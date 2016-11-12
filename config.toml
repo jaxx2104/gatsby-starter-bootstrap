@@ -1,0 +1,14 @@
+siteTitle = "jaxx2104.info"
+siteDescr = "プログラムとバグが好き"
+siteAuthor = "jaxx2104"
+
+siteTelegramUrl = "#"
+siteTwitterUrl = "#"
+siteGithubUrl = "#"
+siteEmailUrl = "#"
+siteRssUrl = "#"
+siteVkUrl = "#"
+
+googleAnalyticsId = ""
+
+linkPrefix = "/gatsby-ninja"

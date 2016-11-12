@@ -1,0 +1,17 @@
+.blog-page {
+	margin-bottom: 40px;
+}
+.blog-page h1 {
+	font-size: responsive 20px 36px;
+	margin-top: 0;
+}
+.blog-page p {
+	font-size: 16px;
+	line-height: 26px;
+	margin-bottom: 26px;
+}
+@media (max-width:900px) {
+	.blog-single .text, .blog-single .footer {
+		padding: 0 15px;
+	}
+}

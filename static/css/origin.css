@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+body {
+    padding-top: 50px;
+    font-family: "Þâ¥´¥·¥Ã¥¯", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "£Í£Ó ¥´¥·¥Ã¥¯", sans-serif;
+    /* font-family: "Hiragino Maru Gothic ProN", "HG´ÝŽºŽÞŽ¼Ž¯Ž¸M-PRO", HGMaruGothicMPRO, "Þâ¥´¥·¥Ã¥¯", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "£Í£Ó ¥´¥·¥Ã¥¯", sans-serif; */
+    font-size: 18px;
+    line-height: 1.72222;
+    color: #34495e;
+    /*padding-top: 50px;*/
+}
+
+canvas{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #34495e;
+}
+
+/*
+H1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small {
+    font-size: 40%;
+}
+*/
+blockquote {
+    word-break: break-word;
+}
+
+small {
+    color: #999;
+}
+/*
+.page-header {
+    padding-bottom: 14px;
+    margin: 30px 0 30px;
+    border-bottom: 1px solid #e7e9ec;
+}
+
+.page-header h1{
+    font-size: 48px;
+    font-weight: bold;
+    padding: 40px 10px 0;
+    margin: 20px 0 30px;
+}
+.page-header a{
+    color:#34495e;
+    padding: 0 10px 0 0;
+}
+*/
+@media screen and (max-device-width: 320px) {
+    .page-header h1 a{
+        display: block;
+    }
+}
+
+.ad-wrap{
+    margin-bottom: 50px;
+}
+
+@media screen and (max-device-width: 320px) {
+    .ad-wrap{
+        margin-left: -18px !important;
+    }
+}
+
+.navbar-default {
+    background-color: #ff4136;
+    border-color: #ff1103;
+}
+
+.navbar-default .navbar-brand {
+    font-weight: 600;
+    color:#fff
+}
+
+.navbar-default .navbar-nav > li > a {
+    color:#fff
+}
+
+
+.article-wrap h1{
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.46428571;
+}
+
+.article-wrap h1 small{
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+
+.article-wrap h2{
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.46428571;
+}
+
+.article-wrap p{
+    margin-bottom: 24px;
+}
+
+
+.snsb {
+    overflow: hidden;
+    padding : 0;
+}
+
+
+.snsb li {
+    list-style-type:none;
+    float: left;
+    margin-right: 4px;
+}
+.snsb iframe {
+    margin: 0 !important;
+}
+
+li {
+    word-break: break-all;
+}
+
+
+footer {
+    padding: 100px 0;
+    background-color: #f05f40;
+    color: #fff;
+}
+
+footer h1 {
+    color: #fff;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer a {
+    font-weight : 700;
+
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fb-like {
+    line-height: 0.8;
+}

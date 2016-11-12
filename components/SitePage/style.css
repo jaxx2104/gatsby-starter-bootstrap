@@ -1,0 +1,226 @@
+/*!
+ * Creative v1.0.3 (http://startbootstrap.com/template-overviews/creative)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+hr {
+    border-color: #f05f40;
+    border-width: 3px;
+    max-width: 50px;
+}
+
+hr.light {
+    border-color: white;
+}
+
+a {
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+    color: #f05f40;
+}
+a:hover,
+a:focus {
+    color: #eb3812;
+}
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.bg-danger {
+    background-color: #f05f40;
+    color: white;
+}
+
+.bg-dark {
+    background-color: #222222;
+    color: white;
+}
+
+.text-faded {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+section {
+    padding: 100px 0;
+    position: relative;
+    width: 100%;
+    min-height: 70%;
+    text-align: center;
+}
+
+aside {
+    padding: 50px 0;
+}
+.no-padding {
+    padding: 0;
+}
+
+section {
+}
+
+.jumboimage {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+}
+
+
+.jumboimage h1 {
+    color: rgba(255, 255, 255, 1.0);
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: 0px 1px 8px rgba(100, 100, 100, 0.3);
+}
+
+header .header-content .header-content-inner hr {
+    margin: 30px auto;
+}
+header .header-content .header-content-inner p {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1.0);
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+    header {
+        min-height: 60%;
+    }
+    header .header-content {
+        text-align: left;
+    }
+    header .header-content .header-content-inner {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header .header-content .header-content-inner p {
+        font-size: 18px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.section-heading {
+    margin-top: 0;
+    font-weight: 700;
+    font-family: "BasisGrotesqueProMonoRegular",'andale mono',monospace;
+}
+
+.bg-danger .section-heading {
+    color: #fff;
+}
+
+.bg-dark .section-heading {
+    color: #fff;
+}
+
+
+.service-box {
+    max-width: 400px;
+    margin: 50px auto 0;
+}
+@media (min-width: 992px) {
+    .service-box {
+        margin: 20px auto 0;
+    }
+}
+
+.service-box i {
+    margin-bottom: 20px;
+}
+
+.portfolio-box {
+    position: relative;
+    display: block;
+    max-width: 650px;
+    margin: 0 auto;
+}
+.portfolio-box .portfolio-box-caption {
+    color: white;
+    opacity: 0;
+    display: block;
+    background: rgba(240, 95, 64, 0.9);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    padding: 0 15px;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 18px;
+}
+.portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+}
+@media (min-width: 768px) {
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 16px;
+    }
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 22px;
+    }
+}
+.call-to-action h2 {
+    margin: 0 auto 20px;
+}
+.text-primary {
+    color: #f05f40;
+}
+.text-primary:hover {
+    color: #c00;
+}
+
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+img::selection {
+    color: white;
+    background: transparent;
+}
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+body {
+    webkit-tap-highlight-color: #222222;
+}
+.bg-danger .text-muted {
+    color: #fff;
+}
+
+.bg-danger a {
+    color: #fff;
+}
