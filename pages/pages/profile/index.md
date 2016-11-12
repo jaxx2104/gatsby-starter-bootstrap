@@ -144,7 +144,7 @@ image: /wp/images/2014/12/b0edb59d97976fb1c698b9997460f6e3-e1458137465824.jpg
   <div class="container">
     <div class="row">
       <div class="col-md-6 ">
-        <img src="http://jaxx2104.info/portfolio/thumb/vor3.png" class="img-rounded img-responsive aligncenter" title="" alt="" />
+        <img src="old.png" class="img-rounded img-responsive aligncenter" title="" alt="" />
       </div>
       <div class="col-md-6">
         <h2 class="section-heading">Degree Works</h2>

@@ -22,7 +22,7 @@ class MarkdownWrapper extends React.Component {
             <DocumentTitle title={ `${post.title} - ${config.siteTitle}` }>
               { template }
             </DocumentTitle>
-            );
+        );
     }
 }
 

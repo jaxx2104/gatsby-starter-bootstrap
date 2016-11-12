@@ -7,15 +7,15 @@ import { prefixLink } from 'gatsby-helpers'
 import access from 'safe-access'
 import { config } from 'config'
 import SitePost from '../components/SitePost'
-import SiteNav from '../components/SiteNav'
-import SiteSidebar from '../components/SiteSidebar'
-import SiteSingle from '../components/SiteSingle'
 
 class SiteIndex extends React.Component {
     description(body) {
-        body = body.replace(/<blockquote>/g, '<blockquote class="blockquote">')
-        const test = body.split("<!--more-->")
-        return test[0]
+        return body = body.replace(/<blockquote>/g, '<blockquote class="blockquote">')
+        if (body.match("<!--more-->")) {
+            const test = body.split("<!--more-->")
+            return test[0]
+        }
+        return body
     }
 
     render() {
@@ -35,7 +35,7 @@ class SiteIndex extends React.Component {
                 for (const i in categories) {
                     const c = categories[i]
                     category.push(
-                         <span className="tag tag-danger">{ c }</span>
+                         <span className="tag tag-danger" key={i}>{ c }</span>
                     )
                 }
 
@@ -43,7 +43,7 @@ class SiteIndex extends React.Component {
                 const data = {}
 
                 pageLinks.push(
-                    <div className='article-wrap'>
+                    <div className='article-wrap' key={page.path}>
                       <div className="page-header">
                         <Link style={ { textDecoration: 'none',} } to={ prefixLink(page.path) } >
                           <h1>{ title }</h1>
@@ -56,7 +56,7 @@ class SiteIndex extends React.Component {
                       <div className="page-content" dangerouslySetInnerHTML={ { __html: this.description(description) } } />
                       <p><Link className='readmore' to={ prefixLink(page.path) }><span className="btn btn-outline-danger btn-block">続きを読む</span></Link></p>
                     </div>
-                      )
+                )
             }
         })
 

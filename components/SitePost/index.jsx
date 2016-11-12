@@ -5,7 +5,6 @@ import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import access from 'safe-access'
 import { config } from 'config'
-import SiteNavi from '../SiteNavi'
 import ReadNext from '../ReadNext'
 import './style.css'
 import '../../static/css/highlight.css'
@@ -14,13 +13,12 @@ class SitePost extends React.Component {
     render() {
         const {route} = this.props
         const post = route.page.data
-        console.log(post)
 
         const category = []
         for (const i in post.categories) {
             const c = post.categories[i]
             category.push(
-                 <span className="tag tag-danger">{ c }</span>
+                 <span className="tag tag-danger" key={i}>{ c }</span>
             )
         }
 

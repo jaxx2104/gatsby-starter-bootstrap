@@ -5,22 +5,20 @@ import { prefixLink } from 'gatsby-helpers'
 import DocumentTitle from 'react-document-title'
 import access from 'safe-access'
 import { config } from 'config'
-import SiteNavi from '../SiteNavi'
 import './style.css';
 
 class SitePage extends React.Component {
     render() {
         const {route} = this.props
         const post = route.page.data
-        console.log(post)
         return (
-            <div dangerouslySetInnerHTML={ {    __html: post.body} }/>
+            <div dangerouslySetInnerHTML={ {__html: post.body} }/>
         );
     }
 }
 
 SitePage.propTypes = {
-    post: React.PropTypes.object.isRequired,
+    post: React.PropTypes.object,
     pages: React.PropTypes.array,
 }
 
