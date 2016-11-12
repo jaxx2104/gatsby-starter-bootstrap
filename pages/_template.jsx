@@ -8,6 +8,8 @@ import '../static/css/reset.css'
 //import '../static/css/base.css'
 //import '../static/css/typography.css'
 import '../static/scss/bootstrap.scss'
+import '../static/css/font-awesome.css'
+
 import '../static/css/animate.css'
 import '../static/scss/devicons.scss'
 import '../static/scss/test.scss'
