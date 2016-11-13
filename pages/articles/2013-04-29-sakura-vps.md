@@ -37,6 +37,7 @@ tags:
 
 <!--more-->
 
+
 ## 初期設定
 
 ssh接続
@@ -361,22 +362,22 @@ Apache再起動
 ```
 
 ```
-&lt;Directory /usr/share/phpMyAdmin/&gt;
-#   &lt;IfModule mod_authz_core.c&gt;
+<Directory /usr/share/phpMyAdmin/>
+#   <IfModule mod_authz_core.c>
      # Apache 2.4
-#     &lt;RequireAny&gt;
+#     <RequireAny>
 #       Require ip 127.0.0.1
 #       Require ip ::1
-#     &lt;/RequireAny&gt;
-#   &lt;/IfModule&gt;
-#   &lt;IfModule !mod_authz_core.c&gt;
+#     </RequireAny>
+#   </IfModule>
+#   <IfModule !mod_authz_core.c>
      # Apache 2.2
 #     Order Deny,Allow
 #     Deny from All
 #     Allow from 127.0.0.1
 #     Allow from ::1
-#   &lt;/IfModule&gt;
-&lt;/Directory&gt;
+#   </IfModule>
+</Directory>
 ```
 
 Apache再起動

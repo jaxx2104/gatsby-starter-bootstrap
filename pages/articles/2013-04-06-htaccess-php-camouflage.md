@@ -31,28 +31,28 @@ tags:
 <!--more-->
 
 **explode.php**
-  
+
 画像を掲載する側のphp
-  
+
 imgタグにファイルパスを暗号化したものを埋め込む。
 
 ```
-&lt;?php
+<?php
 $str = "画像ファイル名";
 $encodeStr = base64_encode($str);
 $encodeUrl = urlencode($encodeStr)
-?&gt;
-&lt;html&gt;
-&lt;body&gt;
-&lt;img src="&lt;?php echo $encodeUrl; ?&gt;.gif"/&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+?>
+<html>
+<body>
+<img src="<?php echo $encodeUrl; ?>.gif"/>
+</body>
+</html>
 ```
 
 **.htaccess**
-  
+
 explode.phpから画像ファイルパスのリクエストを受け
-  
+
 rebuild.phpにクエリを投げる
 
 ```
@@ -64,13 +64,13 @@ RewriteRule ^(.*)\.gif$ rebuild.php?f=$1 [L,QSA]
 ```
 
 **rebuild.php**
-  
+
 暗号化されたクエリを受け取り、
-  
+
 復号化してサーバーから画像ファイルを読み込む
 
 ```
-&lt;?php
+<?php
 $encodeUrl = $_GET&#91;'f'&#93;;
 $encodeStr = urldecode($encodeUrl);
 $decodeStr = base64_decode($encodeStr);
@@ -78,16 +78,16 @@ $decodeStr = base64_decode($encodeStr);
 if(file_exists($decodeStr . ".gif")){
 	header("Content-Type: text/html; charset=UTF-8");
 	header("Content-Type: image/jpeg");
-	
+
 	readfile($decodeStr . ".gif");
 }else{
 	header("HTTP/1.1 404 Not Found");
 }
-?&gt;
+?>
 ```
 
 こうすることで元の画像ファイルパスをURL欄に直打ちしても403エラーを吐くが、
-  
+
 ホストからリダイレクトを経て暗号化された画像ファイルパスのみ画像を閲覧する事が可能
-  
+
 サイトで画像を小出しにして運用するときに便利かも。

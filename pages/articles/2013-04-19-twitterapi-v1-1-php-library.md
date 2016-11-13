@@ -32,7 +32,7 @@ PHPで動作するライブラリで今回調べたものがこの3つ。
   * twitteroauth by @abraham
   * 140dev Twitter Framework by @140dev
 
-<!--more-->
+
 
 
   

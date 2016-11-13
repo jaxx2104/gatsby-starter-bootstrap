@@ -10,6 +10,11 @@ import './style.css'
 import '../../static/css/highlight.css'
 
 class SitePost extends React.Component {
+    description(body) {
+        var test = body.replace(/<blockquote>/g, '<blockquote class="blockquote">')
+        return test
+    }
+
     render() {
         const {route} = this.props
         const post = route.page.data
@@ -34,7 +39,7 @@ class SitePost extends React.Component {
                     </time>
                     { category }
                   </div>
-                  <div className="page-content" dangerouslySetInnerHTML={ { __html: post.body } } />
+                  <div className="page-content" dangerouslySetInnerHTML={ { __html: this.description(post.body) } } />
                   <div className='footer'>
                     <ReadNext post={ post } {...this.props}/>
                     <hr></hr>

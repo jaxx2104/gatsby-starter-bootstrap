@@ -31,7 +31,7 @@ $data = file_get_contents($url);
 file_put_contents('images/logo.jpg',$data);
 [/php]
 
-<!--more-->
+
 
 これはfile\_get\_contentsを使ったもの。
   

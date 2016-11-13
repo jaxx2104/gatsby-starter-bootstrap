@@ -21,7 +21,7 @@ tags:
 右カラムのつぶやきを1件表示するプラグインを作った時のメモ
 
 このままだと[外観]->[ウィジェット]の欄に「Get Twitter」が追加され、
-  
+
 サイト上に「サンプルです」と表示されるので、この部分を置き換える。
 
 ```
@@ -31,7 +31,7 @@ tags:
 <!--more-->
 
 ```
-&lt;?php
+<?php
 /*
 Plugin Name: Get Twitter
 Plugin URI: http://jaxx2104.info
@@ -42,12 +42,12 @@ Author URI: http://www.jaxx2104.info
  */
 
 class GetTwitter_Widget extends WP_Widget {
-  //1.[外観]-&gt;[ウィジェット] での表示
+  //1.[外観]->[ウィジェット] での表示
   public function __construct() {
     parent::__construct(
       'getTwitter_widget', // Base ID
       'Get Twitter', // Name
-      array( 'description' =&gt; __('TwitterAPIを使って、つぶやきを表示するプラグイン', 'text_domain'), ) //desc
+      array( 'description' => __('TwitterAPIを使って、つぶやきを表示するプラグイン', 'text_domain'), ) //desc
     );
   }
 
@@ -69,7 +69,7 @@ class GetTwitter_Widget extends WP_Widget {
     return $instance;
   }
 
-  //4.[外観]-&gt;[ウィジェット] でのフォーム
+  //4.[外観]->[ウィジェット] でのフォーム
   public function form( $instance ) {
     if ( $instance ) {
       $title = esc_attr($instance['title']);
@@ -77,7 +77,7 @@ class GetTwitter_Widget extends WP_Widget {
     else {
       $title = __('New title', 'text_domain');
     }
-    echo sprintf('&lt;p&gt;&lt;label for="%s"&gt;%s&lt;/label&gt;&lt;input class="widefat" id="%s" name="%s" type="text" value="%s" /&gt;&lt;/p&gt;',$this-&gt;get_field_id('title'),_e('Title:'),$this-&gt;get_field_id('title'),$this-&gt;get_field_name('title'),$title);
+    echo sprintf('<p><label for="%s">%s</label><input class="widefat" id="%s" name="%s" type="text" value="%s" /></p>',$this->get_field_id('title'),_e('Title:'),$this->get_field_id('title'),$this->get_field_name('title'),$title);
   }
 }
 
@@ -85,7 +85,7 @@ add_action('widgets_init',
            create_function('', 'register_widget("GetTwitter_widget");')
            );
 
-?&gt;
+?>
 ```
 
 プラグイン作るの楽しいぞ！

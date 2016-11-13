@@ -20,20 +20,21 @@ tags:
   - PHP
   - WordPress
 ---
-さくらVPSをCentOS7へアップデートしました。
-  
-いろいろ変更点あったので備忘録としてメモしました。
-  
-ご参考まで。
-
 <img src="/images/2014/10/centos-500x134.png" alt="centos" class="img-rounded img-responsive size-large wp-image-1008" srcset="/images/2014/10/centos-500x134.png 500w, /images/2014/10/centos-300x80.png 300w, /images/2014/10/centos.png 1340w" sizes="(max-width: 500px) 100vw, 500px" />
+
+
+さくらVPSをCentOS7へアップデートしました。
+
+いろいろ変更点あったので備忘録としてメモしました。
 
 ## CentOS7 アップデート
 
 OSのインストールとネットワーク周りはさくらの管理画面から。
-  
+
 「OS再インストール」->「カスタムOSインストール」
-  
+
+<!--more-->
+
 以下参照
 
 ```
@@ -41,44 +42,44 @@ CentOS 7 カスタムOSインストールガイド
 <a href="http://support.sakura.ad.jp/manual/vps/cpanel/custom_centos7.html" title="http://support.sakura.ad.jp/manual/vps/cpanel/custom_centos7.html" target="_blank">http://support.sakura.ad.jp/manual/vps/cpanel/custom_centos7.html</a>
 ```
 
-<!--more-->
+
 
 ## yum アップデート
 
-> $ yum -y update 
+> $ yum -y update
 
 ## 日本語環境
 
-> $ emacs /etc/locale.conf 
+> $ emacs /etc/locale.conf
 
 ```
-#LANG="en_US.UTF-8" 
+#LANG="en_US.UTF-8"
 LANG="ja_JP.UTF-8"
 ```
 
 ## SELINUX 確認・無効
 
 > $ getenforce
-  
-> $ setenforce 0 
+
+> $ setenforce 0
 
 ## ファイアウォール
 
 初期設定だとsshのみしか許可していないのでhttpを追加。
 
 > $ firewall-cmd -state
-  
+
 > $ firewall-cmd -list-services
-  
-> $ firewall-cmd -add-service=http 
+
+> $ firewall-cmd -add-service=http
 
 ## SSH
 
 設定。SSHのポート番号は標準だと22ですが、
-  
+
 セキュリティ上任意の番号に変更します。
 
-> $ emacs /etc/ssh/sshd_config 
+> $ emacs /etc/ssh/sshd_config
 
 ```
 Port ポート番号;
@@ -87,23 +88,23 @@ PermitRootLogin No;
 
 ファイアウォールの設定もあわせて変更してください。
 
-> $ emacs /usr/lib/firewalld/services/ssh.xml 
+> $ emacs /usr/lib/firewalld/services/ssh.xml
 
 サービス開始
 
-> $ systemctl restart sshd.service 
+> $ systemctl restart sshd.service
 
 ## LAMP環境構築
 
 php,mysql,apache,emacs,wgetをyumでインストール
 
-> yum -y install emacs wget php-mysql php php-gd php-mbstring mariadb mariadb-server httpd 
+> yum -y install emacs wget php-mysql php php-gd php-mbstring mariadb mariadb-server httpd
 
 ## Appache
 
 使用状況によって違うので、必要最低限の設定。
 
-> $ emacs /etc/httpd/conf/httpd.conf 
+> $ emacs /etc/httpd/conf/httpd.conf
 
 ```
 # サーバーの名前を設定
@@ -121,14 +122,14 @@ AllowOverride ALL
 サービス開始
 
 > $ systemctl start httpd.service
-  
-> $ systemctl enable httpd.service 
+
+> $ systemctl enable httpd.service
 
 ## MySQL
 
 mysqlはmariadbという名前になった様子。
 
-> $ emacs /etc/my.cnf.d/server.cnf 
+> $ emacs /etc/my.cnf.d/server.cnf
 
 ```
 [mysqld]
@@ -139,16 +140,16 @@ plugin-load = handlersocket.so
 WordPress用のユーザーと権限設定
 
 > > create database データベース名;
-  
-> > grant all on データベース名.* to &#8216;ユーザー名&#8217;@&#8217;ホスト名&#8217; identified by &#8216;パスワード&#8217; 
+
+> > grant all on データベース名.* to &#8216;ユーザー名&#8217;@&#8217;ホスト名&#8217; identified by &#8216;パスワード&#8217;
 
 サービス開始と初期設定
 
 > $ systemctl start mariadb
-  
+
 > $ systemctl enable mariadb
-  
-> $ mysql\_secure\_installation 
+
+> $ mysql\_secure\_installation
 
 ```
 既存password（デフォルトは空）
@@ -159,21 +160,21 @@ WordPress用のユーザーと権限設定
 ## WordPress
 
 以下から最新バージョンを確認して4.0を入れます。
-  
+
 <a href="https://ja.wordpress.org/" title="https://ja.wordpress.org/" target="_blank">https://ja.wordpress.org/</a>
 
 > $ cd /var/www/html/
-  
+
 > $ wget http://ja.wordpress.org/wordpress-4.0-ja.zip
-  
+
 > $ unzip wordpress-4.0-ja.zip
-  
-> $ mv -rf wordpress wp 
+
+> $ mv -rf wordpress wp
 
 あとはウェブルートのwp配下からインストール作業。
 
 以上駆け足で書いていきましたが、
-  
+
 CentOS7でファイアウォールやサービスの開始・終了など変更点ありました。
-  
+
 confファイルなどの細かな設定は使用状況に合わせて検討してください。

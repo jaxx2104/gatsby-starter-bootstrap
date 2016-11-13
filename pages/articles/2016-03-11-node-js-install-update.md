@@ -20,6 +20,8 @@ $ sudo yum install nodejs npm -enablerepo=epel
 $ sudo yum install gcc gcc-c++
 ```
 
+<!--more-->
+
 n のインストール
 ```
 $ sudo npm install -g n

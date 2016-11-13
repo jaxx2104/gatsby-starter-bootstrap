@@ -15,15 +15,16 @@ tags:
   - Evernote
   - Mac
 ---
-## Evernote Market
 
 Evernoteがネットでセレクトショップ始めたようなので、おしゃれだったMacBookケースを買ってみました。
 
 <img src="/images/2013/12/IMG_0007-500x333.jpg" alt="IMG_0007" class="img-rounded img-responsive alignnone size-large wp-image-832" srcset="/images/2013/12/IMG_0007-500x333.jpg 500w, /images/2013/12/IMG_0007-300x200.jpg 300w, /images/2013/12/IMG_0007.jpg 600w" sizes="(max-width: 500px) 100vw, 500px" />
 
 お値段は 商品 ¥4410 + 送料 ¥600 でした。
-  
+
 商品は注文してから2,3日で届きました。
+
+<!--more-->
 
 ## MacBookを実際に入れてみた感想
 

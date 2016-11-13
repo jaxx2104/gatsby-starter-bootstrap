@@ -31,7 +31,7 @@ HTMLやPHP書いてて色付けや補完があったほうが便利だし
 > <a href="http://www.forest.impress.co.jp/library/software/xyzzy/">http://www.forest.impress.co.jp/library/software/xyzzy/</a>
 
 
-<!--more-->
+
 
 ## 各種site-lispのダウンロード
 

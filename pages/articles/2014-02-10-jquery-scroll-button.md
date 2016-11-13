@@ -10,7 +10,7 @@ categories:
   - JavaScript
 ---
 ご飯が炊けるまで時間があるので、
-  
+
 ちょっとだけメモします。
 
 指定した要素にスクロールするボタンをjQueryで書きます。
@@ -18,7 +18,7 @@ categories:
 ## HTML
 
 ```
-<span style="line-height: 1.5em;">&lt;div id="page-scroll-button"&gt;スクロール！&lt;/div&gt;</span>
+<span style="line-height: 1.5em;"><div id="page-scroll-button">スクロール！</div></span>
 ```
 
 書き方はどうあれ、こんなボタンがあったとしましょう。
@@ -28,7 +28,7 @@ categories:
 
 
 こんな感じ。
-  
+
 ほんとにチラシの裏にでも書けっていう内容ですみません。
-  
+
 ごはん炊けました。晩御飯ですよ〜(^^)

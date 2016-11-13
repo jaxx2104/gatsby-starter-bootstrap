@@ -20,7 +20,7 @@ tags:
   - WordPress
 ---
 LAMP環境構築を数カ月ぶりにやったらいろいろと変更している部分があったので更新。
-  
+
 WordPressのインストールは実際の作業ではやっていないので少し省いてます。
 
 ## CentOS バージョン確認
@@ -39,29 +39,30 @@ WordPressのインストールは実際の作業ではやっていないので�
 
 <!--more-->
 
-> $ yum -y groupinstall &#8220;開発ツール　&#8221;
-  
-> $ yum groupinfo &#8220;開発ツール　&#8221; 
+```
+$ yum -y groupinstall “開発ツール　”
+$ yum groupinfo “開発ツール　”
+```
 
 ## emacs,get,tree 追加
 
 テキストエディタはemacsを使用しているで、この段階で必要なものをインストールします。
 
-> $ yum -y install emacs
-  
-> $ yum -y install get
-  
-> $ yum -y install tree 
+```
+$ yum -y install emacs
+$ yum -y install get
+$ yum -y install tree
+```
 
 ## SELINUX 確認・無効
 
 SELINUXは無効にします。SELINUXとは、なぜ無効にするかは調べて下さい。
 
-> $ getenforce
-  
-> $ setenforce 0
-  
-> $ emacs /etc/sysconfig/selinux 
+```
+$ getenforce
+$ setenforce 0
+$ emacs /etc/sysconfig/selinux
+```
 
 ```
 SELINUX=disabled
@@ -71,7 +72,9 @@ SELINUX=disabled
 
 日本語環境にしますが、個人の気分だと思います
 
-> $ emacs /etc/sysconfig/i18n 
+```
+$ emacs /etc/sysconfig/i18n
+```
 
 ```
 LANG="ja_JP.UTF-8"
@@ -82,9 +85,10 @@ SYSFONT="latarcyrheb-sun16"
 
 NTPを使ってサーバーの時刻合わせを行います。
 
-> $ yum -y install ntp
-  
-> $ emacs /etc/ntp.conf
+```
+$ yum -y install ntp
+$ emacs /etc/ntp.conf
+```
 
 ```
 restrict 192.168.1.0 mask 255.255.255.0 nomodify notrap
@@ -94,21 +98,24 @@ server ntp.jst.mfeed.ad.jp
 
 サービスの開始・自動起動
 
-> $ /etc/rc.d/init.d/ntpd start
-  
-> $ chkconfig ntpd on
-  
-> $ ntpq -p 
+```
+$ /etc/rc.d/init.d/ntpd start
+$ chkconfig ntpd on
+$ ntpq -p
+```
 
 ## ユーザーの作成
 
-> $ useradd ユーザー名
-  
-> $ passwd ユーザー名 
+```
+$ useradd ユーザー名
+$ passwd ユーザー名
+```
 
 ポート番号設定とrootでのログインを禁止
 
-> $ emacs /etc/ssh/sshd_config
+```
+$ emacs /etc/ssh/sshd_config
+```
 
 ```
 Port XXX.XXX.XXX.XXX;
@@ -119,7 +126,9 @@ PermitRootLogin No;
 
 SH、HTTP、HTTPS、POP3、SMTP、サブミッションポートのみ通す。sshのポート番号は先ほど指定したもの
 
-> $ emacs /etc/sysconfig/iptables
+```
+$ emacs /etc/sysconfig/iptables
+```
 
 ```
 *filter
@@ -147,40 +156,46 @@ COMMIT
 ```
 
 再起動して有効化
-
-> $ /etc/rc.d/init.d/iptables restart
+```
+$ /etc/rc.d/init.d/iptables restart
+```
 
 ## 不要なサービスの停止(ip6tables)
 
-> $ /etc/rc.d/init.d/ip6tables stop
-  
-> $ chkconfig ip6tables off 
+```
+$ /etc/rc.d/init.d/ip6tables stop
+$ chkconfig ip6tables off
+```
 
 ## yum リポジトリ追加
 
 yum リポジトリダウンロード
 
-> $ wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+```
+$ wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 
 （無い場合：http://dl.fedoraproject.org/pub/epel/6/x86_64/ からepal検索）
 
-> $ wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+$ wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 
 （無い場合：http://rpms.famillecollet.com/ から検索）
 
-> $ wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+$ wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 
 （無い場合：http://dag.wieers.com/rpm/packages/rpmforge-release/から検索）
+```
 
 yum リポジトリ追加
-
-> rpm -Uvh epel-release-6-8.noarch.rpm remi-release-6.rpm rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+```
+$ rpm -Uvh epel-release-6-8.noarch.rpm remi-release-6.rpm rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+```
 
 追加したリポジトリを明示的に指定した時のみ使用
 
-> $ emacs /etc/yum.repos.d/epel.repo
-  
-> $ emacs /etc/yum.repos.d/rpmforge.repo
+```
+$ emacs /etc/yum.repos.d/epel.repo
+$ emacs /etc/yum.repos.d/rpmforge.repo
+```
 
 ```
 enabled=0
@@ -189,13 +204,14 @@ enabled=0
 ## LAMP環境構築
 
 この一行で一式をインストールするので不要なものは削って下さい。
-
-> $ yum -y -enablerepo=remi,epel,rpmforge install httpd-devel php-cli php-fpm php-devel php-gd php-mbstring php-mysql php-pdo php-pear php mysql-server phpMyAdmin vsftpd
+```
+$ yum -y -enablerepo=remi,epel,rpmforge install httpd-devel php-cli php-fpm php-devel php-gd php-mbstring php-mysql php-pdo php-pear php mysql-server phpMyAdmin vsftpd
+```
 
 ## Appache
-
-> $ emacs /etc/httpd/conf/httpd.conf
-
+```
+$ emacs /etc/httpd/conf/httpd.conf
+```
 ```
 HTTPレスポンスヘッダのServerヘッダの情報を最小限にする
 #ServerTokens OS
@@ -239,21 +255,19 @@ AddDefaultCharset UTF-8
 ```
 
 ドキュメントルートの所有者を変更
-
-> $ chown user:group /var/www/html/
-
+```
+$ chown user:group /var/www/html/
+```
 サービス開始
-
-> $ /sbin/chkconfig httpd on
-  
-> $ /etc/rc.d/init.d/httpd start
-  
-> $ /sbin/chkconfig -list httpd 
-
+```
+$ /sbin/chkconfig httpd on
+$ /etc/rc.d/init.d/httpd start
+$ /sbin/chkconfig -list httpd
+```
 ## sftp
-
-> $ emacs /etc/vsftpd/vsftpd.conf
-
+```
+$ emacs /etc/vsftpd/vsftpd.conf
+```
 編集
 
 ```
@@ -270,15 +284,14 @@ use_localtime=YES
 ```
 
 サービスの開始・自動起動
-
-> $ /etc/rc.d/init.d/vsftpd start
-  
-> $ chkconfig vsftpd on
-
+```
+$ /etc/rc.d/init.d/vsftpd start
+$ chkconfig vsftpd on
+```
 ## MySQL
-
-> $ emacs /etc/my.cnf
-
+```
+$ emacs /etc/my.cnf
+```
 追加
 
 ```
@@ -305,14 +318,12 @@ pid-file=/var/run/mysqld/mysqld.pid
 ```
 
 サービス開始
-
-> $ /etc/rc.d/init.d/mysqld start
-  
-> $ mysql\_install\_db
-  
-> $ chkconfig mysqld on
-  
-> $ mysql\_secure\_installation
+```
+$ /etc/rc.d/init.d/mysqld start
+$ mysql\_install\_db
+$ chkconfig mysqld on
+$ mysql\_secure\_installation
+```
 
 以下の質問に答える
 
@@ -323,9 +334,9 @@ yes
 ```
 
 ## php
-
-> $ emacs /etc/php.ini
-
+```
+$ emacs /etc/php.ini
+```
 ```
 mbstring.language = Japanese
 ```
@@ -333,40 +344,39 @@ mbstring.language = Japanese
 ## phpmyadmin
 
 BASIC認証の場合
-
-> $ emacs /etc/httpd/conf.d/phpMyAdmin.conf 
-
 ```
-&lt;Directory "/usr/share/phpmyadmin">
+$ emacs /etc/httpd/conf.d/phpMyAdmin.conf
+```
+```
+<Directory "/usr/share/phpmyadmin">
   Options FollowSymLinks
   AllowOverride All
   Order Deny,Allow
   Deny from all
   Allow from 127.0.0.1
   Allow from 192.168.11.
-&lt;/Directory>
+</Directory>
 ```
 
 確認
-
-> $ /etc/rc.d/init.d/httpd restart 
-
+```
+$ /etc/rc.d/init.d/httpd restart
+```
 basic認証のパスワードはMySQLのrootパスワード
 
 ## WordPress
 
 WordPress用MySQLユーザの作成
 
-> $ mysql -uroot -p
-  
-> $ create database データベース名 
-
-> grant create,select,insert,update,delete on (作成したDB名).* to 'ユーザ名'@&#8217;ホスト名' identified by 'パスワード'
-  
-> flush privileges; 
+```
+$ mysql -uroot -p
+$ create database データベース名
+grant create,select,insert,update,delete on (作成したDB名).* to 'ユーザ名'@&#8217;ホスト名' identified by 'パスワード'
+flush privileges;
+```
 
 以上でLAMP環境構築からWordPressインストールまで完了です。
-  
+
 だいぶ省いている箇所もあるので参考程度にと思っています。
-  
+
 confファイルなどの細かな設定は使用状況に合わせて検討してください。

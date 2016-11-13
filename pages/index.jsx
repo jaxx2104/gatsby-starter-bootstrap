@@ -10,12 +10,14 @@ import SitePost from '../components/SitePost'
 
 class SiteIndex extends React.Component {
     description(body) {
-        return body = body.replace(/<blockquote>/g, '<blockquote class="blockquote">')
-        if (body.match("<!--more-->")) {
-            const test = body.split("<!--more-->")
-            return test[0]
+        var test = body.replace(/<blockquote>/g, '<blockquote class="blockquote">')
+        if (test.match("<!--more-->")) {
+            test = test.split("<!--more-->")
+            if (typeof test[0] != "undefined") {
+                return test[0]
+            }
         }
-        return body
+        return test
     }
 
     render() {

@@ -25,6 +25,8 @@ Titaniumは以前に少しだけ触ったことがあって、その時は「Res
 
 数年さわっていない間にMVCフレームワーク「Alloy」が出ていて面白そうだったのと、個人的にアプリを作りたい衝動にかられて開発環境も不十分なくせに、iOS Developer Programに7,800円払ってしまったこともあり、Titaniumを使って初アプリを作ることにしました。
 
+<!--more-->
+
 ## ドキュメント
 
 公式ドキュメントを読んで開発環境とAlloyの基本構成は理解出来ました。
@@ -32,7 +34,7 @@ Titaniumは以前に少しだけ触ったことがあって、その時は「Res
 > **Titanium 3.X - Appcelerator Docs**
 > <a href="http://docs.appcelerator.com/titanium/3.0/#!/guide" title="http://docs.appcelerator.com/titanium/3.0/#!/guide" target="_blank">http://docs.appcelerator.com/titanium/3.0/#!/guide</a>
 
-<!--more-->
+
 
 ただTitaniumの各要素については調べる頻度が多いので、開発環境がMacの場合はDashに追加すると便利です。
 

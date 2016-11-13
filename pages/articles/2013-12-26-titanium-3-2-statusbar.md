@@ -23,22 +23,24 @@ tags:
 tiapp.xml
 
 ```
-&lt;ios&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;plist&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dict&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;key&gt;UIStatusBarStyle&lt;/key&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;string&gt;UIStatusBarStyleLightContent&lt;/string&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dict&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;/plist&gt;
-&lt;/ios&gt;
+<ios>
+    <plist>
+        <dict>
+            <key>UIStatusBarStyle</key>
+            <string>UIStatusBarStyleLightContent</string>
+        </dict>
+    </plist>
+</ios>
 ```
+<!--more-->
 
 ## Titanium 3.1.3 以前
 
 tiapp.xml
 
 ```
-&lt;statusbar-style&gt;opaque_black&lt;/statusbar-style&gt;```
+<statusbar-style>opaque_black</statusbar-style>
+```
 
 
 これで白になるかと思います。

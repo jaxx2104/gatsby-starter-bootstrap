@@ -29,14 +29,16 @@ tags:
 # chmod 755 /etc/zabbix/alertscripts/sendmessage-smtp-php/sendmessage_smtp_php.sh
 ```
 
+<!--more-->
+
 ## メールスクリプトの設定
 
 メールスクリプトのSMTP認証の設定をします。
-  
+
 AWSコンソールから各項目の値を取得できます。HOSTのポート番号は465です。
-  
+
 また動作しない場合は $mailer->SMTPDebug = 1; と追加することで、
-  
+
 デバックモードを有効にしてエラーを知ることもできます。
 
 ```
@@ -44,12 +46,12 @@ AWSコンソールから各項目の値を取得できます。HOSTのポート�
 ```
 
 > $MAIL\_SMTP\_HOST = &#8216;email-smtp.us-east-1.amazonaws.com:465&#8217;;
-  
+
 > $MAIL\_SMTP\_USER = &#8216;SMTP-USERNAME&#8217;;
-  
+
 > $MAIL\_SMTP\_PASS = &#8216;SMTP-USERPASS&#8217;;
-  
-> $mailer->SMTPDebug = 1; 
+
+> $mailer->SMTPDebug = 1;
 
 Zabbixの設定ファイルにメールスクリプトのパスを記します。
 
@@ -57,7 +59,7 @@ Zabbixの設定ファイルにメールスクリプトのパスを記します�
 # emacs /var/lib/zabbix/zabbix_server.conf
 ```
 
-> AlertScriptsPath=/etc/zabbix/alertscripts 
+> AlertScriptsPath=/etc/zabbix/alertscripts
 
 ## コマンドで確認
 
@@ -66,15 +68,15 @@ php sendmessage-smtp-php/sendmessage_smtp_php.sh mail@sample.com title body
 ```
 
 success が返れば成功
-  
+
 php の OpenSSL が有効になっていないと怒られたので、
-  
+
 -with-openssl 追加し再コンパイルし直し。その後受信確認できました。
 
 ## スクリプトを登録
 
 あとは通常通りZabbixの管理画面からスクリプトを登録します、
-  
+
 管理 -> メディアタイプ -> メディアタイプの作成 をクリックし、
 
   * 説明 : sendmessage\_smtp\_php.sh

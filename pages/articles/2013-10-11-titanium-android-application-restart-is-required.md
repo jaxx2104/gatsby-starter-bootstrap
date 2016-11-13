@@ -28,32 +28,34 @@ Google Play に公開したアプリにおいて、 Google Play の「開く」�
 
 起動時にこんなエラーが出る
 
+<!--more-->
+
 <img src="/images/2013/10/IMG_1495-281x500.jpg" alt="IMG_1495" class="img-rounded aligncenter size-large wp-image-656" srcset="/images/2013/10/IMG_1495-281x500.jpg 281w, /images/2013/10/IMG_1495-168x300.jpg 168w, /images/2013/10/IMG_1495.jpg 720w" sizes="(max-width: 281px) 100vw, 281px" />
 
   * Titanium SDK 3.1.3
   * GALAXY S2 Android 4.0.2
   * Xperia Z Android 4.1.3
 
-<!--more-->
+
 
 ## 修正方法
 
 tiapp.xmlに以下の1行を加える。
 
 ```
-&lt;property name="ti.android.bug2373.finishfalseroot" type="bool"&gt;true&lt;/property&gt;
+<property name="ti.android.bug2373.finishfalseroot" type="bool">true</property>
 ```
 
 場所に注意が必要でこやつの下に加えないといけない。
 
 ```
-&lt;ti:app xmlns:ti="http://ti.appcelerator.org"&gt;
+<ti:app xmlns:ti="http://ti.appcelerator.org">
 ```
 
 Androidのみのエラーだからって<android>の下に加えると問題は修正されません。
 
 ```
-&lt;android xmlns:android="http://schemas.android.com/apk/res/android"&gt;
+<android xmlns:android="http://schemas.android.com/apk/res/android">
 ```
 
 ## こんなのもあったけど&#8230;
@@ -63,13 +65,13 @@ Androidのみのエラーだからって<android>の下に加えると問題は�
 finishfalserootの1行のみでエラーは回避できてた。
 
 ```
-&lt;property name="ti.android.bug2373.disableDetection" type="bool"&gt;true&lt;/property&gt;
-&lt;property name="ti.android.bug2373.restartDelay" type="int"&gt;500&lt;/property&gt;
-&lt;property name="ti.android.bug2373.finishDelay" type="int"&gt;0&lt;/property&gt;
-&lt;property name="ti.android.bug2373.skipAlert" type="bool"&gt;true&lt;/property&gt;
-&lt;property name="ti.android.bug2373.message"&gt;Initializing&lt;/property&gt;
-&lt;property name="ti.android.bug2373.title"&gt;Restart Required&lt;/property&gt;
-&lt;property name="ti.android.bug2373.buttonText"&gt;Continue&lt;/property&gt;
+<property name="ti.android.bug2373.disableDetection" type="bool">true</property>
+<property name="ti.android.bug2373.restartDelay" type="int">500</property>
+<property name="ti.android.bug2373.finishDelay" type="int">0</property>
+<property name="ti.android.bug2373.skipAlert" type="bool">true</property>
+<property name="ti.android.bug2373.message">Initializing</property>
+<property name="ti.android.bug2373.title">Restart Required</property>
+<property name="ti.android.bug2373.buttonText">Continue</property>
 ```
 
 ## bug2373の原因
@@ -78,7 +80,7 @@ finishfalserootの1行のみでエラーは回避できてた。
 
 ```
 TitaniumのISSUE
-&lt;a href="https://jira.appcelerator.org/browse/TIMOB-9285" title="Android: Message "An application restart is required" fires incorrectly." target="_blank">https://jira.appcelerator.org/browse/TIMOB-9285&lt;/a>
+<a href="https://jira.appcelerator.org/browse/TIMOB-9285" title="Android: Message "An application restart is required" fires incorrectly." target="_blank">https://jira.appcelerator.org/browse/TIMOB-9285</a>
 ```
 
 ```
@@ -87,9 +89,9 @@ GoogleのISSUE
 ```
 
 Titanium SDK 2.0の頃からこのエラーはあったようで、
-  
+
 いろんな策が講じられて、&#8221;ti.android.bug2373&#8243;とかで検索すると
-  
+
 エラーの回避方法みたいな内容がブログなどにも書かれているけど
-  
+
 人によって書き方が微妙に違うのと、ちょっと古い情報もあったりして迷った。

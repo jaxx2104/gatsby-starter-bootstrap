@@ -13,25 +13,9 @@ tags:
 ---
 Twitterなどでは絵文字が使えます。
 
-<blockquote class="twitter-tweet" lang="ja">
-  <p>
-    絵文字のテスト
-  </p>
-
-  <p>
-    &mdash; jaxx2104 (@jaxx2104) <a href="https://twitter.com/jaxx2104/status/524223367084138496">2014, 10月 20</a>
-  </p>
-</blockquote>
-
-
-
 Twitterの埋め込んだサイトのHTMLソースを利用する際など、
-
 HTMLエンティティを含んだ文字列をこちらでデコードしたい場合。
-
 以下のようにします。
-
-## コード
 
 ```
 $text = html_entity_decode($text);

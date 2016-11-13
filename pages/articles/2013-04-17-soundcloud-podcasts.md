@@ -28,7 +28,7 @@ https://soundcloud.com```
 
 SoundCloudをPodcastsみたいに更新があれば自動でローカルにダウンロードされてiPhoneと同期して持ち歩けたらな、と思ってたら出来たのでメモ。
 
-<!--more-->
+
 
 SoundCloudのアーティストページURLをコピーし以下のサイトでXMLファイルを生成します。
 

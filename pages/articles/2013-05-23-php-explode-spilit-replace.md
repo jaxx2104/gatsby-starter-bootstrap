@@ -33,10 +33,11 @@ tags:
 ## 検索
 
 ```
-$array = preg_match_all ( string $pattern, string $subject )```
+$array = preg_match_all ( string $pattern, string $subject )
+```
 
 
-<!--more-->
+
 
 
 
@@ -47,19 +48,22 @@ $array = preg_match_all ( string $pattern, string $subject )```
 文字列を文字列で分割
 
 ```
-$array = explode  ( string $delimiter, string $string ))```
+$array = explode  ( string $delimiter, string $string ))
+```
 
 文字列を正規表現で分割( 非推奨 )
 
 ```
-$array = split ( string $pattern, string $string )<)```
+$array = split ( string $pattern, string $string )<)
+```
 文字列を正規表現で分割
 
 ```
 $array = preg_split('/[\s]+||
 
 <p>
-  こうやると複数条件でかつ、こちらだけ後方参照.*?<\/p>/',$String,null,(PREG_SPLIT_DELIM_CAPTURE|PREG_SPLIT_NO_EMPTY));</;```
+  こうやると複数条件でかつ、こちらだけ後方参照.*?<\/p>/',$String,null,(PREG_SPLIT_DELIM_CAPTURE|PREG_SPLIT_NO_EMPTY));</;
+  ```
 
 
   <ul>

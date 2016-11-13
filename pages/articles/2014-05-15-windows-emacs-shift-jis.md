@@ -13,20 +13,14 @@ tags:
   - init.el
   - Mac
 ---
-Windowマシンにemacsを入れた際に、
-  
-日本語ディレクトリ内のファイルを開くと、
-  
-中身が空の状態になってしまいます。
+Windowマシンにemacsを入れた際に、  
+日本語ディレクトリ内のファイルを開くと中身が空の状態になってしまいます。
 
 ## 原因は文字コードのせい
 
-init.elもしくは.emacsに
-  
-以下の一文を追加してあげて下さい。
+init.elもしくは.emacsに以下の一文を追加して下さい。
 
 ```
 (setq default-file-name-coding-system 'japanese-shift-jis)
 ```
-
 これで問題なくファイルが開けるはずです。

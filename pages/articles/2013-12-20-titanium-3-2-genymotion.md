@@ -19,21 +19,23 @@ tags:
 ## Androidエミュレータ = 重い
 
 立ち上がりまでが重いですよね。
-  
+
 開発していてログとか取るのも一苦労です。
 
 ## Titanium + Genymotion
 
 でも最近は、仮想マシンとしてAndroidエミュレータを立ち上げる Genymotion を使うのが主流みたいでして、Titaniumでも使えないかなと思ったら、バージョン3.2から対応したみたいです。
-  
+
 さっそく有効にしてみたいと思う。
+
+<!--more-->
 
 環境
 
 ```
 OSX 10.9.1
 
-Titanium SDK 3.2 
+Titanium SDK 3.2
 Titanium CLI 3.2
 Titanium Studio 3.2
 Alloy 1.3
@@ -45,6 +47,6 @@ Genymotion は公式のスタートガイドに習いながらエミュレータ
 
 Titanium cli のconfigでGenymotionを有効にします。
 
-> $ titanium config genymotion.enabled true 
+> $ titanium config genymotion.enabled true
 
 そうするとtitanium studio上で「Android Emulator」の中に Genymotion のエミュレータが追加されると思います。ログも出せるので開発はかどるよ！

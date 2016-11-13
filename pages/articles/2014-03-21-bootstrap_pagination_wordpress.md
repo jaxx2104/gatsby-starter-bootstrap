@@ -27,7 +27,7 @@ tags:
 > bootstarap の Pagenation
 > http://getbootstrap.com/components/#pagination
 
-
+<!--more-->
 
 このHTMLタグをWordpressのpageに合わせて、
 

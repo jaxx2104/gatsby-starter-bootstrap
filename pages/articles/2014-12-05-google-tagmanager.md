@@ -12,29 +12,30 @@ categories:
   - JavaScript
 ---
 GoogleAnalyticsで離脱率や平均セッションを見ていて、
-  
+
 ユーザーがページのどこまで目を通しているのか気になりました。
 
 <img src="/images/2014/12/Google-Tag-Manager-1.png" alt="Google-Tag-Manager-1" class="img-rounded img-responsive aligncenter size-full wp-image-1072" />
 
 海外の技術ブログやGithubでも評価のある、
-  
+
 「Scroll Depth」というライブラリを使用します。要件としてjQuery1.7以上です。
 
-> **Scroll Depth**
-  
-> <a href="http://scrolldepth.parsnip.io/" title="http://scrolldepth.parsnip.io/" target="_blank">http://scrolldepth.parsnip.io/</a> 
+<!--more-->
+
+> Scroll Depth
+> http://scrolldepth.parsnip.io/
 
 これとタグマネージャを連携してスクロール計測を行いたい思います。
 
-<!--more-->
+
 
 ## Dom Event の設定
 
 まずは「Triggers」（旧:ルール）からイベントを登録します。
-  
+
 「Scroll Depth」を実行する際にスクロール幅の計算を行うため、
-  
+
 読み込み完了イベントの「gtm.dom」を「Dom Event」として登録します。
 
 <img src="/images/2014/12/Google-Tag-Manager1-800x419.png" alt="Google Tag Manager1" class="img-rounded img-responsive aligncenter size-large wp-image-1079" srcset="/images/2014/12/Google-Tag-Manager1-800x419.png 800w, /images/2014/12/Google-Tag-Manager1-572x300.png 572w, /images/2014/12/Google-Tag-Manager1.png 967w" sizes="(max-width: 800px) 100vw, 800px" />
@@ -42,17 +43,16 @@ GoogleAnalyticsで離脱率や平均セッションを見ていて、
 ## Scroll Listener の設定
 
 次に「Tags」（旧:タグ）からライブラリを「Scroll Listener」として登録します。
-  
+
 以下Githubの「jquery.scrolldepth.js」をscriptタグではさんで貼り付けて下さい。
 
-> **robflaherty/jquery-scrolldepth**
-  
-> <a href="https://github.com/robflaherty/jquery-scrolldepth" title="https://github.com/robflaherty/jquery-scrolldepth" target="_blank">https://github.com/robflaherty/jquery-scrolldepth</a> 
+> robflaherty/jquery-scrolldepth**
+> https://github.com/robflaherty/jquery-scrolldepth
 
 <img src="/images/2014/12/Google-Tag-Manager2-800x733.png" alt="Google Tag Manager2" class="img-rounded img-responsive aligncenter size-large wp-image-1087" srcset="/images/2014/12/Google-Tag-Manager2-800x733.png 800w, /images/2014/12/Google-Tag-Manager2-600x549.png 600w, /images/2014/12/Google-Tag-Manager2.png 969w" sizes="(max-width: 800px) 100vw, 800px" />
 
 タグの最後に実行タグを追記します。
-  
+
 オプションで計測する項目のオンオフが出来ます。（他にも有り）
 
 ```
@@ -70,7 +70,7 @@ $.scrollDepth({
 ## Scroll Event の条件設定
 
 次に「Triggers」（旧:ルール）から「Scroll Listener」のイベント登録します。
-  
+
 イベント名は「ScrollDistance」と入力します。
 
 <img src="/images/2014/12/Google-Tag-Manager3-800x418.png" alt="Google Tag Manager3" class="img-rounded img-responsive aligncenter size-large wp-image-1092" srcset="/images/2014/12/Google-Tag-Manager3-800x418.png 800w, /images/2014/12/Google-Tag-Manager3-600x313.png 600w, /images/2014/12/Google-Tag-Manager3.png 968w" sizes="(max-width: 800px) 100vw, 800px" />
@@ -98,11 +98,11 @@ $.scrollDepth({
 ## Scroll Event の設定
 
 最後に「Tags」（旧:タグ）からAnalytics のプロファイルを選択して、
-  
+
 各項目を入力すれば設定完了です。
 
 <img src="/images/2014/12/Google_Tag_Manager8-800x1093.png" alt="Google_Tag_Manager8" class="img-rounded img-responsive aligncenter size-large wp-image-1100" srcset="/images/2014/12/Google_Tag_Manager8-800x1093.png 800w, /images/2014/12/Google_Tag_Manager8-600x819.png 600w, /images/2014/12/Google_Tag_Manager8.png 969w" sizes="(max-width: 800px) 100vw, 800px" />
 
 デバックモードでPCからでもスマホからで取得できていれば完了です。
-  
+
 満足感で公開を忘れないよう気をつけて下さい。

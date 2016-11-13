@@ -148,7 +148,7 @@ image: /wp/images/2014/12/b0edb59d97976fb1c698b9997460f6e3-e1458137465824.jpg
       </div>
       <div class="col-md-6">
         <h2 class="section-heading">Degree Works</h2>
-        <p>過去の制作は<a href="/portfolio/">こちら</a></p>
+        <p>過去の制作は<a href="https://old.jaxx2104.info/">こちら</a></p>
       </div>
     </div>
   </div>

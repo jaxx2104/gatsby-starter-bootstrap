@@ -13,25 +13,25 @@ tags:
   - Twitter API
 ---
 Twitter APIを使って画像付きで投稿する場合、
-  
+
 ライブラリのtmhOAuthで簡単に認証とリクエスト行うことが出来ます。
 
 > themattharris/tmhOAuth
-  
-> <a href="https://github.com/themattharris/tmhOAuth" title="tmhOAuth" target="_blank">https://github.com/themattharris/tmhOAuth</a> 
+> https://github.com/themattharris/tmhOAuth
+
+<!--more-->
 
 ## OAuth認証
 
 Twitterへの認証の際に使う、認証鍵はTwitter Developersにて取得します。
 
 > Twitter Developers
-  
-> <a href="https://dev.twitter.com/" title="Twitter Developers" target="_blank">https://dev.twitter.com/</a> 
+> https://dev.twitter.com/
 
-<!--more-->
+
 
 認証の際に「Problem with the SSL CA cert」と言われたので、
-  
+
 curl\_ssl\_verifypeerを 一時的に false にしました。
 
 ```
@@ -75,7 +75,7 @@ if ($tmhOAuth->response["code"] == 200){ // $codeにもステータスは返っ�
   <p>
     ロボットからの投稿テスト <a href="http://t.co/JJnCpKsK2c">pic.twitter.com/JJnCpKsK2c</a>
   </p>
-  
+
   <p>
     &mdash; jaxx2104 (@jaxx2104) <a href="https://twitter.com/jaxx2104/status/524807599380631552">2014, 10月 22</a>
   </p>

@@ -24,10 +24,8 @@ iPhotoを使ってフォトブックが簡単に作れるみたいなので、�
 <img class="img-rounded aligncenter size-full wp-image-612" alt="af7f052ca06f2b0bce7cd562ab0ef139.jpg" src="/images/2013/09/af7f052ca06f2b0bce7cd562ab0ef139.jpg" />
 
 フォトブックの種類とサイズ。
-  
-そしてテーマを選んで写真を配置していく！
 
-&nbsp;
+そしてテーマを選んで写真を配置していく！
 
 <!--more-->
 
@@ -44,7 +42,7 @@ iPhotoを使ってフォトブックが簡単に作れるみたいなので、�
 <img class="img-rounded aligncenter size-large wp-image-603" alt="IMG_1417.jpg" src="/images/2013/09/IMG_1417-500x500.jpg" srcset="/images/2013/09/IMG_1417-500x500.jpg 500w, /images/2013/09/IMG_1417-150x150.jpg 150w, /images/2013/09/IMG_1417-300x300.jpg 300w, /images/2013/09/IMG_1417.jpg 600w" sizes="(max-width: 500px) 100vw, 500px" />
 
 写真はすべてiPhoneで撮ったんだけど、普通に綺麗に仕上がってた。
-  
+
 自分はソフトカバータイプで20×30のものにしたんだけど、コスパがいいので次もこのタイプで作ろうと思います。
 
 フォトブック以外にもカレンダーとかメッセージカードなんかも作れるので機会あればみなさんも試してみて下さい！
