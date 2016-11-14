@@ -1,5 +1,5 @@
-siteTitle = "jaxx2104.info"
-siteDescr = "プログラムとバグが好き"
+siteTitle = "Gatstrap"
+siteDescr = "Gatsby starter for bootstrap a blog"
 siteAuthor = "jaxx2104"
 
 siteTelegramUrl = "#"
@@ -11,4 +11,4 @@ siteVkUrl = "#"
 
 googleAnalyticsId = ""
 
-linkPrefix = "/gatsby-ninja"
+linkPrefix = "/gatstrap"

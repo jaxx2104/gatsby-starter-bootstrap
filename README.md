@@ -14,7 +14,7 @@ Install this starter (assuming Gatsby is installed) by running from your CLI:
 ## Running in development
 `gatsby develop`
 
-![](http://i.imgur.com/422y5GV.png)
+![](http://imgur.com/a/1fu5u)
 
 ## License
 The MIT license.
