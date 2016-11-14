@@ -5,7 +5,7 @@ date: 2014-01-24T00:01:44+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=866
-permalink: /aws-alertmail
+path: /aws-alertmail
 dsq_thread_id:
   - "2163783293"
 categories:

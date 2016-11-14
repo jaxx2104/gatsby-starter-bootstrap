@@ -5,7 +5,7 @@ date: 2013-11-25T01:14:59+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=735
-permalink: /macbook-air-app-install
+path: /macbook-air-app-install
 dsq_thread_id:
   - "1995259545"
 image: /wp/images/2013/11/IMG_1593-500x5001-e1385313381165.jpg

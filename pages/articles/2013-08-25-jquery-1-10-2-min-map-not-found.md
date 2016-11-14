@@ -5,7 +5,7 @@ date: 2013-08-25T00:39:22+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=583
-permalink: /jquery-1-10-2-min-map-not-found
+path: /jquery-1-10-2-min-map-not-found
 dsq_thread_id:
   - "1638659893"
 categories:

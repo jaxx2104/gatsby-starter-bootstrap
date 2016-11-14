@@ -5,7 +5,7 @@ date: 2013-06-16T15:48:24+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=433
-permalink: /the-designers-republic
+path: /the-designers-republic
 dsq_thread_id:
   - "1404742308"
 image: /wp/images/2013/06/tumblr_m8300lKnBF1r67jsuo2_500.gif

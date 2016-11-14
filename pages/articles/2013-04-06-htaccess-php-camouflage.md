@@ -5,7 +5,7 @@ date: 2013-04-06T23:56:43+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=119
-permalink: /htaccess-php-camouflage
+path: /htaccess-php-camouflage
 dsq_thread_id:
   - "1191076854"
 image: /wp/images/2013/04/3402955869_5c79c8c7ef.jpg

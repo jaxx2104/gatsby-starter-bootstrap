@@ -5,7 +5,7 @@ date: 2014-12-05T02:58:08+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=1068
-permalink: /google-tagmanager
+path: /google-tagmanager
 image: /wp/images/2014/12/Google-Tag-Manager-1.png
 categories:
   - Google

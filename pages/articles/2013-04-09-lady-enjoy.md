@@ -5,7 +5,7 @@ date: 2013-04-09T23:35:13+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=144
-permalink: /lady-enjoy
+path: /lady-enjoy
 dsq_thread_id:
   - "1376471558"
 categories:

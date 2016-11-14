@@ -5,7 +5,7 @@ date: 2013-04-14T00:17:29+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=147
-permalink: /mamp-mysql-terminal
+path: /mamp-mysql-terminal
 dsq_thread_id:
   - "1212655925"
 categories:

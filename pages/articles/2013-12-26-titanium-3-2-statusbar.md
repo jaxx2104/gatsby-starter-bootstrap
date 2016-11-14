@@ -5,7 +5,7 @@ date: 2013-12-26T09:07:10+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=820
-permalink: /titanium-3-2-statusbar
+path: /titanium-3-2-statusbar
 dsq_thread_id:
   - "2093273586"
 categories:

@@ -5,7 +5,7 @@ date: 2013-05-23T22:43:07+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=388
-permalink: /php-explode-spilit-replace
+path: /php-explode-spilit-replace
 dsq_thread_id:
   - "1310299215"
 image: /wp/images/2013/09/phplogo-500x3261.png

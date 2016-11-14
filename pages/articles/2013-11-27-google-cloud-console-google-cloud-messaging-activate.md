@@ -5,7 +5,7 @@ date: 2013-11-27T01:40:45+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=758
-permalink: /google-cloud-console-google-cloud-messaging-activate
+path: /google-cloud-console-google-cloud-messaging-activate
 dsq_thread_id:
   - "2001604140"
 categories:

@@ -5,7 +5,7 @@ date: 2013-10-11T00:24:18+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=655
-permalink: /titanium-android-application-restart-is-required
+path: /titanium-android-application-restart-is-required
 dsq_thread_id:
   - "1843307779"
 image: /wp/images/2013/10/TitaniumSDK-500x5001.png

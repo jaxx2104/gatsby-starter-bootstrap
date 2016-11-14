@@ -5,7 +5,7 @@ date: 2013-08-20T00:57:59+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=572
-permalink: /php-header-utf-8
+path: /php-header-utf-8
 dsq_thread_id:
   - "1617898710"
 categories:

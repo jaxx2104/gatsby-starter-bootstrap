@@ -5,7 +5,7 @@ date: 2014-10-23T01:42:18+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=1030
-permalink: /htaccess-rewrite
+path: /htaccess-rewrite
 categories:
   - Apache
 tags:

@@ -5,7 +5,7 @@ date: 2013-12-05T00:56:38+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=798
-permalink: /centos-lamp-wordpress-step
+path: /centos-lamp-wordpress-step
 dsq_thread_id:
   - "2024174432"
 categories:

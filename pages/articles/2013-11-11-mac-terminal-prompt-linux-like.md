@@ -5,7 +5,7 @@ date: 2013-11-11T00:13:03+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=705
-permalink: /mac-terminal-prompt-linux-like
+path: /mac-terminal-prompt-linux-like
 dsq_thread_id:
   - "1953492079"
 categories:

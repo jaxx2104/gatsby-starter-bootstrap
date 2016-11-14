@@ -5,7 +5,7 @@ date: 2013-11-22T01:46:33+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=730
-permalink: /ti-filesystem-ios-android
+path: /ti-filesystem-ios-android
 dsq_thread_id:
   - "1986276865"
 categories:

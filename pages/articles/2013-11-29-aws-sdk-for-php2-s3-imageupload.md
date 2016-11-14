@@ -5,7 +5,7 @@ date: 2013-11-29T23:58:21+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=763
-permalink: /aws-sdk-for-php2-s3-imageupload
+path: /aws-sdk-for-php2-s3-imageupload
 dsq_thread_id:
   - "2010092722"
 categories:

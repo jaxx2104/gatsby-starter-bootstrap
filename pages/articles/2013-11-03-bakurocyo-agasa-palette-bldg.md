@@ -5,7 +5,7 @@ date: 2013-11-03T01:16:24+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=683
-permalink: /bakurocyo-agasa-palette-bldg
+path: /bakurocyo-agasa-palette-bldg
 dsq_thread_id:
   - "1930066224"
 image: /wp/images/2013/11/IMG_1531-500x5001.jpg

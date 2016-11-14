@@ -5,7 +5,7 @@ date: 2013-09-14T20:34:28+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=647
-permalink: /wordcamp-tokyo-2013-sticker
+path: /wordcamp-tokyo-2013-sticker
 dsq_thread_id:
   - "1758953914"
 image: /wp/images/2013/09/jpeg-1-500x5001.jpeg

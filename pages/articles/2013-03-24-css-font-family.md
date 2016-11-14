@@ -5,7 +5,7 @@ date: 2013-03-24T19:04:01+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=15
-permalink: /css-font-family
+path: /css-font-family
 dsq_thread_id:
   - "1161520382"
 categories:

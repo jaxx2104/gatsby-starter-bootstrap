@@ -5,7 +5,7 @@ date: 2013-08-08T23:39:20+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=547
-permalink: /travel-nara
+path: /travel-nara
 dsq_thread_id:
   - "1585115536"
 image: /wp/images/2013/08/68bc691e001911e3815722000aaa049c_7.jpg

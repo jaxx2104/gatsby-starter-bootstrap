@@ -5,7 +5,7 @@ date: 2013-06-17T23:32:27+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=445
-permalink: /google-adsense-responsive
+path: /google-adsense-responsive
 dsq_thread_id:
   - "1407552097"
 categories:

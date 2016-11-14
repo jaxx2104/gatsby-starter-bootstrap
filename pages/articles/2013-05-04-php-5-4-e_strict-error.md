@@ -5,7 +5,7 @@ date: 2013-05-04T17:08:05+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=319
-permalink: /php-5-4-e_strict-error
+path: /php-5-4-e_strict-error
 dsq_thread_id:
   - "1260311375"
 image: /wp/images/2013/09/phplogo-500x326.png

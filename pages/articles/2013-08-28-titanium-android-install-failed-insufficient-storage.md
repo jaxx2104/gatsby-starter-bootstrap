@@ -5,7 +5,7 @@ date: 2013-08-28T02:11:06+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=596
-permalink: /titanium-android-install-failed-insufficient-storage
+path: /titanium-android-install-failed-insufficient-storage
 dsq_thread_id:
   - "1655495683"
 categories:

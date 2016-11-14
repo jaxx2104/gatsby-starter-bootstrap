@@ -5,7 +5,7 @@ date: 2013-08-01T00:56:19+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=501
-permalink: /wordpress-theme
+path: /wordpress-theme
 dsq_thread_id:
   - "1551809322"
 image: /wp/images/2013/08/IMG_1001.jpg

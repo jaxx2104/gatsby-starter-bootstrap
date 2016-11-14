@@ -5,7 +5,7 @@ date: 2013-08-12T23:34:37+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=561
-permalink: /wordpress-plugin
+path: /wordpress-plugin
 dsq_thread_id:
   - "1600636335"
 categories:

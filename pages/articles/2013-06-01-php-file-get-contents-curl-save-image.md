@@ -5,7 +5,7 @@ date: 2013-06-01T00:05:04+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=398
-permalink: /php-file-get-contents-curl-save-image
+path: /php-file-get-contents-curl-save-image
 dsq_thread_id:
   - "1344249080"
 image: /wp/images/2013/09/2f1ef28cdb2a163186dcd87d21f60ea8-500x312.png

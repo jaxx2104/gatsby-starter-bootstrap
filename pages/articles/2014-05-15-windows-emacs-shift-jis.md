@@ -5,7 +5,7 @@ date: 2014-05-15T02:02:42+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=956
-permalink: /windows-emacs-shift-jis
+path: /windows-emacs-shift-jis
 categories:
   - Emacs
 tags:

@@ -5,7 +5,7 @@ date: 2014-10-21T00:38:26+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=1019
-permalink: /php_html_decode
+path: /php_html_decode
 categories:
   - PHP
 tags:

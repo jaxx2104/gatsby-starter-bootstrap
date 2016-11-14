@@ -5,7 +5,7 @@ date: 2016-07-20T09:02:29+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=1402
-permalink: /homekit-irmagician
+path: /homekit-irmagician
 image: /wp/images/2016/07/e434d04ea420ba5f36d8a21409577ea2.gif
 categories:
   - iOS

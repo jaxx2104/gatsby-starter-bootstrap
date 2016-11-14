@@ -5,7 +5,7 @@ date: 2014-08-02T11:44:09+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=962
-permalink: /preg_not_match
+path: /preg_not_match
 categories:
   - 正規表現
 ---

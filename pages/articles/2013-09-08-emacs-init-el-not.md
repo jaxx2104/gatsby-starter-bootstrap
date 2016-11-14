@@ -5,7 +5,7 @@ date: 2013-09-08T12:48:17+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=617
-permalink: /emacs-init-el-not
+path: /emacs-init-el-not
 dsq_thread_id:
   - "1730068840"
 image: /wp/images/2013/09/emacs_initel-500x5001.png

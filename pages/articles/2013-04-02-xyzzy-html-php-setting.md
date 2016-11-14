@@ -5,7 +5,7 @@ date: 2013-04-02T23:35:00+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=80
-permalink: /xyzzy-html-php-setting
+path: /xyzzy-html-php-setting
 dsq_thread_id:
   - "1182081508"
 image: /wp/images/2013/09/xyzzy-e1364919322419-1024x617.png

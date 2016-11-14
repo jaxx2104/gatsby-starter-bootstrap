@@ -5,7 +5,7 @@ date: 2013-09-05T00:39:33+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=604
-permalink: /iphoto-photobook
+path: /iphoto-photobook
 dsq_thread_id:
   - "1709971239"
 image: /wp/images/2013/09/af7f052ca06f2b0bce7cd562ab0ef139.png

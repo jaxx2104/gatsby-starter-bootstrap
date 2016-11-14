@@ -5,7 +5,7 @@ date: 2014-02-10T21:48:17+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=887
-permalink: /jquery-scroll-button
+path: /jquery-scroll-button
 categories:
   - JavaScript
 ---

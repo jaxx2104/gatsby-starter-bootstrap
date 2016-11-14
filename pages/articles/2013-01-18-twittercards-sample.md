@@ -5,7 +5,7 @@ date: 2013-01-18T01:37:14+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=384
-permalink: /twittercards-sample
+path: /twittercards-sample
 dsq_thread_id:
   - "1294895059"
 image: /wp/images/2013/04/3402955869_5c79c8c7ef.jpg

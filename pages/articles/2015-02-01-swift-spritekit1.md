@@ -5,7 +5,7 @@ date: 2015-02-01T15:10:50+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=1168
-permalink: /swift-spritekit1
+path: /swift-spritekit1
 image: /wp/images/2015/01/swift-logo-hero-1.jpg
 categories:
   - iOS

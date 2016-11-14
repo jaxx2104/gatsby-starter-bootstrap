@@ -5,7 +5,7 @@ date: 2014-05-11T23:27:36+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=945
-permalink: /mysql-server-has-gone-away
+path: /mysql-server-has-gone-away
 categories:
   - MySQL
   - PHP

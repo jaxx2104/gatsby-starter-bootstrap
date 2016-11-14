@@ -5,7 +5,7 @@ date: 2014-12-13T03:59:22+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=1067
-permalink: /titanium-app-ref
+path: /titanium-app-ref
 image: /wp/images/2014/12/b0edb59d97976fb1c698b9997460f6e3-e1458137465824.jpg
 categories:
   - Alloy

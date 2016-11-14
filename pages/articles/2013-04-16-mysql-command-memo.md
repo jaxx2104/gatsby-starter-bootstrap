@@ -5,7 +5,7 @@ date: 2013-04-16T21:34:56+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=170
-permalink: /mysql-command-memo
+path: /mysql-command-memo
 dsq_thread_id:
   - "1215041451"
 image: /wp/images/2013/09/MySQL-01-500x312.png

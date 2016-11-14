@@ -5,7 +5,7 @@ date: 2016-03-11T00:41:12+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=1299
-permalink: /node-js-install-update
+path: /node-js-install-update
 image: /wp/images/2016/03/nodejs-image-processing-600x300-1.png
 categories:
   - CentOS

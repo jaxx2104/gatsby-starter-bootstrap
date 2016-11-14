@@ -5,7 +5,7 @@ date: 2014-10-30T23:06:40+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=1043
-permalink: /tmhoauth-twitter
+path: /tmhoauth-twitter
 categories:
   - PHP
 tags:

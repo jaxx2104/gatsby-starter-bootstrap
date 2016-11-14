@@ -5,7 +5,7 @@ date: 2013-04-19T00:52:25+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=221
-permalink: /twitterapi-v1-1-php-library
+path: /twitterapi-v1-1-php-library
 dsq_thread_id:
   - "1221874753"
 categories:

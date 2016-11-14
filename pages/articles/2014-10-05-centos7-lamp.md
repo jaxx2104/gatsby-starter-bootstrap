@@ -5,7 +5,7 @@ date: 2014-10-05T15:23:17+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=988
-permalink: /centos7-lamp
+path: /centos7-lamp
 image: /wp/images/2014/10/centos-500x1341.png
 categories:
   - Apache

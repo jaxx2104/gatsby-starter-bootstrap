@@ -5,7 +5,7 @@ date: 2013-11-21T02:48:24+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=715
-permalink: /titanium-get-device-os-version
+path: /titanium-get-device-os-version
 dsq_thread_id:
   - "2001577798"
 image: /wp/images/2013/11/f19313ab36c560af5c9a4d02c866846d-500x4571.jpg

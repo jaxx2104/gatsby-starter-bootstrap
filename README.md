@@ -1,13 +1,11 @@
-# Lumen
+# Inazuma
 
-Gatsby starter for creating a blog
+Gatsby starter for bootstrap a blog
 
 ## Features
-+ Inline CSS.
-+ Clean and extensible code.
-+ Six simple components: SiteSidebar, SiteNav, SiteLinks, SitePost, SitePage, ReadNext.
-+ [peterramsing/lost](https://github.com/peterramsing/lost) as a base for Grid.
-+ [matejlatin/Gutenberg](https://github.com/matejlatin/Gutenberg) as a base for Typography.
++ Single column layout
++ Simple components: SiteNavi, SitePost, SitePage.
++ [Twitter Bootstrap](https://github.com/twbs/bootstrap) css framework.
 
 ## Installing
 Install this starter (assuming Gatsby is installed) by running from your CLI:
@@ -17,10 +15,6 @@ Install this starter (assuming Gatsby is installed) by running from your CLI:
 `gatsby develop`
 
 ![](http://i.imgur.com/422y5GV.png)
-
-## Ports
-
-[Statinamic port](https://github.com/thangngoc89/statinamic-theme-lumen) by [Khoa Nguyen](https://github.com/thangngoc89)
 
 ## License
 The MIT license.

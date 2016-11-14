@@ -5,7 +5,7 @@ date: 2013-05-13T23:43:32+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=367
-permalink: /yurari-weekend
+path: /yurari-weekend
 dsq_thread_id:
   - "1285341552"
 image: /wp/images/2013/09/ebf0728aec3d1724bf18c81aa68767a7-500x500.jpg

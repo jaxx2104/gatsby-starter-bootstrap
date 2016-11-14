@@ -5,7 +5,7 @@ date: 2013-04-29T01:42:08+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=286
-permalink: /sakura-vps
+path: /sakura-vps
 dsq_thread_id:
   - "1255348091"
 image: /wp/images/2013/09/vps-01-011-500x312.png

@@ -5,7 +5,7 @@ date: 2014-01-11T23:21:37+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=850
-permalink: /webview-user-agent
+path: /webview-user-agent
 dsq_thread_id:
   - "2108496253"
 categories:

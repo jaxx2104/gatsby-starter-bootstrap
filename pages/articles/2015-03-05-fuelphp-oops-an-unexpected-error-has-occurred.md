@@ -5,7 +5,7 @@ date: 2015-03-05T21:50:23+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=1210
-permalink: /fuelphp-oops-an-unexpected-error-has-occurred
+path: /fuelphp-oops-an-unexpected-error-has-occurred
 image: /wp/images/2015/03/1415367437FuelPHP-800x3231.jpg
 categories:
   - FuelPHP

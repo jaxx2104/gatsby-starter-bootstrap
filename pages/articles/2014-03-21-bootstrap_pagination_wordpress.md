@@ -5,7 +5,7 @@ date: 2014-03-21T12:28:51+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=915
-permalink: /bootstrap_pagination_wordpress
+path: /bootstrap_pagination_wordpress
 image: /wp/images/2014/03/pagenation-01-500x3751.png
 categories:
   - PHP

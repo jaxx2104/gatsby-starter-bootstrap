@@ -5,7 +5,7 @@ date: 2013-05-16T22:36:35+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/wp/?p=370
-permalink: /mysql-select
+path: /mysql-select
 dsq_thread_id:
   - "1292386972"
 image: /wp/images/2013/09/MySQL-01-500x3121.png

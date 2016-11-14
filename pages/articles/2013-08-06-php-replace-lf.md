@@ -5,7 +5,7 @@ date: 2013-08-06T00:22:48+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=530
-permalink: /php-replace-lf
+path: /php-replace-lf
 dsq_thread_id:
   - "1572526481"
 image: /wp/images/2013/09/IMG_1003-500x500.jpg

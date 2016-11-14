@@ -5,7 +5,7 @@ date: 2014-04-28T01:36:33+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=933
-permalink: /ios7_ui_icon_size
+path: /ios7_ui_icon_size
 categories:
   - iOS
 tags:

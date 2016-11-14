@@ -5,7 +5,7 @@ date: 2014-03-02T17:14:05+00:00
 author: jaxx2104
 layout: post
 guid: http://jaxx2104.info/?p=899
-permalink: /ios-safari-evernote
+path: /ios-safari-evernote
 image: /wp/images/2014/03/60008d9b64bb36ff4a6fd973c45bfcea-500x3871.png
 categories:
   - iOS
