@@ -1,20 +1,23 @@
-# Inazuma
+# Gatstrap
 
 Gatsby starter for bootstrap a blog
+
+![](http://i.imgur.com/SwE51Ib.png)
 
 ## Features
 + Single column layout
 + Simple components: SiteNavi, SitePost, SitePage.
 + [Twitter Bootstrap](https://github.com/twbs/bootstrap) css framework.
 
-## Installing
+## Installation
 Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new lumen https://github.com/wpioneer/gatsby-starter-lumen`
+`gatsby new gatstrap https://github.com/jaxx2104/gatstrap`
 
-## Running in development
+
+## Usage
+develop
 `gatsby develop`
 
-![](http://imgur.com/a/1fu5u)
 
 ## License
 The MIT license.
