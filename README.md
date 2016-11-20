@@ -11,7 +11,7 @@ Gatsby starter for bootstrap a blog
 
 ## Installation
 Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatstrap https://github.com/jaxx2104/gatstrap`
+`gatsby new gatstrap https://github.com/jaxx2104/gatsby-starter-bootstrap`
 
 
 ## Usage
@@ -22,7 +22,7 @@ develop
 ## License
 The MIT license.
 
-Copyright (c) 2016 Alexandr Shelepenok [ashk.io](http://ashk.io)
+Copyright (c) 2016 Futoshi Iwashita [jaxx2104.info](https://jaxx2104.info/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

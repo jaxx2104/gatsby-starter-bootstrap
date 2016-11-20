@@ -111,13 +111,13 @@ image: /wp/images/2014/12/b0edb59d97976fb1c698b9997460f6e3-e1458137465824.jpg
     <div class="row">
       <div class="col-md-6 wow slideInLeft" data-wow-duration="1.0s">
         <a href="/yomu/">
-          <img src="/images/2016/03/ps-1-600x600.png" alt="ps" class="img-rounded img-responsive aligncenter size-medium wp-image-1260" srcset="/images/2016/03/ps-1-150x150.png 150w, /images/2016/03/ps-1-600x600.png 600w, /images/2016/03/ps-1-768x768.png 768w, /images/2016/03/ps-1-800x800.png 800w, /images/2016/03/ps-1.png 1000w" sizes="(max-width: 600px) 100vw, 600px" />
+          <img src="yomu.png" />
         </a>
         <p>Yomu</p>
       </div>
       <div class="col-md-6 wow slideInRight" data-wow-duration="1.0s">
         <a href="/detector/">
-          <img src="/images/2016/03/ps1-600x600.png" class="img-rounded img-responsive aligncenter size-medium wp-image-1261" />
+          <img src="detector.png" />
         </a>
         <p>Detector</p>
       </div>

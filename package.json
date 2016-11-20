@@ -1,6 +1,6 @@
 {
-  "version": "1.1.0",
-  "name": "gatsby-starter-lumen",
+  "version": "0.1.0",
+  "name": "gatsby-starter-bootstrap",
   "description": "Simple starter for Gatsby",
   "main": "n/a",
   "scripts": {
@@ -16,10 +16,10 @@
   },
   "keywords": [
     "gatsby",
-    "lumen",
+    "gatstrap",
     "starter"
   ],
-  "author": "Alexander Shelepenok <a.shelepenok@gmail.com>",
+  "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -38,6 +38,7 @@
     "react-dom": "^15.3.0",
     "react-ga": "^2.1.2",
     "react-router": "^2.6.1",
+    "react-share": "^1.11.0",
     "safe-access": "^0.1.0",
     "underscore.string": "^3.2.3"
   },
@@ -59,12 +60,12 @@
     "node-sass": "^3.11.2",
     "null-loader": "^0.1.1",
     "postcss-loader": "^0.9.1",
+    "react-share": "^1.11.0",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.10",
     "rucksack-css": "^0.8.5",
     "style-loader": "^0.13.1",
-    "wow.js": "^1.2.2",
     "wowjs": "^1.1.3"
   }
 }

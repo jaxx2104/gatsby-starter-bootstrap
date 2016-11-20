@@ -8,7 +8,7 @@ path: "/detector"
 guid: http://jaxx2104.info/?page_id=1284
 image: /wp/images/2016/03/5-e1457620535813.jpg
 ---
-<section class="jumboimage" style="background-image: url('/images/2016/03/5-e1457620535813.jpg')">
+<section class="jumboimage" style="background-image: url('bg.jpg')">
   <div class="container">
     <h1 class="display-1">Detector</h1>
   </div>
@@ -42,10 +42,10 @@ image: /wp/images/2016/03/5-e1457620535813.jpg
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <img src="/images/2016/03/ps1-600x600.png" alt="ps1" class="img-rounded img-responsive aligncenter size-medium wp-image-1291" srcset="/images/2016/03/ps1-600x600.png 600w, /images/2016/03/ps1-150x150.png 150w, /images/2016/03/ps1-768x768.png 768w, /images/2016/03/ps1-800x800.png 800w, /images/2016/03/ps1.png 1000w" sizes="(max-width: 600px) 100vw, 600px" />
+        <img src="one.png" />
       </div>
       <div class="col-md-6">
-        <img src="/images/2016/03/pn2-600x600.png" alt="pn2" class="img-rounded img-responsive aligncenter size-medium wp-image-1293" srcset="/images/2016/03/pn2-600x600.png 600w, /images/2016/03/pn2-150x150.png 150w, /images/2016/03/pn2-768x768.png 768w, /images/2016/03/pn2-800x800.png 800w, /images/2016/03/pn2.png 1000w" sizes="(max-width: 600px) 100vw, 600px" />
+        <img src="two.png" />
       </div>
       </p>
     </div>

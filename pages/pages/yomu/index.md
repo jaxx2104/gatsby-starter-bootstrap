@@ -6,9 +6,9 @@ author: jaxx2104
 layout: page
 path: "/yomu"
 guid: http://jaxx2104.info/?page_id=1224
-image: /wp/images/2014/12/b0edb59d97976fb1c698b9997460f6e3-e1458137465824.jpg
+image: bg.jpg
 ---
-<section class="jumboimage" style="background-image: url('/images/2014/12/b0edb59d97976fb1c698b9997460f6e3-e1458137465824.jpg')">
+<section class="jumboimage" style="background-image: url('bg.jpg')">
     <h1 class="display-1">Yomu</h1>
 </section>
 
@@ -40,10 +40,10 @@ image: /wp/images/2014/12/b0edb59d97976fb1c698b9997460f6e3-e1458137465824.jpg
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <img src="/images/2016/03/ps-1-600x600.png" alt="ps" class="img-rounded img-responsive aligncenter size-medium wp-image-1260" srcset="/images/2016/03/ps-1-600x600.png 600w, /images/2016/03/ps-1-150x150.png 150w, /images/2016/03/ps-1-768x768.png 768w, /images/2016/03/ps-1-800x800.png 800w, /images/2016/03/ps-1.png 1000w" sizes="(max-width: 600px) 100vw, 600px" />
+        <img src="one.png" />
       </div>
       <div class="col-md-6">
-        <img src="/images/2016/03/ps2-1-600x600.png" alt="ps2" class="img-rounded img-responsive aligncenter size-medium wp-image-1261" srcset="/images/2016/03/ps2-1-600x600.png 600w, /images/2016/03/ps2-1-150x150.png 150w, /images/2016/03/ps2-1-768x768.png 768w, /images/2016/03/ps2-1-800x800.png 800w, /images/2016/03/ps2-1.png 1000w" sizes="(max-width: 600px) 100vw, 600px" />
+        <img src="two.png" />
       </div>
     </div>
   </div>

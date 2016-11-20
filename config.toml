@@ -2,13 +2,6 @@ siteTitle = "Gatstrap"
 siteDescr = "Gatsby starter for bootstrap a blog"
 siteAuthor = "jaxx2104"
 
-siteTelegramUrl = "#"
-siteTwitterUrl = "#"
-siteGithubUrl = "#"
-siteEmailUrl = "#"
-siteRssUrl = "#"
-siteVkUrl = "#"
-
+twitterId = "jaxx2104"
 googleAnalyticsId = ""
-
-linkPrefix = "/gatstrap"
+linkPrefix = "/gatsby-starter-bootstrap"

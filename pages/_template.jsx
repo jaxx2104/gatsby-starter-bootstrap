@@ -5,15 +5,13 @@ import { config } from 'config'
 import SiteNavi from '../components/SiteNavi'
 
 import '../static/css/reset.css'
-//import '../static/css/base.css'
-//import '../static/css/typography.css'
+import '../static/css/highlight.css'
 import '../static/scss/bootstrap.scss'
 import '../static/css/font-awesome.css'
 
 import '../static/css/animate.css'
 import '../static/scss/devicons.scss'
 import '../static/scss/test.scss'
-//import '../static/css/origin.css'
 
 //import WOW from 'wowjs';
 //var wow = new WOW.WOW()
