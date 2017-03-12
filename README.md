@@ -2,7 +2,7 @@
 
 Gatsby starter for bootstrap a blog
 
-![](http://i.imgur.com/SwE51Ib.png)
+![](http://i.imgur.com/SLW7Nb1.png)
 
 ## Features
 + Single column layout

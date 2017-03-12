@@ -6,9 +6,16 @@ import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import access from 'safe-access'
 import { config } from 'config'
-import SitePost from '../components/SitePost'
 
 class SiteIndex extends React.Component {
+
+    more(body, path) {
+        if (body.match("<!--more-->")) {
+            return <Link className='readmore' to={ prefixLink(path) }><span className="btn btn-outline-danger btn-block">MORE</span></Link>
+        }
+        return
+    }
+
     description(body) {
         var test = body.replace(/<blockquote>/g, '<blockquote class="blockquote">')
         if (test.match("<!--more-->")) {
@@ -37,7 +44,7 @@ class SiteIndex extends React.Component {
                 for (const i in categories) {
                     const c = categories[i]
                     category.push(
-                         <span className="tag tag-danger" key={i}>{ c }</span>
+                         <span className="badge badge-danger" key={i}>{ c }</span>
                     )
                 }
 
@@ -56,7 +63,7 @@ class SiteIndex extends React.Component {
                         { category }
                       </div>
                       <div className="page-content" dangerouslySetInnerHTML={ { __html: this.description(description) } } />
-                      <p><Link className='readmore' to={ prefixLink(page.path) }><span className="btn btn-outline-danger btn-block">続きを読む</span></Link></p>
+                      { this.more(description, page.path) }
                     </div>
                 )
             }

@@ -22,7 +22,7 @@ class SitePost extends React.Component {
         for (const i in post.categories) {
             const c = post.categories[i]
             category.push(
-                 <span className="tag tag-danger" key={i}>{ c }</span>
+                 <span className="badge badge-danger" key={i}>{ c }</span>
             )
         }
         return (
