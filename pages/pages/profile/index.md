@@ -17,10 +17,10 @@ image: /wp/images/2014/12/b0edb59d97976fb1c698b9997460f6e3-e1458137465824.jpg
     <h1>jaxx2104</h1>
     <p class="lead text-muted">コーラとバグが好き</p>
     <div class="service-box">
-        <a href="https://github.com/jaxx2104"><i class="fa fa-github wow bounceIn" data-wow-duration="2.0s"></i></a>
-        <a href="https://twitter.com/jaxx2104"><i class="fa fa fa-twitter wow bounceIn" data-wow-duration="2.0s"></i></a>
-        <a href="https://www.facebook.com/futoshi.iwashita"><i class="fa fa fa-facebook wow bounceIn" data-wow-duration="2.0s"></i></a>
-        <a href="http://jaxx2104.tumblr.com/"><i class="fa fa fa-tumblr wow bounceIn" data-wow-duration="2.0s"></i></a>
+        <a href=""><i class="fa fa-github wow bounceIn" data-wow-duration="2.0s"></i></a>
+        <a href=""><i class="fa fa fa-twitter wow bounceIn" data-wow-duration="2.0s"></i></a>
+        <a href=""><i class="fa fa fa-facebook wow bounceIn" data-wow-duration="2.0s"></i></a>
+        <a href=""><i class="fa fa fa-tumblr wow bounceIn" data-wow-duration="2.0s"></i></a>
     </div>
   </div>
 </section>
@@ -93,7 +93,7 @@ image: /wp/images/2014/12/b0edb59d97976fb1c698b9997460f6e3-e1458137465824.jpg
   </div>
   <div class="container">
     <div class="service-box">
-    <p>学生時代のバイトをきっかけにwebエンジニアとしてスタート。主にフロントエンドを担当していますが、サーバーサイドの開発からデータ解析までやっています。趣味は Node.js を使ったIoTとアプリの開発です。</p>
+    <p>sampletext</p>
     </div>
   </div>
 </section>
@@ -110,46 +110,26 @@ image: /wp/images/2014/12/b0edb59d97976fb1c698b9997460f6e3-e1458137465824.jpg
   <div class="container">
     <div class="row">
       <div class="col-md-6 wow slideInLeft" data-wow-duration="1.0s">
-        <a href="/yomu/">
-          <img src="yomu.png" />
-        </a>
-        <p>Yomu</p>
+        <p>image1</p>
       </div>
       <div class="col-md-6 wow slideInRight" data-wow-duration="1.0s">
-        <a href="/detector/">
-          <img src="detector.png" />
-        </a>
-        <p>Detector</p>
+        <p>image2</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="repos" class="bg-danger">
+<section id="repos">
   <div class="container">
     <div class="row">
         <div class="col-md-6 ">
             <h2 class="section-heading">Repositories</h2>
         </div>
         <div class="col-md-6 text-xs-left">
-            <li><a href="https://github.com/jaxx2104/node-sample">node-sample</a></li>
-            <li><a href="https://github.com/jaxx2104/irm">irm</a></li>
-            <li><a href="https://github.com/jaxx2104/mt-dataapi-php">mt-dataapi-php</a></li>
+            <li><a href="">sample</a></li>
+            <li><a href="">sample</a></li>
+            <li><a href="">sample</a></li>
         </div>
-    </div>
-  </div>
-</section>
-
-<section id="features">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 ">
-        <img src="old.png" class="img-rounded img-responsive aligncenter" title="" alt="" />
-      </div>
-      <div class="col-md-6">
-        <h2 class="section-heading">Degree Works</h2>
-        <p>過去の制作は<a href="https://old.jaxx2104.info/">こちら</a></p>
-      </div>
     </div>
   </div>
 </section>
