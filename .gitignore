@@ -5,3 +5,4 @@ public
 pages/.manifest
 .idea
 .vscode
+.DS_Store
