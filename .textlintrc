@@ -1,0 +1,10 @@
+{
+  "filters": {},
+  "rules": {
+    "preset-japanese": true,
+    "spellcheck-tech-word": true,
+    "prh": {
+        "rulePaths" :["utils/dbpress.yml"]
+    }
+  }
+}
