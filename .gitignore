@@ -3,6 +3,7 @@ public
 
 .gatsby-context.js
 pages/.manifest
+.cache
 .idea
 .vscode
 .DS_Store
