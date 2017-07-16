@@ -1,20 +1,20 @@
-import React from "react"
-import Helmet from "react-helmet"
-import Link from "gatsby-link"
-import get from "lodash/get"
+import React from 'react'
+import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
+import get from 'lodash/get'
 
-import SitePost from "../components/SitePost"
-import SitePage from "../components/SitePage"
+import SitePost from '../components/SitePost'
+import SitePage from '../components/SitePage'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.post
     const site = this.props.data.site
-    const siteTitle = get(this.props, "data.site.meta.title")
+    const siteTitle = get(this.props, 'data.site.meta.title')
 
-    let template = ""
-    if (post.frontmatter.layout != "page") {
-      template = <SitePost data={post} site={site} isIndex={false}></SitePost>
+    let template = ''
+    if (post.frontmatter.layout != 'page') {
+      template = <SitePost data={post} site={site} isIndex={false} />
     } else {
       template = <SitePage {...this.props} />
     }
@@ -37,13 +37,7 @@ export const pageQuery = graphql`
         author
       }
     }
-    post: markdownRemark(
-      frontmatter: {
-        path: {
-          eq: $path
-        }
-      }
-    ) {
+    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
       frontmatter {

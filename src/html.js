@@ -1,15 +1,15 @@
-import React from "react"
-import Helmet from "react-helmet"
+import React from 'react'
+import Helmet from 'react-helmet'
 
-import "normalize.css/normalize.css"
-import "animate.css/animate.css"
-import "font-awesome/css/font-awesome.css"
-import "devicons/css/devicons.css"
+import 'normalize.css/normalize.css'
+import 'animate.css/animate.css'
+import 'font-awesome/css/font-awesome.css'
+import 'devicons/css/devicons.css'
 
 let stylesStr
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === 'production') {
   try {
-    stylesStr = require("!raw-loader!../public/styles.css")
+    stylesStr = require('!raw-loader!../public/styles.css')
   } catch (e) {
     console.log(e)
   }
@@ -19,7 +19,7 @@ export default class HTML extends React.Component {
   render() {
     const head = Helmet.rewind()
     let css
-    if (process.env.NODE_ENV === "production") {
+    if (process.env.NODE_ENV === 'production') {
       css = (
         <style
           id="gatsby-inlined-css"
@@ -39,9 +39,9 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
           {css}
-          <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" ></script>
+          <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" />
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" />
         </head>
         <body>
           <div

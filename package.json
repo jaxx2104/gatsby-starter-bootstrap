@@ -1,20 +1,17 @@
 {
-  "name": "gatsby-starter-blog",
-  "description": "Starter Gatsby Blog",
+  "name": "gatsby-starter-bootstrap",
+  "description": "Simple starter for Gatsby",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
-  },
+  "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
   "dependencies": {
-    "babel-eslint": "^7.2.3",
-    "gatsby": "^1.2.0",
-    "gatsby-link": "^1.0.9",
+    "gatsby": "^1.0.1",
+    "gatsby-link": "^1.0.1",
     "gatsby-plugin-google-analytics": "^1.0.0",
     "gatsby-plugin-manifest": "^1.0.0",
     "gatsby-plugin-offline": "^1.0.0",
     "gatsby-plugin-preact": "^1.0.0",
-    "gatsby-plugin-react-helmet": "^1.0.0",
+    "gatsby-plugin-react-helmet": "^1.0.1",
+    "gatsby-plugin-sass": "^1.0.1",
     "gatsby-plugin-sharp": "^1.0.0",
     "gatsby-remark-copy-linked-files": "^1.0.0",
     "gatsby-remark-images": "^1.2.0",
@@ -26,18 +23,18 @@
     "gatsby-transformer-sharp": "^1.0.0",
     "lodash": "^4.15.0",
     "react-responsive-grid": "^0.3.3",
-    "react-typography": "^0.15.0",
-    "typography": "^0.15.8",
-    "typography-theme-wordpress-2016": "^0.15.1"
+    "react-typography": "^0.15.0"
   },
   "devDependencies": {
     "animate.css": "^3.5.2",
+    "babel-eslint": "^7.2.3",
     "bootstrap": "^4.0.0-alpha.6",
     "devicons": "^1.8.0",
     "eslint": "^4.2.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-prettier": "^2.1.2",
     "eslint-plugin-react": "^7.1.0",
     "font-awesome": "^4.7.0",
-    "gatsby-plugin-sass": "^1.0.1",
     "gh-pages": "^0.12.0",
     "moment": "^2.18.1",
     "normalize.css": "^7.0.0",
@@ -49,25 +46,21 @@
     "textlint-rule-prh": "^4.0.1",
     "textlint-rule-spellcheck-tech-word": "^5.0.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "gatstrap",
+    "starter"
   ],
   "license": "MIT",
   "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
   "scripts": {
-    "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "lint:text": "./node_modules/.bin/textlint src/pages/**/index.md",
-    "lint:textfix": "./node_modules/.bin/textlint --fix src/pages/**/index.md",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"pages/*.js\" \"utils/*.js\" \"wrappers/*.js\" \"html.js\"",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:text": "textlint src/pages/**/index.md",
+    "lint:textfix": "textlint --fix src/pages/**/index.md",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
