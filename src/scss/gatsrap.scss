@@ -1,0 +1,197 @@
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
+
+// Start with assigning color names to specific hex values.
+$white: #fff !default;
+$black: #000 !default;
+$red: #f44336 !default;
+$orange: #ff9800 !default;
+$yellow: #ffeb3b !default;
+$green: #8bc34a !default;
+$blue: #3f51b5 !default;
+$teal: #009688 !default;
+$pink: #e91e63 !default;
+$purple: #673ab7 !default;
+
+// Create grayscale
+$gray-dark: #292b2c !default;
+$gray: #464a4c !default;
+$gray-light: #636c72 !default;
+$gray-lighter: #eceeef !default;
+$gray-lightest: #f7f7f9 !default;
+
+// Reassign color vars to semantic color scheme
+$brand-primary: $red !default;
+$brand-success: $green !default;
+$brand-info: $teal !default;
+$brand-warning: $orange !default;
+$brand-danger: $red !default;
+$brand-inverse: $gray-dark !default;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-rounded: true !default;
+$enable-shadows: true !default;
+$enable-gradients: false !default;
+$enable-transitions: false !default;
+$enable-hover-media-query: false !default;
+$enable-grid-classes: true !default;
+$enable-print-styles: true !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (sm: 540px, md: 640px, lg: 740px, xl: 840px) !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white !default;
+$body-color: $gray !default;
+$inverse-bg: $gray-dark !default;
+$inverse-color: $gray-lighter !default;
+
+// Links
+//
+// Style anchor elements.
+$link-color: $brand-primary !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: none !default;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, YuGothic !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: 1.25rem !default;
+$font-size-sm: .875rem !default;
+$font-size-xs: .75rem !default;
+
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+$font-size-h1: 1.6rem !default;
+$font-size-h2: 1.4rem !default;
+$font-size-h3: 1.2rem !default;
+$font-size-h4: 1.1rem !default;
+$font-size-h5: 1.05rem !default;
+$font-size-h6: 1rem !default;
+
+// $headings-margin-bottom: ($spacer / 2) !default;
+$headings-font-family: inherit !default;
+$headings-font-weight: 600 !default;
+$headings-line-height: 1.1 !default;
+$headings-color: inherit !default;
+
+$display1-size: 6rem !default;
+$display2-size: 5.5rem !default;
+$display3-size: 4.5rem !default;
+$display4-size: 3.5rem !default;
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+blockquote a {
+  display: block;
+  word-break: break-word;
+}
+
+.articles {
+  padding-top: 40px;
+}
+
+.article-wrap {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.page-header {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  word-break: break-word;
+}
+
+.page-header h1 {
+  color: $gray-light;
+}
+
+.page-content {
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.page-content h2 {
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.page-content p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  margin-right: 3px;
+}
+
+a {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  color: #f05f40;
+}
+
+a:hover,
+a:focus {
+  color: #eb3812;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+time {
+  font-size: 0.75rem;
+  color: #ccc;
+  display: inline;
+  margin-right: 10px;
+}
+
+img {
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  max-width: 100%;
+}
+
+img:hover {
+  -webkit-animation: pulse 0.5s;
+  animation: pulse 0.5s;
+}
+
+hr {
+  border-color: #f05f40;
+  border-width: 3px;
+  max-width: 50px;
+}
+
+hr.light {
+  border-color: white;
+}

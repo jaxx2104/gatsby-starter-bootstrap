@@ -1,22 +1,47 @@
-const rucksack = require("rucksack-css")
-const lost = require("lost")
-const cssnext = require("postcss-cssnext")
+const _ = require('lodash')
+const Promise = require('bluebird')
+const path = require('path')
+const select = require('unist-util-select')
+const fs = require('fs-extra')
 
-exports.modifyWebpackConfig = function (config, env) {
-  config.merge({
-    postcss: [
-      lost(),
-      rucksack(),
-      cssnext({
-        browsers: [">1%", "last 2 versions"],
-      }),
-    ],
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { createPage } = boundActionCreators
+
+  return new Promise((resolve, reject) => {
+    const pages = []
+    const blogPost = path.resolve('./src/templates/blog-post.js')
+    resolve(
+      graphql(
+        `
+      {
+        allMarkdownRemark(limit: 1000) {
+          edges {
+            node {
+              frontmatter {
+                path
+              }
+            }
+          }
+        }
+      }
+    `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors)
+          reject(result.errors)
+        }
+
+        // Create blog posts pages.
+        _.each(result.data.allMarkdownRemark.edges, edge => {
+          createPage({
+            path: edge.node.frontmatter.path,
+            component: blogPost,
+            context: {
+              path: edge.node.frontmatter.path,
+            },
+          })
+        })
+      })
+    )
   })
-
-  config.loader("svg", {
-    test: /\.(svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-    loader: "file-loader",
-  })
-
-  return config
 }
