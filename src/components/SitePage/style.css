@@ -224,3 +224,7 @@ body {
 .bg-danger a {
     color: #fff;
 }
+
+i {
+    font-size: 64px
+}
