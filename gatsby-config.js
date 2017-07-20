@@ -3,7 +3,7 @@ module.exports = {
     title: 'Gatstrap',
     author: 'Jaxx2104',
   },
-  pathPrefix: '/gatsby-starter-bootstrap',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',

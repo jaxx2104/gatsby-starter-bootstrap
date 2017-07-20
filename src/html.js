@@ -34,6 +34,7 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
           {css}
+          <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
         </head>
         <body>
           <div
