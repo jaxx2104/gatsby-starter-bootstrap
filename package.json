@@ -58,7 +58,7 @@
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"pages/*.js\" \"utils/*.js\" \"wrappers/*.js\" \"html.js\"",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\" \"src/**/*.jsx\"",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "lint:text": "textlint src/pages/**/index.md",
     "lint:textfix": "textlint --fix src/pages/**/index.md",
