@@ -24,15 +24,6 @@ class Profile extends React.Component {
             <p className="lead text-muted">I love bug</p>
             <div>
               <a
-                ref="ghButton"
-                className="github-button"
-                href="https://github.com/jaxx2104"
-                aria-label="Follow @jaxx2104 on GitHub"
-              >
-                Follow @jaxx2104
-              </a>
-              &nbsp;
-              <a
                 ref="twButton"
                 href="https://twitter.com/jaxx2104"
                 className="twitter-follow-button"

@@ -8,6 +8,7 @@
     "gatsby-link": "^1.5.2",
     "gatsby-plugin-google-analytics": "^1.0.1",
     "gatsby-plugin-manifest": "^1.0.1",
+    "gatsby-plugin-nprogress": "^1.0.1",
     "gatsby-plugin-offline": "^1.0.1",
     "gatsby-plugin-preact": "^1.0.1",
     "gatsby-plugin-react-helmet": "^1.0.1",
@@ -22,7 +23,9 @@
     "gatsby-transformer-remark": "^1.1.0",
     "gatsby-transformer-sharp": "^1.5.0",
     "lodash": "^4.15.0",
+    "react-lazyload": "^2.2.7",
     "react-responsive-grid": "^0.3.4",
+    "react-tap-event-plugin": "^2.0.1",
     "react-typography": "^0.15.10"
   },
   "devDependencies": {
@@ -59,7 +62,7 @@
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\" \"src/**/*.jsx\"",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"pages/*.js\" \"utils/*.js\" \"wrappers/*.js\" \"**/*.jsx\" \"**/*.css\" \"**/*.scss\"",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "lint:text": "textlint src/pages/**/index.md",
     "lint:textfix": "textlint --fix src/pages/**/index.md",

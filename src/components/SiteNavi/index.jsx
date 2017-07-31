@@ -3,8 +3,7 @@ import Link from 'gatsby-link'
 
 class SiteNavi extends React.Component {
   render() {
-    const { location } = this.props
-    const { title } = this.props
+    const { location, title } = this.props
     return (
       <nav className="navbar sticky-top navbar-toggleable-sm navbar-inverse bg-danger">
         <button
