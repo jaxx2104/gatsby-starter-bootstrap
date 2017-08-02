@@ -3,11 +3,12 @@ import Link from 'gatsby-link'
 import { Container } from 'react-responsive-grid'
 import { siteMetadata } from '../../gatsby-config'
 import SiteNavi from '../components/SiteNavi'
+import 'bootstrap/dist/js/bootstrap'
 
 import '../scss/gatsrap.scss'
 import 'animate.css/animate.css'
 import 'font-awesome/css/font-awesome.css'
-import 'prismjs/themes/prism.css'
+import 'prismjs/themes/prism-okaidia.css'
 import 'devicon/devicon.min.css'
 
 class Template extends React.Component {
@@ -23,9 +24,6 @@ class Template extends React.Component {
 
   render() {
     const { location, children } = this.props
-    if (location.pathname === '/') {
-    } else {
-    }
     return (
       <div>
         <SiteNavi title={siteMetadata.title} {...this.props} />

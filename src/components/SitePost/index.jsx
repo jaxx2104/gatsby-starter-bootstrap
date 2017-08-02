@@ -43,16 +43,14 @@ class SitePost extends React.Component {
   }
 
   render() {
-    const post = this.props.data
-    const site = this.props.site
-    const isIndex = this.props.isIndex
+    const { site, data, isIndex } = this.props
 
-    const title = get(post, 'frontmatter.title')
-    const path = get(post, 'frontmatter.path')
-    const date = get(post, 'frontmatter.date')
-    const desc = get(post, 'frontmatter.description') || get(post, 'html')
+    const title = get(data, 'frontmatter.title')
+    const path = get(data, 'frontmatter.path')
+    const date = get(data, 'frontmatter.date')
+    const desc = get(data, 'frontmatter.description') || get(data, 'html')
     const cate =
-      get(post, 'frontmatter.category') || get(post, 'frontmatter.categories')
+      get(data, 'frontmatter.category') || get(data, 'frontmatter.categories')
 
     const categories = cate ? this.categories(cate) : ''
     const description = isIndex ? this.description(desc) : desc
