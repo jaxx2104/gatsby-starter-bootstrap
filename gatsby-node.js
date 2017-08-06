@@ -3,20 +3,6 @@ const Promise = require('bluebird')
 const path = require('path')
 const select = require('unist-util-select')
 const fs = require('fs-extra')
-const injectTapEventPlugin = require('react-tap-event-plugin')
-const webpack = require('webpack')
-
-injectTapEventPlugin()
-
-exports.modifyWebpackConfig = ({ config }) =>
-  config.plugin(`jQuery`, webpack.ProvidePlugin, [
-    {
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      Tether: 'tether',
-      'window.Tether': 'tether',
-    },
-  ])
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators

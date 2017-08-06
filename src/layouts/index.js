@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import { Container } from 'react-responsive-grid'
 import { siteMetadata } from '../../gatsby-config'
 import SiteNavi from '../components/SiteNavi'
-import 'bootstrap/dist/js/bootstrap'
 
 import '../scss/gatsrap.scss'
 import 'animate.css/animate.css'

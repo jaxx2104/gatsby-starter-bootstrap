@@ -2,10 +2,8 @@
 language: cpp
 sudo: false
 env:
-  - export NODE_VERSION="4"
   - export NODE_VERSION="5"
 os:
-  - linux
   - osx
 # pre-install to bring in the correct version of node via nvm
 before_install:
