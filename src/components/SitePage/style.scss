@@ -1,0 +1,57 @@
+section {
+  &.bg-dark,
+  &.bg-danger {
+    color: white;
+
+    .section-heading,
+    .text-muted,
+    a {
+      color: #fff;
+    }
+  }
+
+  &.bg-dark {
+    background-color: #222;
+  }
+
+  &.bg-danger {
+    background-color: #f05f40;
+  }
+
+  &.jumboimage {
+    background-size: cover;
+    background-position: center;
+
+    h1 {
+      color: rgba(255, 255, 255, 1.0);
+      font-weight: 700;
+      text-shadow: 0px 1px 8px rgba(100, 100, 100, 0.3);
+    }
+  }
+
+  hr {
+    border-color: #f05f40;
+    border-width: 3px;
+    max-width: 50px;
+
+    &.light {
+      border-color: white;
+    }
+  }
+
+  .section-heading {
+    margin-top: 0;
+    font-weight: 700;
+    font-family: "BasisGrotesqueProMonoRegular", 'andale mono', monospace;
+  }
+
+  .service-box {
+    max-width: 400px;
+    margin: 50px auto 0;
+
+    i {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+  }
+}

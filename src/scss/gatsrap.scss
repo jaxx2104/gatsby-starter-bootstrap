@@ -111,68 +111,13 @@ blockquote a {
   word-break: break-word;
 }
 
-.articles {
-  padding-top: 40px;
-}
-
-.article-wrap {
-  padding-bottom: 20px;
-  margin-bottom: 30px;
-}
-
-.page-header {
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #eee;
-  word-break: break-word;
-}
-
-.page-header h1 {
+h1 {
   color: $gray-light;
-}
-
-.page-content {
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-}
-
-.page-content h2 {
-  padding-top: 10px;
-  margin-bottom: 20px;
-}
-
-.page-content p {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.badge {
-  margin-right: 3px;
-}
-
-a {
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
-  color: #f05f40;
-}
-
-a:hover,
-a:focus {
-  color: #eb3812;
 }
 
 p {
   font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-time {
-  font-size: 0.75rem;
-  color: #ccc;
-  display: inline;
-  margin-right: 10px;
 }
 
 img {
@@ -186,12 +131,14 @@ img:hover {
   animation: pulse 0.5s;
 }
 
-hr {
-  border-color: #f05f40;
-  border-width: 3px;
-  max-width: 50px;
+section {
+  padding: 100px 0;
+  position: relative;
+  width: 100%;
+  min-height: 70%;
+  text-align: center;
 }
 
-hr.light {
-  border-color: white;
+.no-padding {
+  padding: 0;
 }

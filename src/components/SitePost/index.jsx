@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import size from 'lodash/size'
 import ReadNext from '../ReadNext'
+import './style.scss'
 
 class SitePost extends React.Component {
   more(body, path) {
@@ -56,7 +57,6 @@ class SitePost extends React.Component {
     const description = isIndex ? this.description(desc) : desc
     const more = isIndex ? this.more(desc, path) : ''
     const footer = isIndex ? '' : <ReadNext data={site} />
-
     return (
       <div className="container">
         <div className="articles col-md-12">

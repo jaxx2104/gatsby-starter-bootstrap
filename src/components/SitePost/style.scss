@@ -1,0 +1,38 @@
+.articles {
+  padding-top: 40px;
+
+  .article-wrap {
+    padding-bottom: 10px;
+
+    .page-header {
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      word-break: break-word;
+
+      .badge {
+        margin-right: 3px;
+      }
+
+      time {
+        font-size: 0.75rem;
+        color: #ccc;
+        display: inline;
+        margin-right: 10px;
+      }
+    }
+
+    .page-content {
+      padding-bottom: 10px;
+
+      h2 {
+        padding-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin: 20px 0;
+      }
+    }
+  }
+}
