@@ -10,7 +10,7 @@ class SitePost extends React.Component {
     if (body.match('<!--more-->')) {
       return (
         <Link className="readmore" to={path}>
-          <span className="btn btn-outline-danger btn-block">MORE</span>
+          <span className="btn btn-outline-primary btn-block">MORE</span>
         </Link>
       )
     }
@@ -35,7 +35,7 @@ class SitePost extends React.Component {
     const categories = []
     data.forEach((category, i) => {
       categories.push(
-        <span className="badge badge-danger" key={i}>
+        <span className="badge badge-primary text-white" key={i}>
           {category}
         </span>
       )
@@ -63,12 +63,8 @@ class SitePost extends React.Component {
           <div className="article-wrap" key={path}>
             <div className="page-header">
               <Link style={{ boxShadow: 'none' }} to={path}>
-                <h1>
-                  {title}
-                </h1>
-                <time dateTime={date}>
-                  {date}
-                </time>
+                <h1>{title}</h1>
+                <time dateTime={date}>{date}</time>
               </Link>
               {categories}
             </div>

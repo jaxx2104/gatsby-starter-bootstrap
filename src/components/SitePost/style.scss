@@ -1,3 +1,5 @@
+@import '../../scss/gatsrap.scss';
+
 .articles {
   padding-top: 40px;
 
@@ -7,16 +9,20 @@
     .page-header {
       padding-bottom: 10px;
       margin-bottom: 20px;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid $gray-200;
       word-break: break-word;
+
+      h1 {
+        color: $gray-600;
+      }
 
       .badge {
         margin-right: 3px;
       }
 
       time {
-        font-size: 0.75rem;
-        color: #ccc;
+        font-size: $font-size-xs;
+        color: $gray-500;
         display: inline;
         margin-right: 10px;
       }
@@ -32,6 +38,17 @@
 
       p {
         margin: 20px 0;
+      }
+
+      blockquote {
+        background-color: $gray-100;
+        border-left: 5px solid $gray-200;
+        padding: 0.25em 1.5em;
+
+        a {
+          display: block;
+          word-break: break-word;
+        }
       }
     }
   }

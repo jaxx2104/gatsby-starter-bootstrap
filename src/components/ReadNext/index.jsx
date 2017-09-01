@@ -11,7 +11,7 @@ class ReadNext extends React.Component {
 
     return (
       <div className="footer">
-        <hr />
+        <hr className="border-primary" />
         <p>
           {title}
           <Link to="/profile/">

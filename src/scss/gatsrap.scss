@@ -3,31 +3,45 @@
 // Grayscale and brand colors for use across Bootstrap.
 
 // Start with assigning color names to specific hex values.
-$white: #fff !default;
-$black: #000 !default;
-$red: #f44336 !default;
-$orange: #ff9800 !default;
-$yellow: #ffeb3b !default;
-$green: #8bc34a !default;
-$blue: #3f51b5 !default;
-$teal: #009688 !default;
-$pink: #e91e63 !default;
-$purple: #673ab7 !default;
+//
+// Color system
+//
 
-// Create grayscale
-$gray-dark: #292b2c !default;
-$gray: #464a4c !default;
-$gray-light: #636c72 !default;
-$gray-lighter: #eceeef !default;
-$gray-lightest: #f7f7f9 !default;
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$blue: #03a9f4 !default;
+$indigo: #3f51b5 !default;
+$purple: #673ab7 !default;
+$pink: #e91e63 !default;
+$red: #f44336 !default;
+$orange: #ff5722 !default;
+$yellow: #ffab00 !default;
+$green: #8bc34a !default;
+$teal: #009688 !default;
+$cyan: #00bcd4 !default;
 
 // Reassign color vars to semantic color scheme
-$brand-primary: $red !default;
-$brand-success: $green !default;
-$brand-info: $teal !default;
-$brand-warning: $orange !default;
-$brand-danger: $red !default;
-$brand-inverse: $gray-dark !default;
+$theme-colors: (
+    primary: $red,
+    secondary: $gray-600,
+    success: $green,
+    info: $cyan,
+    warning: $yellow,
+    danger: $red,
+    light: $gray-100,
+    dark: $gray-800
+  )
+  !default;
 
 // Options
 //
@@ -51,28 +65,31 @@ $container-max-widths: (sm: 540px, md: 640px, lg: 740px, xl: 840px) !default;
 // Settings for the `<body>` element.
 
 $body-bg: $white !default;
-$body-color: $gray !default;
-$inverse-bg: $gray-dark !default;
-$inverse-color: $gray-lighter !default;
+$body-color: $gray-700 !default;
+$inverse-bg: $gray-900 !default;
+$inverse-color: $gray-600 !default;
 
 // Links
 //
 // Style anchor elements.
-$link-color: $brand-primary !default;
 $link-decoration: none !default;
-$link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: none !default;
 
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont,
-  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, YuGothic !default;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol' !default;
+$font-family-monospace: 'BasisGrotesqueProMonoRegular', 'andale mono',
+  'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+  monospace !default;
+$font-family-base: $font-family-sans-serif !default;
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg: 1.25rem !default;
-$font-size-sm: .875rem !default;
-$font-size-xs: .75rem !default;
+$font-size-sm: 0.875rem !default;
+$font-size-xs: 0.75rem !default;
 
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
@@ -80,12 +97,12 @@ $font-weight-bold: bold !default;
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
 
-$font-size-h1: 1.6rem !default;
-$font-size-h2: 1.4rem !default;
-$font-size-h3: 1.2rem !default;
-$font-size-h4: 1.1rem !default;
-$font-size-h5: 1.05rem !default;
-$font-size-h6: 1rem !default;
+$h1-font-size: 1.6rem !default;
+$h2-font-size: 1.4rem !default;
+$h3-font-size: 1.2rem !default;
+$h4-font-size: 1.1rem !default;
+$h5-font-size: 1.05rem !default;
+$h6-font-size: 1rem !default;
 
 // $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family: inherit !default;
@@ -98,26 +115,19 @@ $display2-size: 5.5rem !default;
 $display3-size: 4.5rem !default;
 $display4-size: 3.5rem !default;
 
-@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
 
 html,
 body {
   height: 100%;
   width: 100%;
-}
-
-blockquote a {
-  display: block;
-  word-break: break-word;
-}
-
-h1 {
-  color: $gray-light;
+  -webkit-font-smoothing: antialiased;
 }
 
 p {
   font-size: 16px;
   line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 img {
@@ -129,16 +139,4 @@ img {
 img:hover {
   -webkit-animation: pulse 0.5s;
   animation: pulse 0.5s;
-}
-
-section {
-  padding: 100px 0;
-  position: relative;
-  width: 100%;
-  min-height: 70%;
-  text-align: center;
-}
-
-.no-padding {
-  padding: 0;
 }

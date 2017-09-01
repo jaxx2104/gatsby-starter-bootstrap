@@ -1,48 +1,31 @@
+@import '../../scss/gatsrap.scss';
+
 section {
-  &.bg-dark,
-  &.bg-danger {
-    color: white;
-
-    .section-heading,
-    .text-muted,
-    a {
-      color: #fff;
-    }
-  }
-
-  &.bg-dark {
-    background-color: #222;
-  }
-
-  &.bg-danger {
-    background-color: #f05f40;
-  }
+  padding: 100px 0;
 
   &.jumboimage {
     background-size: cover;
     background-position: center;
 
     h1 {
-      color: rgba(255, 255, 255, 1.0);
+      color: $white;
       font-weight: 700;
       text-shadow: 0px 1px 8px rgba(100, 100, 100, 0.3);
     }
   }
 
   hr {
-    border-color: #f05f40;
+    border-color: $red;
     border-width: 3px;
     max-width: 50px;
 
     &.light {
-      border-color: white;
+      border-color: $white;
     }
   }
 
   .section-heading {
-    margin-top: 0;
-    font-weight: 700;
-    font-family: "BasisGrotesqueProMonoRegular", 'andale mono', monospace;
+    font-family: $font-family-monospace;
   }
 
   .service-box {
@@ -50,7 +33,7 @@ section {
     margin: 50px auto 0;
 
     i {
-      font-size: 64px;
+      font-size: $display4-size;
       margin-bottom: 20px;
     }
   }

@@ -1,6 +1,8 @@
+@import '../../scss/gatsrap.scss';
+
 .footer {
   hr {
-    border-color: #f05f40;
+    border-color: $red;
     border-width: 3px;
     max-width: 50px;
   }
