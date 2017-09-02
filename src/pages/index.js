@@ -22,7 +22,7 @@ class BlogIndex extends React.Component {
       const path = get(data, 'post.path')
       if (layout === 'post' && path !== '/404/') {
         pageLinks.push(
-          <LazyLoad height={500} offset={100}>
+          <LazyLoad height={500} offset={100} key={i}>
             <SitePost data={data.post} site={site} isIndex={true} key={i} />
           </LazyLoad>
         )
