@@ -4,7 +4,7 @@ import { Container } from 'react-responsive-grid'
 import { siteMetadata } from '../../gatsby-config'
 import SiteNavi from '../components/SiteNavi'
 
-import '../scss/gatsrap.scss'
+import './gatsrap.scss'
 import 'animate.css/animate.css'
 import 'font-awesome/css/font-awesome.css'
 import 'prismjs/themes/prism-okaidia.css'

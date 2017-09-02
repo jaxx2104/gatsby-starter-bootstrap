@@ -29,3 +29,7 @@ Install this starter (assuming Gatsby is installed) by running from your CLI:
 ## Usage
 develop
 `gatsby develop`
+
+### Custom Theme
+`/src/layouts/gatsrap.css`
+
