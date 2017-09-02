@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import './style.scss'
 
 class SitePage extends React.Component {
   render() {

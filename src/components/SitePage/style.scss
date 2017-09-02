@@ -1,0 +1,40 @@
+@import '../../scss/gatsrap.scss';
+
+section {
+  padding: 100px 0;
+
+  &.jumboimage {
+    background-size: cover;
+    background-position: center;
+
+    h1 {
+      color: $white;
+      font-weight: 700;
+      text-shadow: 0px 1px 8px rgba(100, 100, 100, 0.3);
+    }
+  }
+
+  hr {
+    border-color: $red;
+    border-width: 3px;
+    max-width: 50px;
+
+    &.light {
+      border-color: $white;
+    }
+  }
+
+  .section-heading {
+    font-family: $font-family-monospace;
+  }
+
+  .service-box {
+    max-width: 400px;
+    margin: 50px auto 0;
+
+    i {
+      font-size: $display4-size;
+      margin-bottom: 20px;
+    }
+  }
+}

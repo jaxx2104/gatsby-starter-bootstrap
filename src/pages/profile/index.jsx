@@ -21,7 +21,7 @@ class Profile extends React.Component {
               width="120px"
             />
             <h1>jaxx2104</h1>
-            <p className="lead text-muted">I love bug</p>
+            <p className="lead text-muted">コーラとバグが好き</p>
             <div>
               <a
                 ref="twButton"
@@ -35,12 +35,12 @@ class Profile extends React.Component {
           </div>
         </section>
 
-        <section id="features" className="bg-danger text-center">
+        <section id="features" className="bg-primary text-white text-center">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
                 <h2 className="section-heading">SKIL</h2>
-                <hr className="primary" />
+                <hr className="border-white" />
               </div>
             </div>
           </div>
@@ -160,24 +160,33 @@ class Profile extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <h2 className="section-heading">Features </h2>
-                <hr className="primary" />
+                <h2 className="section-heading">Features</h2>
+                <hr className="border-primary" />
               </div>
             </div>
           </div>
           <div className="container">
-            <div className="service-box">
-              <p>sample text :D</p>
+            <div className="row justify-content-md-center">
+              <div className="col-lg-8">
+                <p>
+                  学生時代のバイトでWEBエンジニアになりました。<br />
+                  主にフロントエンドを仕事にしていますが、バックエンドの開発もやってます。
+                  趣味はNode.jsを使ったIoTとアプリの開発です。
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-danger text-center" id="concept">
+        <section
+          className="bg-primary text-white text-center color-inverse"
+          id="concept"
+        >
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <h2 className="section-heading">WORKS </h2>
-                <hr className="light" />
+                <h2 className="section-heading">WORKS</h2>
+                <hr className="border-white" />
               </div>
             </div>
           </div>
@@ -192,7 +201,7 @@ class Profile extends React.Component {
                   alt="work1"
                   className="rounded-circle mx-auto"
                 />
-                <p>work1</p>
+                <p>Yomu</p>
               </div>
               <div
                 className="col-md-6 wow slideInRight"
@@ -203,7 +212,7 @@ class Profile extends React.Component {
                   alt="work2"
                   className="rounded-circle mx-auto"
                 />
-                <p>work2</p>
+                <p>Detector</p>
               </div>
             </div>
           </div>
@@ -211,20 +220,49 @@ class Profile extends React.Component {
 
         <section id="repos">
           <div className="container">
-            <div className="row">
-              <div className="col-md-6 ">
+            <div className="row align-items-center">
+              <div className="col-md-6 text-center">
                 <h2 className="section-heading">Repositories</h2>
               </div>
-              <div className="col-md-6 text-xs-left">
+              <div className="col-md-6 text-left">
                 <li>
-                  <a href="">sample</a>
+                  <a href="https://github.com/jaxx2104/gatsby-starter-bootstrap">
+                    gatstrap
+                  </a>
                 </li>
                 <li>
-                  <a href="">sample</a>
+                  <a href="https://github.com/jaxx2104/gulp-sample">
+                    gulp-sample
+                  </a>
                 </li>
                 <li>
-                  <a href="">sample</a>
+                  <a href="https://github.com/jaxx2104/irm">irm</a>
                 </li>
+                <li>
+                  <a href="https://github.com/jaxx2104/mt-dataapi-php">
+                    mt-dataapi-php
+                  </a>
+                </li>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="features">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-md-6">
+                <img
+                  src={pathPrefix + '/img/work3.png'}
+                  className="img-rounded img-responsive"
+                  title=""
+                  alt=""
+                />
+              </div>
+              <div className="col-md-6 text-center align-middle">
+                <h2 className="section-heading">Degree Works</h2>
+                <p>
+                  過去の制作は<a href="https://old.jaxx2104.info/">こちら</a>
+                </p>
               </div>
             </div>
           </div>
