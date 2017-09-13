@@ -6,7 +6,7 @@
 
 Gatsby starter for bootstrap a blog
 
-![](http://i.imgur.com/Ox8As5P.png)
+![](https://i.imgur.com/Qcd3NwR.png)
 
 
 ## GatsbyJS v1
