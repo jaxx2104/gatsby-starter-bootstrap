@@ -1,7 +1,8 @@
-import React from 'react'
+import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import get from 'lodash/get'
+import React from 'react'
+import striptags from 'striptags'
 
 import SitePost from '../components/SitePost'
 import SitePage from '../components/SitePage'
@@ -22,7 +23,23 @@ class BlogPostTemplate extends React.Component {
     }
     return (
       <div>
-        <Helmet title={`${title} | ${siteTitle}`} />
+        <Helmet
+          title={`${title} | ${siteTitle}`}
+          meta={[
+            { name: 'twitter:card', content: 'summary' },
+            { name: 'twitter:site', content: `@${get(site, 'meta.twitter')}` },
+            { property: 'og:title', content: get(post, 'frontmatter.title') },
+            { property: 'og:type', content: 'article' },
+            {
+              property: 'og:description',
+              content: striptags(get(post, 'html')).substr(0, 200),
+            },
+            {
+              property: 'og:url',
+              content: get(site, 'meta.url') + get(post, 'frontmatter.path'),
+            },
+          ]}
+        />
         {template}
       </div>
     )
@@ -36,7 +53,10 @@ export const pageQuery = graphql`
     site {
       meta: siteMetadata {
         title
+        description
+        url
         author
+        twitter
       }
     }
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {

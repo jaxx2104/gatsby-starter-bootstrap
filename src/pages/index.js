@@ -31,7 +31,21 @@ class BlogIndex extends React.Component {
 
     return (
       <div>
-        <Helmet title={get(site, 'title')} />
+        <Helmet
+          title={get(site, 'title')}
+          meta={[
+            { name: 'twitter:card', content: 'summary' },
+            { name: 'twitter:site', content: `@${get(site, 'twitter')}` },
+            { property: 'og:title', content: get(site, 'title') },
+            { property: 'og:type', content: 'website' },
+            { property: 'og:description', content: get(site, 'description') },
+            { property: 'og:url', content: get(site, 'url') },
+            {
+              property: 'og:image',
+              content: `${get(site, 'url')}/img/profile.jpg`,
+            },
+          ]}
+        />
         {pageLinks}
       </div>
     )
@@ -45,7 +59,10 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
+        url
         author
+        twitter
       }
     }
     remark: allMarkdownRemark {

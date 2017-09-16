@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatstrap',
-    author: 'Jaxx2104',
+    description: 'Gatsby starter for bootstrap a blog',
+    url: 'https://jaxx2104.github.io/gatsby-starter-bootstrap',
+    author: 'jaxx2104',
+    twitter: 'jaxx2104',
   },
   pathPrefix: '/',
   plugins: [
@@ -42,7 +45,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: ``,
       },
     },
     'gatsby-plugin-offline',
