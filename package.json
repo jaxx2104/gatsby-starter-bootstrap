@@ -44,6 +44,7 @@
     "moment": "^2.18.1",
     "normalize.css": "^7.0.0",
     "prettier": "^1.7.0",
+    "striptags": "^3.1.0",
     "textlint": "^8.2.1",
     "textlint-rule-max-ten": "^2.0.3",
     "textlint-rule-no-mix-dearu-desumasu": "^3.0.3",
