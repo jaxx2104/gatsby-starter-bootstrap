@@ -57,10 +57,10 @@
   "keywords": ["gatsby", "gatstrap", "starter"],
   "license": "MIT",
   "lint-staged": {
-    "*.{js,jsx}": ["npm run format", "git add"],
-    "*.json": ["npm run format", "git add"],
-    "*.css": ["npm run format", "git add"],
-    "*.scss": ["npm run format", "git add"],
+    "*.{js,jsx}": ["prettier --write", "git add"],
+    "*.json": ["prettier --write", "git add"],
+    "*.css": ["prettier --write", "git add"],
+    "*.scss": ["prettier --write", "git add"],
     "*.md": ["npm run lint:textfix", "git add"]
   },
   "main": "n/a",
@@ -68,7 +68,7 @@
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write",
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "lint:text": "textlint src/pages/**/index.md",
     "lint:textfix": "textlint --fix src/pages/**/index.md",
