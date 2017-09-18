@@ -1,10 +1,10 @@
 {
   "name": "gatsby-starter-bootstrap",
   "description": "Simple starter for Gatsby",
-  "version": "1.9.33",
+  "version": "1.9.36",
   "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.33",
+    "gatsby": "^1.9.36",
     "gatsby-link": "^1.6.16",
     "gatsby-plugin-google-analytics": "^1.0.7",
     "gatsby-plugin-manifest": "^1.0.7",
@@ -34,7 +34,7 @@
     "bootstrap": "^4.0.0-beta",
     "devicon": "https://github.com/konpa/devicon.git#v2.2",
     "eslint": "^4.7.0",
-    "eslint-config-prettier": "^2.4.0",
+    "eslint-config-prettier": "^2.5.0",
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-react": "^7.3.0",
     "font-awesome": "^4.7.0",
