@@ -1,10 +1,11 @@
 {
   "filters": {},
   "rules": {
-    "preset-japanese": true,
-    "spellcheck-tech-word": true,
-    "prh": {
-        "rulePaths" :["utils/dbpress.yml"]
-    }
+    "preset-ja-spacing": {
+      "ja-space-between-half-and-full-width": {
+        "space": "always"
+      }
+    },
+    "preset-japanese": true
   }
 }
