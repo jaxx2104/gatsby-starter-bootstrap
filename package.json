@@ -50,14 +50,33 @@
     "textlint-rule-preset-japanese": "^1.3.4",
     "wowjs": "^1.1.3"
   },
-  "keywords": ["gatsby", "gatstrap", "starter"],
+  "keywords": [
+    "gatsby",
+    "gatstrap",
+    "starter"
+  ],
   "license": "MIT",
   "lint-staged": {
-    "*.{js,jsx}": ["prettier --write", "git add"],
-    "*.json": ["prettier --write", "git add"],
-    "*.css": ["prettier --write", "git add"],
-    "*.scss": ["prettier --write", "git add"],
-    "*.md": ["npm run lint:textfix", "git add"]
+    "*.{js,jsx}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.css": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.scss": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.md": [
+      "npm run lint:textfix",
+      "git add"
+    ]
   },
   "main": "n/a",
   "scripts": {
