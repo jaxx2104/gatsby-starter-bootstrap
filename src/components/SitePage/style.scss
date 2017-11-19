@@ -35,6 +35,37 @@ section {
     i {
       font-size: $display4-size;
       margin-bottom: 20px;
+
+      &[data-emergence='visible'] {
+        opacity: 1;
+        animation: bounceIn 2s;
+      }
+
+      &[data-emergence='hidden'] {
+        opacity: 0;
+      }
+    }
+  }
+
+  .slide-left {
+    &[data-emergence='visible'] {
+      opacity: 1;
+      animation: slideInLeft 1s;
+    }
+
+    &[data-emergence='hidden'] {
+      opacity: 0;
+    }
+  }
+
+  .slide-right {
+    &[data-emergence='visible'] {
+      opacity: 1;
+      animation: slideInRight 1s;
+    }
+
+    &[data-emergence='hidden'] {
+      opacity: 0;
     }
   }
 }

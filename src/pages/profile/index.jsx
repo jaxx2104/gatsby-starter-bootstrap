@@ -53,10 +53,7 @@ class Profile extends React.Component {
                   data-placement="top"
                   title="HTML"
                 >
-                  <i
-                    className="devicon-html5-plain wow bounceIn"
-                    data-wow-duration="2.0s"
-                  />
+                  <i className="devicon-html5-plain " data-emergence="hidden" />
                 </div>
               </div>
               <div className="col-lg-3 col-6">
@@ -67,8 +64,8 @@ class Profile extends React.Component {
                   title="JavaScript"
                 >
                   <i
-                    className="devicon-javascript-plain wow bounceIn"
-                    data-wow-duration="2.0s"
+                    className="devicon-javascript-plain"
+                    data-emergence="hidden"
                   />
                 </div>
               </div>
@@ -80,8 +77,8 @@ class Profile extends React.Component {
                   title="React.js"
                 >
                   <i
-                    className="devicon-react-original wow bounceIn"
-                    data-wow-duration="2.0s"
+                    className="devicon-react-original"
+                    data-emergence="hidden"
                   />
                 </div>
               </div>
@@ -92,10 +89,7 @@ class Profile extends React.Component {
                   data-placement="top"
                   title="Vue.js"
                 >
-                  <i
-                    className="devicon-vuejs-plain wow bounceIn"
-                    data-wow-duration="2.0s"
-                  />
+                  <i className="devicon-vuejs-plain" data-emergence="hidden" />
                 </div>
               </div>
             </div>
@@ -108,8 +102,8 @@ class Profile extends React.Component {
                   title="Node.js"
                 >
                   <i
-                    className="devicon-nodejs-plain-wordmark wow bounceIn"
-                    data-wow-duration="2.0s"
+                    className="devicon-nodejs-plain-wordmark"
+                    data-emergence="hidden"
                   />
                 </div>
               </div>
@@ -120,10 +114,7 @@ class Profile extends React.Component {
                   data-placement="top"
                   title="PHP"
                 >
-                  <i
-                    className="devicon-php-plain wow bounceIn"
-                    data-wow-duration="2.0s"
-                  />
+                  <i className="devicon-php-plain" data-emergence="hidden" />
                 </div>
               </div>
               <div className="col-lg-3 col-6 ">
@@ -134,8 +125,8 @@ class Profile extends React.Component {
                   title="Swift"
                 >
                   <i
-                    className="devicon-swift-plain-wordmark wow bounceIn"
-                    data-wow-duration="2.0s"
+                    className="devicon-swift-plain-wordmark"
+                    data-emergence="hidden"
                   />
                 </div>
               </div>
@@ -148,7 +139,7 @@ class Profile extends React.Component {
                 >
                   <i
                     className="devicon-amazonwebservices-plain-wordmark"
-                    data-wow-duration="2.0s"
+                    data-emergence="hidden"
                   />
                 </div>
               </div>
@@ -192,10 +183,7 @@ class Profile extends React.Component {
           </div>
           <div className="container">
             <div className="row">
-              <div
-                className="col-md-6 wow slideInLeft"
-                data-wow-duration="1.0s"
-              >
+              <div className="col-md-6 slide-left" data-emergence="hidden">
                 <img
                   src={pathPrefix + '/img/work1.png'}
                   alt="work1"
@@ -203,10 +191,7 @@ class Profile extends React.Component {
                 />
                 <p>Yomu</p>
               </div>
-              <div
-                className="col-md-6 wow slideInRight"
-                data-wow-duration="1.0s"
-              >
+              <div className="col-md-6 slide-right" data-emergence="hidden">
                 <img
                   src={pathPrefix + '/img/work2.png'}
                   alt="work2"
