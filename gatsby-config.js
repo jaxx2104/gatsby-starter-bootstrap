@@ -39,6 +39,17 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Gatstrap',
+        short_name: 'Gatstrap',
+        start_url: '/gatsby-starter-bootstrap',
+        background_color: '#fff',
+        theme_color: '#673ab7',
+        display: 'minimal-ui',
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
