@@ -60,7 +60,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
-        url
+        url: siteUrl
         author
         twitter
       }

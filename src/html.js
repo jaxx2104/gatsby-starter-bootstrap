@@ -42,8 +42,6 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
-          <script async src="//buttons.github.io/buttons.js" />
-          <script async src="//platform.twitter.com/widgets.js" />
         </body>
       </html>
     )
