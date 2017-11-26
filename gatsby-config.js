@@ -44,7 +44,7 @@ module.exports = {
       options: {
         name: 'Gatstrap',
         short_name: 'Gatstrap',
-        start_url: '/gatsby-starter-bootstrap',
+        start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',
         display: 'minimal-ui',
