@@ -44,10 +44,22 @@ module.exports = {
       options: {
         name: 'Gatstrap',
         short_name: 'Gatstrap',
-        start_url: '/gatsby-starter-bootstrap',
+        start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',
         display: 'minimal-ui',
+        icons: [
+          {
+            src: '/img/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/img/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
       },
     },
     {
