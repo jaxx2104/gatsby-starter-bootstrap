@@ -10,7 +10,9 @@ import 'prismjs/themes/prism-okaidia.css'
 import 'devicon/devicon.min.css'
 
 class Template extends React.Component {
-  componentDidMount() {}
+  componentDidMount() {
+    emergence.init()
+  }
 
   componentDidUpdate() {
     emergence.init()

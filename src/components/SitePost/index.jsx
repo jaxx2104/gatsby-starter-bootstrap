@@ -56,7 +56,7 @@ class SitePost extends React.Component {
 
     const categories = cate ? this.categories(cate) : ''
     const footer = isIndex ? '' : <ReadNext data={site} />
-    const desc = description || this.description(html)
+    const desc = isIndex ? description || this.description(html) : html
     const more = isIndex ? this.more(!!desc, path) : ''
 
     return (
