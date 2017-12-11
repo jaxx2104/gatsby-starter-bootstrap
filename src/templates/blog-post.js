@@ -57,6 +57,7 @@ export const pageQuery = graphql`
         url: siteUrl
         author
         twitter
+        adsense
       }
     }
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {
