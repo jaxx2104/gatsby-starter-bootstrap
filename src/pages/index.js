@@ -63,6 +63,7 @@ export const pageQuery = graphql`
         url: siteUrl
         author
         twitter
+        adsense
       }
     }
     remark: allMarkdownRemark {
@@ -74,7 +75,6 @@ export const pageQuery = graphql`
             title
             path
             categories
-            description
             date(formatString: "YYYY/MM/DD")
           }
         }
