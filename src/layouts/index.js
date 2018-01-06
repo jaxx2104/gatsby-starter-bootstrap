@@ -4,7 +4,7 @@ import { siteMetadata } from '../../gatsby-config'
 import SiteNavi from '../components/SiteNavi'
 import emergence from 'emergence.js'
 
-import './gatsrap.scss'
+import './gatstrap.scss'
 import 'animate.css/animate.css'
 import 'prismjs/themes/prism-okaidia.css'
 import 'devicon/devicon.min.css'

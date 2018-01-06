@@ -31,5 +31,5 @@ develop
 `gatsby develop`
 
 ### Custom Theme
-`/src/layouts/gatsrap.css`
+`/src/layouts/gatstrap.css`
 
