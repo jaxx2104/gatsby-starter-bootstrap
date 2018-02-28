@@ -45,10 +45,12 @@ module.exports = {
       options: {
         name: 'Gatstrap',
         short_name: 'Gatstrap',
+        description: 'Gatsby starter for bootstrap a blog',
+        homepage_url: 'https://gatstrap.netlify.com',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',
-        display: 'minimal-ui',
+        display: 'standalone',
         icons: [
           {
             src: '/img/android-chrome-192x192.png',
@@ -69,8 +71,15 @@ module.exports = {
         trackingId: '',
       },
     },
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        mergeSecurityHeaders: true,
+        mergeLinkHeaders: true,
+        mergeCachingHeaders: true,
+      },
+    },
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-netlify',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
