@@ -2,7 +2,6 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import React from 'react'
-import striptags from 'striptags'
 
 import SitePost from '../components/SitePost'
 import SitePage from '../components/SitePage'
@@ -32,7 +31,9 @@ class BlogPostTemplate extends React.Component {
             { property: 'og:type', content: 'article' },
             {
               property: 'og:description',
-              content: striptags(get(post, 'html')).substr(0, 200),
+              content: get(post, 'html')
+                .replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '')
+                .substr(0, 200),
             },
             {
               property: 'og:url',

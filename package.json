@@ -35,7 +35,7 @@
   "devDependencies": {
     "animate.css": "^3.5.2",
     "babel-eslint": "^8.0.3",
-    "bootstrap": "4.0.0-beta.2",
+    "bootstrap": "^4.0.0",
     "devicon-2.2": "^2.2.0",
     "emergence.js": "^1.1.2",
     "eslint": "^4.13.0",
@@ -48,7 +48,6 @@
     "lint-staged": "^6.0.0",
     "normalize.css": "^7.0.0",
     "prettier": "^1.9.1",
-    "striptags": "^3.1.1",
     "textlint": "^10.1.1",
     "textlint-rule-preset-ja-spacing": "^2.0.1",
     "textlint-rule-preset-japanese": "^4.0.0"
