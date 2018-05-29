@@ -10,16 +10,15 @@
 
 // Reassign color vars to semantic color scheme
 $theme-colors: (
-    primary: $purple,
-    secondary: $gray-600,
-    success: $green,
-    info: $cyan,
-    warning: $yellow,
-    danger: $red,
-    light: $gray-100,
-    dark: $gray-800
-  )
-  !default;
+  primary: $purple,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800
+) !default;
 
 // Options
 //
@@ -36,7 +35,12 @@ $enable-print-styles: true !default;
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-$container-max-widths: (sm: 540px, md: 640px, lg: 740px, xl: 840px) !default;
+$container-max-widths: (
+  sm: 540px,
+  md: 640px,
+  lg: 740px,
+  xl: 840px
+) !default;
 
 // Body
 //
@@ -56,7 +60,6 @@ $link-hover-decoration: none !default;
 // Fonts
 //
 @import './fonts.scss';
-
 
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 
