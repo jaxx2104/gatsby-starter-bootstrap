@@ -43,7 +43,7 @@
     "eslint-plugin-prettier": "2.6.0",
     "eslint-plugin-react": "7.8.2",
     "font-awesome": "4.7.0",
-    "gh-pages": "1.1.0",
+    "gh-pages": "1.2.0",
     "husky": "0.14.3",
     "lint-staged": "7.1.2",
     "normalize.css": "8.0.0",
