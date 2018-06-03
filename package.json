@@ -29,7 +29,7 @@
     "gatsby-source-filesystem": "^1.5.10",
     "gatsby-transformer-remark": "^1.7.24",
     "gatsby-transformer-sharp": "^1.6.16",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.10",
     "prismjs": "^1.14.0",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.3.0"
@@ -62,7 +62,7 @@
   "license": "MIT",
   "lint-staged": {
     "*.{css,js,jsx,json,scss,md}": [
-      "prettier --write",
+      "npm run format",
       "git add"
     ],
     "*.md": [
@@ -75,7 +75,7 @@
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|scss)\"",
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|scss|md)\"",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "lint:text": "textlint src/pages/**/index.md",
     "lint:textfix": "textlint --fix src/pages/**/index.md",
