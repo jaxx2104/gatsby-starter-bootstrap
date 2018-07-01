@@ -1,12 +1,13 @@
+import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import React from 'react'
 
-import SitePost from '../components/SitePost'
-import SitePage from '../components/SitePage'
+import SitePost from 'components/SitePost'
+import SitePage from 'components/SitePage'
 
-class BlogPostTemplate extends React.Component {
+class PostTemplate extends React.Component {
   render() {
     const post = get(this, 'props.data.post')
     const site = get(this, 'props.data.site')
@@ -47,10 +48,10 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default PostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query PostByPath($path: String!) {
     site {
       meta: siteMetadata {
         title
@@ -68,8 +69,17 @@ export const pageQuery = graphql`
         layout
         title
         path
-        categories
+        category
+        tags
+        description
         date(formatString: "YYYY/MM/DD")
+        image {
+          childImageSharp {
+            sizes(quality: 100) {
+              ...GatsbyImageSharpSizes_withWebp
+            }
+          }
+        }
       }
     }
   }
