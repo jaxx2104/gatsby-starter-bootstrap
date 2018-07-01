@@ -1,282 +1,210 @@
+import { graphql } from 'gatsby'
 import get from 'lodash/get'
+import Img from 'gatsby-image'
 import React from 'react'
-import Helmet from 'react-helmet'
-import { siteMetadata } from '../../../gatsby-config'
+
+import { siteMetadata } from '../../gatsby-config'
+import Layout from 'components/Layout'
+import Meta from 'components/Meta'
+import Icon from 'components/Icon'
 
 class Profile extends React.Component {
   render() {
-    const pathPrefix =
-      process.env.NODE_ENV === 'development' ? '' : __PATH_PREFIX__
-    const title = 'Profile'
+    const { location, data } = this.props
+    const profile = get(data, 'profile.childImageSharp.fixed')
+    const work1 = get(data, 'work1.childImageSharp.sizes')
+    const work2 = get(data, 'work2.childImageSharp.sizes')
+    const back1 = get(data, 'back1.childImageSharp.sizes')
+    const back2 = get(data, 'back2.childImageSharp.sizes')
+
     return (
-      <div>
-        <Helmet
-          title={`${title} | ${get(siteMetadata, 'title')}`}
-          meta={[
-            { name: 'twitter:card', content: 'summary' },
-            {
-              name: 'twitter:site',
-              content: `@${get(siteMetadata, 'twitter')}`,
-            },
-            { property: 'og:title', content: title },
-            { property: 'og:type', content: 'website' },
-            {
-              property: 'og:description',
-              content: get(siteMetadata, 'description'),
-            },
-            {
-              property: 'og:url',
-              content: `${get(siteMetadata, 'siteUrl')}/profile`,
-            },
-            {
-              property: 'og:image',
-              content: `${get(siteMetadata, 'siteUrl')}/img/profile.jpg`,
-            },
-          ]}
-        />
-        <section className="text-center">
-          <div className="container">
-            <img
-              src={pathPrefix + '/img/profile.jpg'}
-              alt="jaxx2104"
-              className="rounded-circle mx-auto d-block"
-              width="120px"
-            />
-            <h1>jaxx2104</h1>
-            <p className="lead text-muted">コーラとバグが好き</p>
-            <div>
-              <a
-                ref="twButton"
-                href="https://twitter.com/jaxx2104"
-                className="twitter-follow-button"
-                data-show-count="false"
-              >
-                Follow @jaxx2104
-              </a>
+      <Layout location={location}>
+        <Meta site={siteMetadata} title="Profile" />
+        <div>
+          <section className="text-center">
+            <div className="container">
+              <Img fixed={profile} className="rounded-circle" />
+              <h1>jaxx2104</h1>
+              <p className="lead text-muted">Front-end engineer.</p>
+              <div>
+                <a
+                  ref="twButton"
+                  href="https://twitter.com/jaxx2104"
+                  className="twitter-follow-button"
+                  data-show-count="false"
+                >
+                  Follow @jaxx2104
+                </a>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="features" className="bg-primary text-white text-center">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <h2 className="section-heading">SKIL</h2>
-                <hr className="border-white" />
-              </div>
-            </div>
-          </div>
-          <div className="container">
-            <div className="row justify-content-md-center">
-              <div className="col-lg-3 col-6">
-                <div
-                  className="service-box"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="HTML"
-                >
-                  <i className="devicon-html5-plain " data-emergence="hidden" />
-                </div>
-              </div>
-              <div className="col-lg-3 col-6">
-                <div
-                  className="service-box"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="JavaScript"
-                >
-                  <i
-                    className="devicon-javascript-plain"
-                    data-emergence="hidden"
-                  />
-                </div>
-              </div>
-              <div className="col-lg-3 col-6">
-                <div
-                  className="service-box"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="React.js"
-                >
-                  <i
-                    className="devicon-react-original"
-                    data-emergence="hidden"
-                  />
-                </div>
-              </div>
-              <div className="col-lg-3 col-6">
-                <div
-                  className="service-box"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Vue.js"
-                >
-                  <i className="devicon-vuejs-plain" data-emergence="hidden" />
+          <section className="bg-primary text-white text-center">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-12">
+                  <h2 className="section-heading">SKILL</h2>
+                  <hr className="border-white" />
                 </div>
               </div>
             </div>
-            <div className="row justify-content-md-center">
-              <div className="col-lg-3 col-6">
-                <div
-                  className="service-box"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Node.js"
-                >
-                  <i
-                    className="devicon-nodejs-plain-wordmark"
-                    data-emergence="hidden"
-                  />
+            <div className="container">
+              <div className="row justify-content-md-center">
+                <div className="col-lg-3 col-6">
+                  <Icon title="HTML" name="html5" />
+                </div>
+                <div className="col-lg-3 col-6">
+                  <Icon title="JavaScript" name="js" />
+                </div>
+                <div className="col-lg-3 col-6">
+                  <Icon title="React.js" name="react" />
+                </div>
+                <div className="col-lg-3 col-6">
+                  <Icon title="Vue.js" name="vuejs" />
                 </div>
               </div>
-              <div className="col-lg-3 col-6 ">
-                <div
-                  className="service-box"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="PHP"
-                >
-                  <i className="devicon-php-plain" data-emergence="hidden" />
+              <div className="row justify-content-md-center">
+                <div className="col-lg-3 col-6">
+                  <Icon title="Node.js" name="node" />
                 </div>
-              </div>
-              <div className="col-lg-3 col-6 ">
-                <div
-                  className="service-box"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Swift"
-                >
-                  <i
-                    className="devicon-swift-plain-wordmark"
-                    data-emergence="hidden"
-                  />
+                <div className="col-lg-3 col-6 ">
+                  <Icon title="PHP" name="php" />
                 </div>
-              </div>
-              <div className="col-lg-3 col-6 ">
-                <div
-                  className="service-box"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="AWS"
-                >
-                  <i
-                    className="devicon-amazonwebservices-plain-wordmark"
-                    data-emergence="hidden"
-                  />
+                <div className="col-lg-3 col-6 ">
+                  <Icon title="AWS" name="aws" />
+                </div>
+                <div className="col-lg-3 col-6 ">
+                  <Icon title="Swift" name="apple" />
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="features" className="text-center">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <h2 className="section-heading">Features</h2>
-                <hr className="border-primary" />
+          <section id="features" className="text-center jumboimage">
+            <Img sizes={back1} className="cover-image" />
+            <div className="container">
+              <div className="row cover-over">
+                <div className="col-md-12 text-left">
+                  <h2 className="section-heading">Features</h2>
+                  <p>
+                    I'm a front-end engineer in Japan 🗼<br />
+                    Used to be a designer of furniture and architecture.<br />
+                  </p>
+                  <li>2013 ~ 2017: J-CAST News</li>
+                  <li>2017 ~ : Recruit Lifestyle</li>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="container">
-            <div className="row justify-content-md-center">
-              <div className="col-lg-8">
-                <p>
-                  学生時代のバイトでWEBエンジニアになりました。<br />
-                  主にフロントエンドを仕事にしていますが、バックエンドの開発もやってます。
-                  趣味はNode.jsを使ったIoTとアプリの開発です。
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
 
-        <section
-          className="bg-primary text-white text-center color-inverse"
-          id="concept"
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <h2 className="section-heading">WORKS</h2>
-                <hr className="border-white" />
+          <section
+            className="bg-primary text-white text-center color-inverse"
+            id="concept"
+          >
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-12">
+                  <h2 className="section-heading">WORKS</h2>
+                  <hr className="border-white" />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6 slide-left" data-emergence="hidden">
-                <img
-                  src={pathPrefix + '/img/work1.png'}
-                  alt="work1"
-                  className="rounded-circle mx-auto"
-                />
-                <p>Yomu</p>
-              </div>
-              <div className="col-md-6 slide-right" data-emergence="hidden">
-                <img
-                  src={pathPrefix + '/img/work2.png'}
-                  alt="work2"
-                  className="rounded-circle mx-auto"
-                />
-                <p>Detector</p>
+            <div className="container">
+              <div className="row">
+                <div className="col-md-6 slide-left" data-emergence="hidden">
+                  <Img sizes={work1} />
+                  <p>Yomu</p>
+                </div>
+                <div className="col-md-6 slide-right" data-emergence="hidden">
+                  <Img sizes={work2} />
+                  <p>Detector</p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="repos">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-md-6 text-center">
-                <h2 className="section-heading">Repositories</h2>
-              </div>
-              <div className="col-md-6 text-left">
-                <li>
-                  <a href="https://github.com/jaxx2104/gatsby-starter-bootstrap">
-                    gatstrap
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/jaxx2104/gulp-sample">
-                    gulp-sample
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/jaxx2104/irm">irm</a>
-                </li>
-                <li>
-                  <a href="https://github.com/jaxx2104/mt-dataapi-php">
-                    mt-dataapi-php
-                  </a>
-                </li>
+          <section id="repos">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-md-12 text-left">
+                  <h2 className="section-heading">Repositories</h2>
+                  <p>
+                    リポジトリは
+                    <a href="https://github.com/jaxx2104/">こちら</a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section id="features">
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-md-6">
-                <img
-                  src={pathPrefix + '/img/work3.png'}
-                  className="img-rounded img-responsive"
-                  title=""
-                  alt=""
-                />
-              </div>
-              <div className="col-md-6 text-center align-middle">
-                <h2 className="section-heading">Degree Works</h2>
-                <p>
-                  過去の制作は<a href="https://old.jaxx2104.info/">こちら</a>
-                </p>
+          </section>
+          <section id="features" className="jumboimage">
+            <Img sizes={back2} className="cover-image" />
+            <div className="container">
+              <div className="row cover-over">
+                <div className="col-md-12 text-left">
+                  <h2 className="section-heading">Degree Works</h2>
+                  <p>
+                    過去の制作は<a
+                      className="text-white"
+                      href="https://old.jaxx2104.info/"
+                    >
+                      こちら
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
+      </Layout>
     )
   }
 }
 
 export default Profile
+
+export const query = graphql`
+  query ProfilePageQuery {
+    profile: file(name: { eq: "profile" }) {
+      childImageSharp {
+        fixed(width: 120, height: 120) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+    work1: file(name: { eq: "work1" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    work2: file(name: { eq: "work2" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    work3: file(name: { eq: "work3" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    back1: file(name: { eq: "back1" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+    back2: file(name: { eq: "back2" }) {
+      childImageSharp {
+        sizes(quality: 100) {
+          ...GatsbyImageSharpSizes_withWebp
+        }
+      }
+    }
+  }
+`

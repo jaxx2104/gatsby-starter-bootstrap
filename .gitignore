@@ -5,4 +5,3 @@ public
 .intermediate-representation/
 .cache/
 .vscode/
-yarn.lock
