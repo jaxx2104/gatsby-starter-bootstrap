@@ -38,8 +38,8 @@ $enable-print-styles: true !default;
 $container-max-widths: (
   sm: 540px,
   md: 640px,
-  lg: 740px,
-  xl: 840px,
+  lg: 710px,
+  xl: 780px,
 ) !default;
 
 // Body
@@ -67,7 +67,11 @@ html,
 body {
   height: 100%;
   width: 100%;
+}
+
+* {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -77,7 +81,6 @@ p {
 }
 
 img {
-  padding-bottom: 10px;
   margin-bottom: 15px;
   max-width: 100%;
 }

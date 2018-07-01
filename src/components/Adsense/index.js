@@ -1,5 +1,4 @@
 import React from 'react'
-import './style.css'
 
 class Adsense extends React.Component {
   componentDidMount() {
@@ -11,7 +10,6 @@ class Adsense extends React.Component {
 
   render() {
     const { clientId, slotId, format } = this.props
-    console.log(clientId)
 
     return clientId ? (
       <div className="ad">

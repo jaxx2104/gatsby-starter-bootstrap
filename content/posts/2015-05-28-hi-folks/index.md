@@ -1,13 +1,13 @@
 ---
-title: Markdown
+title: Markdown 📝
 date: "2015-05-28T22:40:32.169Z"
 layout: post
-path: "/hi-folks/"
-categories:
+path: "/markdown/"
+category: Typography
+tags:
   - Markdown
+  - Emoji
 ---
-
-# An h1 header
 
 Paragraphs are separated by a blank line.
 
@@ -30,7 +30,7 @@ content starts at 4-columns in.
 
 Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
 in chapters 12--14"). Three dots ... will be converted to an ellipsis.
-Unicode is supported. ☺
+Unicode is supported 😄
 
 ```js
 // javascript
