@@ -37,7 +37,7 @@
   "devDependencies": {
     "animate.css": "3.6.1",
     "babel-eslint": "8.2.3",
-    "bootstrap": "4.1.1",
+    "bootstrap": "4.1.2",
     "devicon-2.2": "2.2.0",
     "emergence.js": "1.1.2",
     "eslint": "4.19.1",
