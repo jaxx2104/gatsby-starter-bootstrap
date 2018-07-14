@@ -30,7 +30,7 @@ fontawesome.library.add(
 )
 
 const Icon = ({ name }) => (
-  <div class="icon" title={name}>
+  <div className="icon" title={name}>
     <FontAwesomeIcon icon={['fab', name]} />
   </div>
 )
