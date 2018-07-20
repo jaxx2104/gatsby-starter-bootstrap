@@ -7,8 +7,9 @@ Gatsby starter for bootstrap a blog
 
 ![thumb](https://i.imgur.com/Qcd3NwR.png)
 
-## GatsbyJS v1
+## GatsbyJS v2-beta, v1, v0
 
+- For v2-beta version of this starter, check out the [v2 branch](https://github.com/jaxx2104/gatsby-starter-bootstrap/tree/feature/v2).
 - For v1 version of this starter, check out the [master branch](https://github.com/jaxx2104/gatsby-starter-bootstrap).
 - For v0 version, check out the [v0 branch](https://github.com/jaxx2104/gatsby-starter-bootstrap/tree/v0).
 - Make sure to read the [migration guide](https://www.gatsbyjs.org/docs/migrating-from-v0-to-v1/) when porting v0 projects to v1.
