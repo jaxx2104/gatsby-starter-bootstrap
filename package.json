@@ -50,7 +50,7 @@
     "lint-staged": "7.2.0",
     "normalize.css": "8.0.0",
     "prettier": "1.13.5",
-    "textlint": "10.2.1",
+    "textlint": "11.0.0",
     "textlint-rule-preset-ja-spacing": "2.0.1",
     "textlint-rule-preset-japanese": "4.0.0"
   },
