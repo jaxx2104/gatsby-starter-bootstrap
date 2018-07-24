@@ -1,0 +1,70 @@
+@import 'scss/colors.scss';
+@import 'scss/fonts.scss';
+
+section {
+  padding: 50px 0;
+  min-height: 300px;
+
+
+  &.jumboimage {
+    position: relative;
+    text-align: left;
+    color: white;
+    padding: 0rem 0px;
+    margin: 0px auto;
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(51, 51, 51) 50%);
+  }
+
+  .cover-image {
+    height: 50vh;
+    width: 100%;
+    opacity: 0.6;
+    & > img {
+      object-fit: cover !important;
+      object-position: 0% 50% !important;
+    }
+    max-height: 300px;
+  }
+
+  .cover-over {
+    position: absolute;
+    top: 2em;
+  }
+
+  hr {
+    border-color: $red;
+    border-width: 3px;
+    max-width: 50px;
+
+    &.light {
+      border-color: $white;
+    }
+  }
+
+  .section-heading {
+    font-family: $font-family-monospace;
+  }
+
+
+  .slide-left {
+    &[data-emergence='visible'] {
+      opacity: 1;
+      animation: slideInLeft 1s;
+    }
+
+    &[data-emergence='hidden'] {
+      opacity: 0;
+    }
+  }
+
+  .slide-right {
+    &[data-emergence='visible'] {
+      opacity: 1;
+      animation: slideInRight 1s;
+    }
+
+    &[data-emergence='hidden'] {
+      opacity: 0;
+    }
+  }
+}

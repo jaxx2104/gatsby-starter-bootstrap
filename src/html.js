@@ -1,28 +1,11 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-
-let stylesStr
-if (process.env.NODE_ENV === 'production') {
-  try {
-    stylesStr = require('!raw-loader!../public/styles.css')
-  } catch (e) {
-    console.log(e)
-  }
-}
+import 'scss/gatstrap.scss'
+import 'animate.css/animate.css'
+import 'prismjs/themes/prism-okaidia.css'
+import 'font-awesome/css/font-awesome.css'
 
 export default class HTML extends React.Component {
   render() {
-    const head = Helmet.rewind()
-    let css
-    if (process.env.NODE_ENV === 'production') {
-      css = (
-        <style
-          id="gatsby-inlined-css"
-          dangerouslySetInnerHTML={{ __html: stylesStr }}
-        />
-      )
-    }
-
     return (
       <html lang="en">
         <head>
@@ -33,7 +16,6 @@ export default class HTML extends React.Component {
             content="width=device-width, initial-scale=1.0"
           />
           {this.props.headComponents}
-          {css}
           <link
             href="/img/apple-touch-icon.png"
             rel="apple-touch-icon"
