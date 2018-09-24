@@ -87,8 +87,10 @@ class Profile extends React.Component {
                 <div className="col-md-12 text-left">
                   <h2 className="section-heading">Features</h2>
                   <p>
-                    I'm a front-end engineer in Japan 🗼<br />
-                    Used to be a designer of furniture and architecture.<br />
+                    I'm a front-end engineer in Japan 🗼
+                    <br />
+                    Used to be a designer of furniture and architecture.
+                    <br />
                   </p>
                   <li>2013 ~ 2017: J-CAST News</li>
                   <li>2017 ~ : Recruit Lifestyle</li>
@@ -143,10 +145,8 @@ class Profile extends React.Component {
                 <div className="col-md-12 text-left">
                   <h2 className="section-heading">Degree Works</h2>
                   <p>
-                    過去の制作は<a
-                      className="text-white"
-                      href="https://old.jaxx2104.info/"
-                    >
+                    過去の制作は
+                    <a className="text-white" href="https://old.jaxx2104.info/">
                       こちら
                     </a>
                   </p>
