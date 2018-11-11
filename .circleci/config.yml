@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/repo
     docker:
-      - image: node:10.12.0
+      - image: node:10.13.0
     steps:
       - checkout
       - restore_cache:
@@ -21,7 +21,7 @@ jobs:
   test:
     working_directory: ~/repo
     docker:
-      - image: node:10.12.0
+      - image: node:10.13.0
     steps:
       - attach_workspace:
           at: .
