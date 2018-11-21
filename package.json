@@ -22,7 +22,7 @@
     "gatsby-plugin-sitemap": "2.0.2",
     "gatsby-plugin-twitter": "2.0.7",
     "gatsby-remark-copy-linked-files": "2.0.6",
-    "gatsby-remark-images": "2.0.6",
+    "gatsby-remark-images": "3.0.0",
     "gatsby-remark-prismjs": "3.0.3",
     "gatsby-remark-responsive-iframe": "2.0.6",
     "gatsby-remark-smartypants": "2.0.6",
