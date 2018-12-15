@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-bootstrap",
   "description": "Simple starter for Gatsby",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
   "dependencies": {
     "gatsby": "2.0.67",
