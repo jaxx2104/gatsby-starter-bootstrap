@@ -5197,9 +5197,9 @@ gatsby-plugin-nprogress@2.0.7:
     "@babel/runtime" "^7.0.0"
     nprogress "^0.2.0"
 
-gatsby-plugin-offline@2.0.19:
-  version "2.0.19"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.19.tgz#b072f43756328887b0941a6597f209ff2c299c88"
+gatsby-plugin-offline@2.0.20:
+  version "2.0.20"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.20.tgz#bd1bedb73e85ea49beed8834d3964b294080a3a9"
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
@@ -5290,9 +5290,9 @@ gatsby-react-router-scroll@^2.0.2:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-remark-copy-linked-files@2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.0.7.tgz#e7123463ea0d42c15cf423ebc93b45f9f3a75e56"
+gatsby-remark-copy-linked-files@2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.0.8.tgz#4c5547ec9803e73c926699a6247f4056934a3916"
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
@@ -5396,9 +5396,9 @@ gatsby-transformer-sharp@2.1.9:
     probe-image-size "^4.0.0"
     sharp "^0.21.0"
 
-gatsby@2.0.67:
-  version "2.0.67"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.67.tgz#c7c8d183057b9f6654220fc9ccbbc2c6a5804582"
+gatsby@2.0.68:
+  version "2.0.68"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.68.tgz#39cd65000dda9f25ae709c7f2cd0bc6fabb927a2"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5459,7 +5459,7 @@ gatsby@2.0.67:
     glob "^7.1.1"
     graphql "^0.13.2"
     graphql-relay "^0.5.5"
-    graphql-skip-limit "^2.0.3"
+    graphql-skip-limit "^2.0.4"
     graphql-tools "^3.0.4"
     graphql-type-json "^0.2.1"
     hash-mod "^0.0.5"
@@ -5883,9 +5883,9 @@ graphql-request@^1.5.0:
   dependencies:
     cross-fetch "2.2.2"
 
-graphql-skip-limit@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/graphql-skip-limit/-/graphql-skip-limit-2.0.3.tgz#49fff679fd1972a5b329646ecbc20f7f3c1371f8"
+graphql-skip-limit@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/graphql-skip-limit/-/graphql-skip-limit-2.0.4.tgz#54a612d3af7a374c34f9ac626b700422cb056ef2"
   dependencies:
     "@babel/runtime" "^7.0.0"
 
