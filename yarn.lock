@@ -5239,9 +5239,9 @@ gatsby-plugin-nprogress@2.0.7:
     "@babel/runtime" "^7.0.0"
     nprogress "^0.2.0"
 
-gatsby-plugin-offline@2.0.20:
-  version "2.0.20"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.20.tgz#bd1bedb73e85ea49beed8834d3964b294080a3a9"
+gatsby-plugin-offline@2.0.21:
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.21.tgz#d4637aef5dc6022eb9bd6031123788e73447d3d7"
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
