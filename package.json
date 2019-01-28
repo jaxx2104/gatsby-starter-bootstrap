@@ -4,8 +4,8 @@
   "version": "2.0.1",
   "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
   "dependencies": {
-    "gatsby": "2.0.101",
-    "gatsby-image": "2.0.28",
+    "gatsby": "2.0.103",
+    "gatsby-image": "2.0.29",
     "gatsby-link": "2.0.9",
     "gatsby-plugin-catch-links": "2.0.9",
     "gatsby-plugin-feed": "2.0.12",
