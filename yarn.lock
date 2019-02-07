@@ -5062,9 +5062,9 @@ gatsby-plugin-nprogress@2.0.8:
     "@babel/runtime" "^7.0.0"
     nprogress "^0.2.0"
 
-gatsby-plugin-offline@2.0.22:
-  version "2.0.22"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.22.tgz#b9eeec87bd2c6102550eca2c966274727b3e767f"
+gatsby-plugin-offline@2.0.23:
+  version "2.0.23"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.23.tgz#601f75c38dc0197fd9b5d108a2075fd9afea6304"
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
@@ -5266,9 +5266,9 @@ gatsby-transformer-sharp@2.1.13:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@2.0.116:
-  version "2.0.116"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.116.tgz#33757c7fd8bc9f6f6990a3a7add38b054ab93547"
+gatsby@2.0.117:
+  version "2.0.117"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.117.tgz#df0199e26b7cc7c4ee97c074ca6ef09e766c6fd9"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
