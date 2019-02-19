@@ -5314,9 +5314,9 @@ gatsby-transformer-sharp@2.1.14:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@2.1.8:
-  version "2.1.8"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.8.tgz#1f953964c28522a92b519afe409243420648bb9d"
+gatsby@2.1.9:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.9.tgz#940530ad392313ac931ae20bd0d7e291f1a2e5ad"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5421,6 +5421,7 @@ gatsby@2.1.8:
     signal-exit "^3.0.2"
     slash "^1.0.0"
     socket.io "^2.0.3"
+    stack-trace "^0.0.10"
     string-similarity "^1.2.0"
     style-loader "^0.21.0"
     terser-webpack-plugin "^1.2.2"
