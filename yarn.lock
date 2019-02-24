@@ -831,17 +831,13 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
 
-"@textlint-rule/textlint-rule-no-invalid-control-character@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@textlint-rule/textlint-rule-no-invalid-control-character/-/textlint-rule-no-invalid-control-character-1.0.1.tgz#6ba7dd0555e1b41af2d002a62aa0ae7795111e09"
+"@textlint-rule/textlint-rule-no-invalid-control-character@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@textlint-rule/textlint-rule-no-invalid-control-character/-/textlint-rule-no-invalid-control-character-1.2.0.tgz#3e8f03258d06b7deb2592bdb13626659c46abbf5"
   dependencies:
     execall "^1.0.0"
 
-"@textlint/ast-node-types@^3.0.0":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-3.0.1.tgz#cf35e913aef798f0efac797144e167744a7857e8"
-
-"@textlint/ast-node-types@^4.2.1":
+"@textlint/ast-node-types@^4.0.2", "@textlint/ast-node-types@^4.2.1":
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.2.1.tgz#978fa10e23468114462fc08ef29f96980c12a8ef"
 
@@ -10750,11 +10746,11 @@ sentence-splitter@^2.0.0, sentence-splitter@^2.2.0:
     concat-stream "^1.5.2"
     structured-source "^3.0.2"
 
-sentence-splitter@^3.0.8:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-3.0.8.tgz#45fad70c65b097eb63e86d793080d84cc43d677a"
+sentence-splitter@^3.0.10:
+  version "3.0.11"
+  resolved "https://registry.yarnpkg.com/sentence-splitter/-/sentence-splitter-3.0.11.tgz#82d98f0fd7a392e0e6c49b0730ae7b880bfde0b2"
   dependencies:
-    "@textlint/ast-node-types" "^3.0.0"
+    "@textlint/ast-node-types" "^4.0.2"
     concat-stream "^1.5.2"
     object.values "^1.0.4"
     structured-source "^3.0.2"
@@ -11806,9 +11802,9 @@ textlint-rule-no-doubled-conjunction@^1.0.2:
     textlint-rule-helper "^1.1.5"
     textlint-util-to-string "^1.2.0"
 
-textlint-rule-no-doubled-conjunctive-particle-ga@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/textlint-rule-no-doubled-conjunctive-particle-ga/-/textlint-rule-no-doubled-conjunctive-particle-ga-1.0.2.tgz#b9cb679555aea2ab0d4ffcfa4dd2ffab71bf0057"
+textlint-rule-no-doubled-conjunctive-particle-ga@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/textlint-rule-no-doubled-conjunctive-particle-ga/-/textlint-rule-no-doubled-conjunctive-particle-ga-1.1.0.tgz#f43717a670ca94d5a7de94efb85b862075436f23"
   dependencies:
     kuromojin "^1.1.0"
     sentence-splitter "^1.2.0"
@@ -11859,35 +11855,35 @@ textlint-rule-preset-ja-spacing@2.0.1:
     textlint-rule-ja-space-around-code "^2.0.1"
     textlint-rule-ja-space-between-half-and-full-width "^2.0.1"
 
-textlint-rule-preset-japanese@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/textlint-rule-preset-japanese/-/textlint-rule-preset-japanese-4.0.0.tgz#7f5b0898a470557395328ea1054134766e6f825c"
+textlint-rule-preset-japanese@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-preset-japanese/-/textlint-rule-preset-japanese-4.0.1.tgz#6661949876f70ed230b2777421dc36f62673b548"
   dependencies:
-    "@textlint-rule/textlint-rule-no-invalid-control-character" "^1.0.1"
+    "@textlint-rule/textlint-rule-no-invalid-control-character" "^1.2.0"
     textlint-rule-max-ten "^2.0.2"
     textlint-rule-no-double-negative-ja "^1.0.3"
     textlint-rule-no-doubled-conjunction "^1.0.2"
-    textlint-rule-no-doubled-conjunctive-particle-ga "^1.0.2"
+    textlint-rule-no-doubled-conjunctive-particle-ga "^1.1.0"
     textlint-rule-no-doubled-joshi "^3.0.0"
     textlint-rule-no-dropping-the-ra "^1.1.2"
     textlint-rule-no-mix-dearu-desumasu "^3.0.0"
     textlint-rule-no-nfd "^1.0.1"
-    textlint-rule-prh "^5.0.0"
-    textlint-rule-sentence-length "^2.0.0"
+    textlint-rule-prh "^5.2.0"
+    textlint-rule-sentence-length "^2.1.1"
 
-textlint-rule-prh@^5.0.0:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-prh/-/textlint-rule-prh-5.0.1.tgz#bab66be6b03258880f3fbf466b689ed2ff379b0c"
+textlint-rule-prh@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/textlint-rule-prh/-/textlint-rule-prh-5.2.0.tgz#046453acf03b8e0e007f9c9ab9576ba56008ef99"
   dependencies:
     prh "^5.4.3"
     textlint-rule-helper "^2.0.0"
     untildify "^3.0.2"
 
-textlint-rule-sentence-length@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/textlint-rule-sentence-length/-/textlint-rule-sentence-length-2.0.2.tgz#a3bf761625fb609fe6abb16012c672bafddcf77f"
+textlint-rule-sentence-length@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/textlint-rule-sentence-length/-/textlint-rule-sentence-length-2.1.1.tgz#a348d784b9a4b7be6929204a15cb4508755b99a3"
   dependencies:
-    sentence-splitter "^3.0.8"
+    sentence-splitter "^3.0.10"
     textlint-rule-helper "^2.0.0"
     textlint-util-to-string "^2.1.1"
 
