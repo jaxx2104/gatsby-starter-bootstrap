@@ -57,7 +57,7 @@
     "react-helmet": "5.2.0",
     "textlint": "11.2.3",
     "textlint-rule-preset-ja-spacing": "2.0.1",
-    "textlint-rule-preset-japanese": "4.0.0"
+    "textlint-rule-preset-japanese": "4.0.1"
   },
   "keywords": [
     "gatsby",
