@@ -5014,9 +5014,9 @@ g-status@^2.0.2:
     matcher "^1.0.0"
     simple-git "^1.85.0"
 
-gatsby-cli@^2.4.12:
-  version "2.4.12"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.4.12.tgz#8d457fbbfe93ff4e1b9aa0df7fa6634b8b29b82a"
+gatsby-cli@^2.4.13:
+  version "2.4.13"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.4.13.tgz#2338d005053d3adf60d6182700c118ba9431a57b"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5184,9 +5184,9 @@ gatsby-plugin-sitemap@2.0.6:
     pify "^3.0.0"
     sitemap "^1.12.0"
 
-gatsby-plugin-twitter@2.0.10:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.0.10.tgz#6158125cda15af83dbe03857b3a1d58740be5308"
+gatsby-plugin-twitter@2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.0.11.tgz#292cfb6801dd640012bf9a524bb2fc0c0cde1509"
   dependencies:
     "@babel/runtime" "^7.0.0"
 
@@ -5309,9 +5309,9 @@ gatsby-transformer-sharp@2.1.15:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@2.1.21:
-  version "2.1.21"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.21.tgz#8d2d0767f76985c6facd8e2c596533ebcca70379"
+gatsby@2.1.22:
+  version "2.1.22"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.22.tgz#43943fbadb0b44b0eccf2de3342fa7046940e6bb"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5367,7 +5367,7 @@ gatsby@2.1.21:
     friendly-errors-webpack-plugin "^1.6.1"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.4.12"
+    gatsby-cli "^2.4.13"
     gatsby-link "^2.0.14"
     gatsby-plugin-page-creator "^2.0.8"
     gatsby-react-router-scroll "^2.0.4"
