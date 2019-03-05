@@ -5078,9 +5078,9 @@ gatsby-plugin-google-analytics@2.0.16:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-manifest@2.0.21:
-  version "2.0.21"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.21.tgz#58f037ae1a279735704debf05612827356ec10a5"
+gatsby-plugin-manifest@2.0.22:
+  version "2.0.22"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.22.tgz#b3eb252435d9991013e3b43de9df744148082611"
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -5096,9 +5096,9 @@ gatsby-plugin-netlify@2.0.11:
     lodash "^4.17.10"
     webpack-assets-manifest "^3.0.2"
 
-gatsby-plugin-nprogress@2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.0.8.tgz#7d7d38982ac52f7d8993ab26de50e091fdc7511d"
+gatsby-plugin-nprogress@2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.0.9.tgz#70173c7142e12569aa40f7232588230507e13ed6"
   dependencies:
     "@babel/runtime" "^7.0.0"
     nprogress "^0.2.0"
@@ -5113,9 +5113,9 @@ gatsby-plugin-offline@2.0.24:
     lodash "^4.17.10"
     workbox-build "^3.6.3"
 
-gatsby-plugin-page-creator@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.0.8.tgz#9dfe7df93bca06a898ce29d5701aedf85d1f23f2"
+gatsby-plugin-page-creator@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.0.9.tgz#20726d037b9233ed16946c1459c82cc8bcb0ed68"
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -5127,15 +5127,15 @@ gatsby-plugin-page-creator@^2.0.8:
     parse-filepath "^1.0.1"
     slash "^1.0.0"
 
-gatsby-plugin-preact@2.0.9:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-preact/-/gatsby-plugin-preact-2.0.9.tgz#96a795fc1b30cef751ecc0315aac6e4c974f285e"
+gatsby-plugin-preact@2.0.10:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-preact/-/gatsby-plugin-preact-2.0.10.tgz#64c52859a727b7cbd6a3cb416946970ea7018cea"
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-react-helmet@3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.0.7.tgz#e2fb41232c98ef7a7e7366edcde219c4bfa69392"
+gatsby-plugin-react-helmet@3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.0.8.tgz#40fac40543a8305abcf9cc41d83db05c28c08890"
   dependencies:
     "@babel/runtime" "^7.0.0"
 
@@ -5154,9 +5154,9 @@ gatsby-plugin-sass@^2.0.0-rc.2:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-sharp@2.0.24:
-  version "2.0.24"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.24.tgz#88c6b1adc66690f675c589283b8da68243c32e98"
+gatsby-plugin-sharp@2.0.25:
+  version "2.0.25"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.25.tgz#04ddfa639a9c8c31d2e4865578d9e344dde4b290"
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
@@ -5273,9 +5273,9 @@ gatsby-source-filesystem@2.0.23:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-transformer-remark@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.3.0.tgz#4caa1194a78ce2470c2d0b2ea0e0f9351487e7d9"
+gatsby-transformer-remark@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.3.1.tgz#66f5c7e51e3093206e92874a781ff5c241ae0bf2"
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -5309,9 +5309,9 @@ gatsby-transformer-sharp@2.1.15:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@2.1.22:
-  version "2.1.22"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.22.tgz#43943fbadb0b44b0eccf2de3342fa7046940e6bb"
+gatsby@2.1.23:
+  version "2.1.23"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.23.tgz#f228e54b728ce48bcee38457cff40dd5604db2ab"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5369,7 +5369,7 @@ gatsby@2.1.22:
     fs-extra "^5.0.0"
     gatsby-cli "^2.4.13"
     gatsby-link "^2.0.14"
-    gatsby-plugin-page-creator "^2.0.8"
+    gatsby-plugin-page-creator "^2.0.9"
     gatsby-react-router-scroll "^2.0.4"
     glob "^7.1.1"
     graphql "^14.1.1"
