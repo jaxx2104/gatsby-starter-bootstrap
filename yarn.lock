@@ -5180,9 +5180,9 @@ gatsby-plugin-sharp@2.0.27:
     sharp "^0.21.3"
     svgo "^0.7.2"
 
-gatsby-plugin-sitemap@2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.0.7.tgz#f6c49de822d02f196fc24b4b28455d9314a9abc6"
+gatsby-plugin-sitemap@2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.0.8.tgz#117b1170b3c5bc3a14d3fb97083cce64a42078a5"
   dependencies:
     "@babel/runtime" "^7.0.0"
     minimatch "^3.0.4"
@@ -5216,9 +5216,9 @@ gatsby-remark-copy-linked-files@2.0.10:
     probe-image-size "^4.0.0"
     unist-util-visit "^1.3.0"
 
-gatsby-remark-images@3.0.8:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.0.8.tgz#424d4835131a5619132db1667efb33a90d1d1322"
+gatsby-remark-images@3.0.9:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.0.9.tgz#7116f07b42362a45fcc6a16343ec4d7b622ac33d"
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
