@@ -5278,9 +5278,9 @@ gatsby-source-filesystem@2.0.27:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-transformer-remark@2.3.6:
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.3.6.tgz#f3d64e9bf5335c58de8bc3307fecee18a3834d87"
+gatsby-transformer-remark@2.3.7:
+  version "2.3.7"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.3.7.tgz#de0fea8e25e3fbc1bb5d03ac8f32f4fea19ee66d"
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -5314,9 +5314,9 @@ gatsby-transformer-sharp@2.1.17:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.2.0.tgz#46973febe3fb2ea5f09d9eccd50a3529ac9d2f2e"
+gatsby@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.2.1.tgz#e5b8b0e46aabd7d9afc64a7486696d75e174de70"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
