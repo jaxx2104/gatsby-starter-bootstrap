@@ -5019,9 +5019,9 @@ g-status@^2.0.2:
     matcher "^1.0.0"
     simple-git "^1.85.0"
 
-gatsby-cli@^2.4.16:
-  version "2.4.16"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.4.16.tgz#62581d5c6289ab72cbb34a36ad4ac83fc649768b"
+gatsby-cli@^2.4.17:
+  version "2.4.17"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.4.17.tgz#38f0d2fd55de595b457a1d2a1048fb8f88a8f143"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5314,9 +5314,9 @@ gatsby-transformer-sharp@2.1.17:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.2.3.tgz#8ee215f9020c90fb96f07db1db476861159eb193"
+gatsby@2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.2.4.tgz#6c13922cad31380b8a7136eeeea1d1f0ace4ecc6"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5372,7 +5372,7 @@ gatsby@2.2.3:
     flat "^4.0.0"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.4.16"
+    gatsby-cli "^2.4.17"
     gatsby-link "^2.0.16"
     gatsby-plugin-page-creator "^2.0.10"
     gatsby-react-router-scroll "^2.0.6"
