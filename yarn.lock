@@ -975,6 +975,10 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
 
+"@stefanprobst/lokijs@^1.5.6-b":
+  version "1.5.6-b"
+  resolved "https://registry.yarnpkg.com/@stefanprobst/lokijs/-/lokijs-1.5.6-b.tgz#6a36a86dbe132e702e6b15ffd3ce4139aebfe942"
+
 "@textlint-rule/textlint-rule-no-invalid-control-character@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@textlint-rule/textlint-rule-no-invalid-control-character/-/textlint-rule-no-invalid-control-character-1.2.0.tgz#3e8f03258d06b7deb2592bdb13626659c46abbf5"
@@ -5542,9 +5546,9 @@ gatsby-transformer-sharp@2.1.17:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@2.3.8:
-  version "2.3.8"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.3.8.tgz#17a356173c5c9f8dfd44b8b7449aed120eb482c0"
+gatsby@2.3.9:
+  version "2.3.9"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.3.9.tgz#72dadd66282697eacd02ee2a4b81d2ef5243e17f"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5556,6 +5560,7 @@ gatsby@2.3.8:
     "@mikaelkristiansson/domready" "^1.0.9"
     "@pieh/friendly-errors-webpack-plugin" "1.7.0-chalk-2"
     "@reach/router" "^1.1.1"
+    "@stefanprobst/lokijs" "^1.5.6-b"
     address "1.0.3"
     autoprefixer "^9.4.3"
     babel-core "7.0.0-bridge.0"
@@ -5622,7 +5627,6 @@ gatsby@2.3.8:
     json-stringify-safe "^5.0.1"
     kebab-hash "^0.1.2"
     lodash "^4.17.10"
-    lokijs "^1.5.6"
     md5 "^2.2.1"
     md5-file "^3.1.1"
     mime "^2.2.0"
@@ -5660,6 +5664,7 @@ gatsby@2.3.8:
     "true-case-path" "^1.0.3"
     type-of "^2.0.1"
     url-loader "^1.0.1"
+    util.promisify "^1.0.0"
     uuid "^3.1.0"
     v8-compile-cache "^1.1.0"
     webpack "~4.28.4"
@@ -7977,10 +7982,6 @@ logalot@^2.0.0, logalot@^2.1.0:
 loglevel@^1.4.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.1.tgz#e0fc95133b6ef276cdc8887cdaf24aa6f156f8fa"
-
-lokijs@^1.5.6:
-  version "1.5.6"
-  resolved "https://registry.yarnpkg.com/lokijs/-/lokijs-1.5.6.tgz#6de6b8c3ff7a972fd0104169f81e7ddc244c029f"
 
 longest-streak@^2.0.1:
   version "2.0.2"
