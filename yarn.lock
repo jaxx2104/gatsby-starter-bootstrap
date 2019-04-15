@@ -5209,9 +5209,9 @@ g-status@^2.0.2:
     matcher "^1.0.0"
     simple-git "^1.85.0"
 
-gatsby-cli@^2.5.7:
-  version "2.5.7"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.5.7.tgz#9b1d14507a08eb68af1346955f8bea56ef9918b7"
+gatsby-cli@^2.5.8:
+  version "2.5.8"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.5.8.tgz#0e90e30ee2b212809f92dc2a20d120a13f92bf1c"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5227,6 +5227,7 @@ gatsby-cli@^2.5.7:
     fs-extra "^4.0.1"
     gatsby-telemetry "^1.0.7"
     hosted-git-info "^2.6.0"
+    is-valid-path "^0.1.1"
     lodash "^4.17.10"
     meant "^1.0.1"
     node-fetch "2.3.0"
@@ -5241,9 +5242,9 @@ gatsby-cli@^2.5.7:
     yargs "^12.0.5"
     yurnalist "^1.0.2"
 
-gatsby-image@2.0.38:
-  version "2.0.38"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.38.tgz#348b4a9ba690e1621ec53a7b60405ab525304a7d"
+gatsby-image@2.0.39:
+  version "2.0.39"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.39.tgz#4dc7aab0bfbbfb9ce737a3814d8343a7ee02df17"
   dependencies:
     "@babel/runtime" "^7.0.0"
     object-fit-images "^3.2.4"
@@ -5527,9 +5528,9 @@ gatsby-transformer-sharp@2.1.18:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@2.3.22:
-  version "2.3.22"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.3.22.tgz#5026f468ad7fbcafe936036017b3281f0afd169e"
+gatsby@2.3.23:
+  version "2.3.23"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.3.23.tgz#4e926d170e7fafcf2abf5fcb8c7e00f887bcfd10"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5586,14 +5587,14 @@ gatsby@2.3.22:
     flat "^4.0.0"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.5.7"
+    gatsby-cli "^2.5.8"
     gatsby-link "^2.0.16"
     gatsby-plugin-page-creator "^2.0.12"
     gatsby-react-router-scroll "^2.0.7"
     gatsby-telemetry "^1.0.7"
     glob "^7.1.1"
     graphql "^14.1.1"
-    graphql-compose "^6.0.3"
+    graphql-compose "6.0.3"
     graphql-playground-middleware-express "^1.7.10"
     hash-mod "^0.0.5"
     invariant "^2.2.4"
@@ -6012,7 +6013,7 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.2
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-graphql-compose@^6.0.3:
+graphql-compose@6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/graphql-compose/-/graphql-compose-6.0.3.tgz#fa5668a30694abef4166703aa03af07a741039a8"
   dependencies:
@@ -7051,6 +7052,12 @@ is-installed-globally@^0.1.0:
     global-dirs "^0.1.0"
     is-path-inside "^1.0.0"
 
+is-invalid-path@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/is-invalid-path/-/is-invalid-path-0.1.0.tgz#307a855b3cf1a938b44ea70d2c61106053714f34"
+  dependencies:
+    is-glob "^2.0.0"
+
 is-jpg@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-jpg/-/is-jpg-2.0.0.tgz#2e1997fa6e9166eaac0242daae443403e4ef1d97"
@@ -7226,6 +7233,12 @@ is-utf8@^0.2.0:
 is-valid-glob@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/is-valid-glob/-/is-valid-glob-0.3.0.tgz#d4b55c69f51886f9b65c70d6c2622d37e29f48fe"
+
+is-valid-path@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/is-valid-path/-/is-valid-path-0.1.1.tgz#110f9ff74c37f663e1ec7915eb451f2db93ac9df"
+  dependencies:
+    is-invalid-path "^0.1.0"
 
 is-whitespace-character@^1.0.0:
   version "1.0.2"
