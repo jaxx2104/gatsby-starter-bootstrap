@@ -5250,9 +5250,9 @@ gatsby-cli@^2.5.9:
     yargs "^12.0.5"
     yurnalist "^1.0.2"
 
-gatsby-image@2.0.39:
-  version "2.0.39"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.39.tgz#4dc7aab0bfbbfb9ce737a3814d8343a7ee02df17"
+gatsby-image@2.0.40:
+  version "2.0.40"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.40.tgz#eb59aca8891804464e339baa7421d78f4b7a66c4"
   dependencies:
     "@babel/runtime" "^7.0.0"
     object-fit-images "^3.2.4"
@@ -5406,9 +5406,9 @@ gatsby-react-router-scroll@^2.0.7:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-remark-copy-linked-files@2.0.11:
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.0.11.tgz#00ddb1af5e90a24ed4161a23aa578a9e9be4a2c5"
+gatsby-remark-copy-linked-files@2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.0.12.tgz#0c6596194575489d875151932b60587fef645fd5"
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
