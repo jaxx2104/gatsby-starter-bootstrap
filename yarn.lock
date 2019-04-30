@@ -1001,11 +1001,11 @@
   dependencies:
     map-like "^2.0.0"
 
-"@textlint/fixer-formatter@^3.1.3":
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/@textlint/fixer-formatter/-/fixer-formatter-3.1.3.tgz#c91cc8eb2ab0966fe5c6c3545be643407823c228"
+"@textlint/fixer-formatter@^3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@textlint/fixer-formatter/-/fixer-formatter-3.1.4.tgz#db6111ae7b56206319781dbdf03dc3b5cac46ad9"
   dependencies:
-    "@textlint/types" "^1.1.3"
+    "@textlint/types" "^1.1.4"
     chalk "^1.1.3"
     debug "^4.1.1"
     diff "^2.2.2"
@@ -1015,14 +1015,14 @@
     text-table "^0.2.0"
     try-resolve "^1.0.1"
 
-"@textlint/kernel@^3.1.4":
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/@textlint/kernel/-/kernel-3.1.4.tgz#a81a0e953d8ee1a8ec047df25bb2f410002e30dc"
+"@textlint/kernel@^3.1.5":
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/@textlint/kernel/-/kernel-3.1.5.tgz#4854cab8f28cb82c3f227a412a8c2ebecf8e2509"
   dependencies:
     "@textlint/ast-node-types" "^4.2.1"
     "@textlint/ast-traverse" "^2.1.2"
     "@textlint/feature-flag" "^3.1.2"
-    "@textlint/types" "^1.1.3"
+    "@textlint/types" "^1.1.4"
     "@types/bluebird" "^3.5.18"
     bluebird "^3.5.1"
     debug "^4.1.1"
@@ -1031,13 +1031,13 @@
     object-assign "^4.1.1"
     structured-source "^3.0.2"
 
-"@textlint/linter-formatter@^3.1.3":
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/@textlint/linter-formatter/-/linter-formatter-3.1.3.tgz#4c8213a831a7477793cc5a35c754b12d3dd28002"
+"@textlint/linter-formatter@^3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@textlint/linter-formatter/-/linter-formatter-3.1.4.tgz#566de410cc09565f775d916edcb78755acf60a9b"
   dependencies:
     "@azu/format-text" "^1.0.1"
     "@azu/style-format" "^1.0.0"
-    "@textlint/types" "^1.1.3"
+    "@textlint/types" "^1.1.4"
     chalk "^1.0.0"
     concat-stream "^1.5.1"
     js-yaml "^3.2.4"
@@ -1069,21 +1069,21 @@
   dependencies:
     "@textlint/ast-node-types" "^4.2.1"
 
-"@textlint/textlint-plugin-markdown@^5.1.4":
-  version "5.1.4"
-  resolved "https://registry.yarnpkg.com/@textlint/textlint-plugin-markdown/-/textlint-plugin-markdown-5.1.4.tgz#5212cbaa684e200251f466a65d247468620bfa55"
+"@textlint/textlint-plugin-markdown@^5.1.5":
+  version "5.1.5"
+  resolved "https://registry.yarnpkg.com/@textlint/textlint-plugin-markdown/-/textlint-plugin-markdown-5.1.5.tgz#0515f630de1813c70779ca489ff1003d2efe0417"
   dependencies:
     "@textlint/markdown-to-ast" "^6.1.2"
 
-"@textlint/textlint-plugin-text@^4.1.4":
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/@textlint/textlint-plugin-text/-/textlint-plugin-text-4.1.4.tgz#5515169ce276bee1ef44534d78841b40da6d508c"
+"@textlint/textlint-plugin-text@^4.1.5":
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/@textlint/textlint-plugin-text/-/textlint-plugin-text-4.1.5.tgz#4d947c65dcd75b6f20cf06a061a6bbf1e01ab1d2"
   dependencies:
     "@textlint/text-to-ast" "^3.1.2"
 
-"@textlint/types@^1.1.3":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@textlint/types/-/types-1.1.3.tgz#fcfe9bd012e01d0b641ff57e9d5776fa5b9759af"
+"@textlint/types@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@textlint/types/-/types-1.1.4.tgz#e00778c7d22f9e5cb1a20a98ad1005764b9b4a4b"
   dependencies:
     "@textlint/ast-node-types" "^4.2.1"
     structured-source "^3.0.2"
@@ -12278,18 +12278,18 @@ textlint-util-to-string@^2.1.1:
     object-assign "^4.0.1"
     structured-source "^3.0.2"
 
-textlint@11.2.3:
-  version "11.2.3"
-  resolved "https://registry.yarnpkg.com/textlint/-/textlint-11.2.3.tgz#7f7878453284f1047742458da2b5fa3a376a2e25"
+textlint@11.2.4:
+  version "11.2.4"
+  resolved "https://registry.yarnpkg.com/textlint/-/textlint-11.2.4.tgz#1f9586866ffe7372f52106fe746c993da56732d3"
   dependencies:
     "@textlint/ast-node-types" "^4.2.1"
     "@textlint/ast-traverse" "^2.1.2"
     "@textlint/feature-flag" "^3.1.2"
-    "@textlint/fixer-formatter" "^3.1.3"
-    "@textlint/kernel" "^3.1.4"
-    "@textlint/linter-formatter" "^3.1.3"
-    "@textlint/textlint-plugin-markdown" "^5.1.4"
-    "@textlint/textlint-plugin-text" "^4.1.4"
+    "@textlint/fixer-formatter" "^3.1.4"
+    "@textlint/kernel" "^3.1.5"
+    "@textlint/linter-formatter" "^3.1.4"
+    "@textlint/textlint-plugin-markdown" "^5.1.5"
+    "@textlint/textlint-plugin-text" "^4.1.5"
     "@types/bluebird" "^3.5.18"
     bluebird "^3.0.5"
     debug "^4.1.1"
