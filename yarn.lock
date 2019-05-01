@@ -5327,9 +5327,9 @@ gatsby-plugin-manifest@2.0.29:
     "@babel/runtime" "^7.0.0"
     sharp "^0.21.3"
 
-gatsby-plugin-netlify@2.0.15:
-  version "2.0.15"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.15.tgz#d84b9c18ebd7ed0f74e92675c35fc7a8f15142ee"
+gatsby-plugin-netlify@2.0.16:
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.16.tgz#542849448c495c9feb68e5051de39dfb4b0d10b9"
   dependencies:
     "@babel/runtime" "^7.0.0"
     fs-extra "^4.0.2"
