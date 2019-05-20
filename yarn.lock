@@ -5572,9 +5572,9 @@ gatsby-transformer-sharp@2.1.19:
     semver "^5.6.0"
     sharp "^0.22.1"
 
-gatsby@2.5.5:
-  version "2.5.5"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.5.5.tgz#08f8ce052fdf8656b995cb3880afcf7a483c222e"
+gatsby@2.5.6:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.5.6.tgz#252e4c9d45733d5de710274041b814202cceb2d9"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
