@@ -1424,9 +1424,9 @@ analyze-desumasu-dearu@^3.1.0:
     kuromojin "^1.2.1"
     object.assign "^4.0.3"
 
-animate.css@3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.7.1.tgz#07da14b94185b73f06fcb90faeddb97846b2d481"
+animate.css@3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.7.2.tgz#e73e0d50e92cb1cfef1597d9b38a9481020e08ea"
 
 ansi-align@^2.0.0:
   version "2.0.0"
