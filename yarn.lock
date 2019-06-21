@@ -5322,9 +5322,9 @@ gatsby-graphiql-explorer@^0.2.0:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-image@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.2.0.tgz#37c15dc50f9a67e5a46b2cef8a8870c8068ae5d2"
+gatsby-image@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.2.1.tgz#a883ac469734b9af4018b11dac4d9e24c0e889b9"
   dependencies:
     "@babel/runtime" "^7.0.0"
     object-fit-images "^3.2.4"
@@ -5435,9 +5435,9 @@ gatsby-plugin-sass@^2.0.0-rc.2:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-sharp@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.2.0.tgz#318b71f32680c5dacb78130334524aa9a1fc9821"
+gatsby-plugin-sharp@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.2.1.tgz#a2c91e39cf33a958c108f44b71cc01a3a506c63b"
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
