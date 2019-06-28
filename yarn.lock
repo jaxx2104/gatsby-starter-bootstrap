@@ -5305,9 +5305,9 @@ g-status@^2.0.2:
     matcher "^1.0.0"
     simple-git "^1.85.0"
 
-gatsby-cli@^2.7.3:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.3.tgz#3fb79f6c5481bb2aec6c303170b1a3578115ceb5"
+gatsby-cli@^2.7.4:
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.4.tgz#bc71aa7f14952ee25dd5ab1419954cd0e4f22929"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5657,9 +5657,9 @@ gatsby-transformer-sharp@2.2.0:
     semver "^5.6.0"
     sharp "^0.22.1"
 
-gatsby@2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.11.0.tgz#a26c5297e79f1682909156bb0a05dd9d93c8de56"
+gatsby@2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.11.1.tgz#933723e76f0727516093c5fe28aa8b8aec3d7216"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5718,7 +5718,7 @@ gatsby@2.11.0:
     flat "^4.0.0"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.7.3"
+    gatsby-cli "^2.7.4"
     gatsby-graphiql-explorer "^0.2.0"
     gatsby-link "^2.2.0"
     gatsby-plugin-page-creator "^2.1.1"
