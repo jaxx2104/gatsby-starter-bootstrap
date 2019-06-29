@@ -5516,9 +5516,9 @@ gatsby-plugin-sharp@2.2.1:
     sharp "^0.22.1"
     svgo "^1.2.0"
 
-gatsby-plugin-sitemap@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.2.0.tgz#062197dfb2c5b3c61deb18294c97fb625901d45a"
+gatsby-plugin-sitemap@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.2.1.tgz#8188475e2ec262b5ac269d70b564090f71c63921"
   dependencies:
     "@babel/runtime" "^7.0.0"
     minimatch "^3.0.4"
@@ -5671,9 +5671,9 @@ gatsby-transformer-sharp@2.2.0:
     semver "^5.6.0"
     sharp "^0.22.1"
 
-gatsby@2.11.3:
-  version "2.11.3"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.11.3.tgz#c91f59a5a78a786db3f87d6069e62cd46c3e19f2"
+gatsby@2.11.4:
+  version "2.11.4"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.11.4.tgz#86eb6a306f32137b1f169d415ed2bc68aaf8bcd4"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
