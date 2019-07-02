@@ -14,7 +14,7 @@
     "gatsby-plugin-netlify": "2.1.0",
     "gatsby-plugin-nprogress": "2.1.0",
     "gatsby-plugin-offline": "2.2.0",
-    "gatsby-plugin-preact": "2.0.11",
+    "gatsby-plugin-preact": "3.1.2",
     "gatsby-plugin-react-helmet": "3.1.0",
     "gatsby-plugin-react-next": "2.0.1-13",
     "gatsby-plugin-sass": "^2.0.0-rc.2",
