@@ -1,11 +1,12 @@
 import { Link } from 'gatsby'
-import get from 'lodash/get'
-import React from 'react'
-import map from 'lodash/map'
 import Img from 'gatsby-image'
+import React from 'react'
 
-import Adsense from 'components/Adsense'
-import Footer from 'components/Footer'
+import get from 'lodash/get'
+import map from 'lodash/map'
+
+import Adsense from 'components/adsense'
+
 import './style.scss'
 
 const Post = ({ data, options }) => {
@@ -21,7 +22,7 @@ const Post = ({ data, options }) => {
   const { isIndex, adsense } = options
   const html = get(data, 'html')
   const isMore = isIndex && !!html.match('<!--more-->')
-  const fixed = get(image, 'childImageSharp.fixed')
+  const fluid = get(image, 'childImageSharp.fluid')
 
   return (
     <div className="article" key={path}>
@@ -36,8 +37,8 @@ const Post = ({ data, options }) => {
         </div>
         <div className="content">
           <p>{description}</p>
-          {fixed ? (
-            <Img fixed={fixed} style={{ display: 'block', margin: '0 auto' }} />
+          {fluid ? (
+            <Img fluid={fluid} style={{ display: 'block', margin: '0 auto' }} />
           ) : (
             ''
           )}

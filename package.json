@@ -16,8 +16,7 @@
     "gatsby-plugin-offline": "2.2.1",
     "gatsby-plugin-preact": "3.1.2",
     "gatsby-plugin-react-helmet": "3.1.0",
-    "gatsby-plugin-react-next": "2.0.1-13",
-    "gatsby-plugin-sass": "^2.0.0-rc.2",
+    "gatsby-plugin-sass": "^2.1.0",
     "gatsby-plugin-sharp": "2.2.2",
     "gatsby-plugin-sitemap": "2.2.1",
     "gatsby-plugin-twitter": "2.1.0",
@@ -84,7 +83,11 @@
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "lint:text": "textlint src/pages/**/index.md",
     "lint:textfix": "textlint --fix src/pages/**/index.md",
-    "precommit": "lint-staged",
     "test": "prettier --write \"**/*.+(js|jsx|json|css|scss)\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
