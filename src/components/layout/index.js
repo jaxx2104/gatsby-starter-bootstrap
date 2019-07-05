@@ -1,8 +1,8 @@
 import React from 'react'
 import emergence from 'emergence.js'
 
-import Navi from 'components/_Navi'
-import Footer from 'components/_Footer'
+import Navi from 'components/navi'
+import Footer from 'components/footer'
 import { siteMetadata } from '../../../gatsby-config'
 
 import 'modern-normalize/modern-normalize.css'
