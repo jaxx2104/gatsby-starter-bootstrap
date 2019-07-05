@@ -2,10 +2,10 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import React from 'react'
 
-import Post from 'templates/Post'
-import Meta from 'components/Meta'
-import Layout from 'components/Layout'
-import Page from 'templates/Page'
+import Post from 'templates/post'
+import Meta from 'components/meta'
+import Layout from 'components/layout'
+import Page from 'templates/page'
 
 const Template = ({ data, location }) => (
   <div>
@@ -55,8 +55,8 @@ export const pageQuery = graphql`
         date(formatString: "YYYY/MM/DD")
         image {
           childImageSharp {
-            fixed(width: 500) {
-              ...GatsbyImageSharpFixed_withWebp
+            fluid(maxWidth: 500) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
