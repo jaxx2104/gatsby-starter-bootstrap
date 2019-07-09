@@ -34,6 +34,6 @@ develop
 
 ### Custom Theme
 
-`/src/scss/getstrap.scss`
+`/src/scss/gatstrap.scss`
 
 ![1f466b07-5506-4c8d-8d17-8d02b42d6d0d](https://user-images.githubusercontent.com/2681007/43086458-5092d0be-8ed8-11e8-8125-8b336fdd3b43.gif)
