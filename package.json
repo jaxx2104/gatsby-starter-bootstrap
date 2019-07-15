@@ -4,7 +4,7 @@
   "version": "2.0.1",
   "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
   "dependencies": {
-    "gatsby": "2.13.21",
+    "gatsby": "2.13.22",
     "gatsby-image": "2.2.6",
     "gatsby-link": "2.2.2",
     "gatsby-plugin-catch-links": "2.1.2",
@@ -26,7 +26,7 @@
     "gatsby-remark-responsive-iframe": "2.2.4",
     "gatsby-remark-smartypants": "2.1.2",
     "gatsby-source-filesystem": "2.1.5",
-    "gatsby-transformer-remark": "2.6.5",
+    "gatsby-transformer-remark": "2.6.6",
     "gatsby-transformer-sharp": "2.2.3"
   },
   "devDependencies": {
