@@ -32,6 +32,9 @@ Install this starter (assuming Gatsby is installed) by running from your CLI:
 develop
 `gatsby develop`
 
+> Note:
+> When in develop mode there is a global variable called `__DEV__` that you can use in all your `components`. This can be particulary useful if you like to avoid injecting few third-party scripts / widgets etc. while on develop mode.
+
 ### Custom Theme
 
 `/src/scss/gatstrap.scss`

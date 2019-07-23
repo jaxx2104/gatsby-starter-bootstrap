@@ -61,7 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions, plugins, stage }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
@@ -70,5 +70,10 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         scss: path.resolve(__dirname, 'src/scss'),
       },
     },
+    plugins: [
+      plugins.define({
+        __DEV__: stage === `develop` || stage === `develop-html`,
+      }),
+    ],
   })
 }
