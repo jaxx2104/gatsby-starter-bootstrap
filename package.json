@@ -4,7 +4,7 @@
   "version": "2.0.1",
   "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
   "dependencies": {
-    "gatsby": "2.13.57",
+    "gatsby": "2.13.58",
     "gatsby-image": "2.2.8",
     "gatsby-link": "2.2.4",
     "gatsby-plugin-catch-links": "2.1.2",
@@ -21,12 +21,12 @@
     "gatsby-plugin-sitemap": "2.2.6",
     "gatsby-plugin-twitter": "2.1.2",
     "gatsby-remark-copy-linked-files": "2.1.5",
-    "gatsby-remark-images": "3.1.9",
+    "gatsby-remark-images": "3.1.10",
     "gatsby-remark-prismjs": "3.3.5",
     "gatsby-remark-responsive-iframe": "2.2.4",
     "gatsby-remark-smartypants": "2.1.2",
     "gatsby-source-filesystem": "2.1.9",
-    "gatsby-transformer-remark": "2.6.12",
+    "gatsby-transformer-remark": "2.6.13",
     "gatsby-transformer-sharp": "2.2.6"
   },
   "devDependencies": {
