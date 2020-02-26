@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base"],
+  "extends": ["config:base", "schedule:monthly"],
   "automerge": true,
   "major": {
     "automerge": false
@@ -11,6 +11,5 @@
       "groupName": "devDependencies"
     }
   ],
-  "schedule": ["before 8am on Monday"],
   "timezone": "Asia/Tokyo"
 }
