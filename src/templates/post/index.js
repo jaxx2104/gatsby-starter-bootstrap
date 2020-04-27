@@ -62,7 +62,7 @@ const getAd = (isIndex, adsense) => {
   return !isIndex ? <Adsense clientId={adsense} slotId="" format="auto" /> : ''
 }
 
-const getDescription = body => {
+const getDescription = (body) => {
   body = body.replace(/<blockquote>/g, '<blockquote class="blockquote">')
   if (body.match('<!--more-->')) {
     body = body.split('<!--more-->')
