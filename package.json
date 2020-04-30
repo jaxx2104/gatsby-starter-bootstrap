@@ -45,7 +45,7 @@
     "font-awesome": "4.7.0",
     "gh-pages": "2.2.0",
     "husky": "4.2.5",
-    "lint-staged": "10.1.7",
+    "lint-staged": "10.2.1",
     "lodash": "4.17.15",
     "modern-normalize": "0.6.0",
     "node-sass": "4.14.0",
