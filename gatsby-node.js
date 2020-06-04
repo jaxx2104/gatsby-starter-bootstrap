@@ -1,6 +1,6 @@
 const each = require('lodash/each')
 const path = require('path')
-const PostTemplate = path.resolve('./src/templates/index.js')
+const PostTemplate = path.resolve('./src/templates/index.tsx')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -10,7 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           {
-            allFile(filter: { extension: { regex: "/md|js/" } }, limit: 1000) {
+            allFile(filter: { extension: { regex: "/md|tsx/" } }, limit: 1000) {
               edges {
                 node {
                   id

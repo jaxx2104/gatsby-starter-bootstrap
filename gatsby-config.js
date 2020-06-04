@@ -86,6 +86,12 @@ module.exports = {
         mergeCachingHeaders: true,
       },
     },
+    {
+      resolve: 'gatsby-plugin-graphql-codegen',
+      options: {
+        fileName: `types/graphql-types.d.ts`,
+      },
+    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
@@ -93,6 +99,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',
+    'gatsby-plugin-typescript',
     'gatsby-transformer-sharp',
   ],
 }
