@@ -1,10 +1,11 @@
 import React from 'react'
+import './style.scss'
 
 class Adsense extends React.Component {
   componentDidMount() {
     const { clientId } = this.props
     if (clientId) {
-      ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+      window.adsbygoogle = (window.adsbygoogle || []).push({})
     }
   }
 
