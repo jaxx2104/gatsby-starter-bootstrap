@@ -1,33 +1,42 @@
 import { graphql } from 'gatsby'
-import get from 'lodash/get'
 import React from 'react'
 
-import Post from 'templates/post'
-import Meta from 'components/meta'
-import Layout from 'components/layout'
-import Page from 'templates/page'
+import Post from '../templates/post'
+import Meta from '../components/meta'
+import Layout from '../components/layout'
+import Page from '../templates/page'
+import { PostByPathQuery } from '../../types/graphql-types'
 
-const Template = ({ data, location }) => (
-  <div>
-    <Layout location={location}>
-      <Meta
-        title={get(data, 'post.frontmatter.title')}
-        site={get(data, 'site.meta')}
-      />
-      {get(data, 'post.frontmatter.layout') != 'page' ? (
-        <Post
-          data={get(data, 'post')}
-          options={{
-            isIndex: false,
-            adsense: get(data, 'site.meta.adsense'),
-          }}
+interface Props {
+  data: PostByPathQuery
+  location: Location
+}
+
+const Template: React.FC<Props> = ({ data, location }: Props) => {
+  const isPage = data.post?.frontmatter?.layout != 'page'
+  return (
+    <div>
+      <Layout location={location}>
+        <Meta
+          title={data.post?.frontmatter?.title || ''}
+          site={data.site?.meta}
         />
-      ) : (
-        <Page {...this.props} />
-      )}
-    </Layout>
-  </div>
-)
+        {isPage ? (
+          <Post
+            data={data}
+            options={{
+              isIndex: false,
+              adsense: data.site?.meta?.adsense,
+            }}
+          />
+        ) : (
+          <Page data={data} location={location} />
+        )}
+      </Layout>
+    </div>
+  )
+}
+
 export default Template
 
 export const pageQuery = graphql`
@@ -36,7 +45,7 @@ export const pageQuery = graphql`
       meta: siteMetadata {
         title
         description
-        url: siteUrl
+        siteUrl
         author
         twitter
         adsense

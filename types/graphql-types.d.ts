@@ -697,7 +697,7 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___layout'
   | 'childMarkdownRemark___frontmatter___path'
   | 'childMarkdownRemark___frontmatter___category'
-  | 'childMarkdownRemark___frontmatter___description'
+  | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___frontmatter___image___sourceInstanceName'
   | 'childMarkdownRemark___frontmatter___image___absolutePath'
   | 'childMarkdownRemark___frontmatter___image___relativePath'
@@ -734,7 +734,7 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___image___publicURL'
   | 'childMarkdownRemark___frontmatter___image___id'
   | 'childMarkdownRemark___frontmatter___image___children'
-  | 'childMarkdownRemark___frontmatter___tags'
+  | 'childMarkdownRemark___frontmatter___description'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -1503,7 +1503,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___layout'
   | 'frontmatter___path'
   | 'frontmatter___category'
-  | 'frontmatter___description'
+  | 'frontmatter___tags'
   | 'frontmatter___image___sourceInstanceName'
   | 'frontmatter___image___absolutePath'
   | 'frontmatter___image___relativePath'
@@ -1565,7 +1565,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___image___childMarkdownRemark___timeToRead'
   | 'frontmatter___image___childMarkdownRemark___tableOfContents'
   | 'frontmatter___image___childMarkdownRemark___children'
-  | 'frontmatter___tags'
+  | 'frontmatter___description'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -1691,9 +1691,9 @@ export type MarkdownRemarkFrontmatter = {
   layout?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
   category?: Maybe<Scalars['String']>;
-  description?: Maybe<Scalars['String']>;
-  image?: Maybe<File>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
+  image?: Maybe<File>;
+  description?: Maybe<Scalars['String']>;
 };
 
 
@@ -1710,9 +1710,9 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   layout?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
   category?: Maybe<StringQueryOperatorInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  image?: Maybe<FileFilterInput>;
   tags?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<FileFilterInput>;
+  description?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkGroupConnection = {
@@ -3075,10 +3075,7 @@ export type StringQueryOperatorInput = {
 export type IndexQueryQueryVariables = {};
 
 
-export type IndexQueryQuery = { site?: Maybe<{ meta?: Maybe<(
-      Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'twitter' | 'adsense'>
-      & { url: SiteSiteMetadata['siteUrl'] }
-    )> }>, remark: { posts: Array<{ post: (
+export type IndexQueryQuery = { site?: Maybe<{ meta?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'siteUrl' | 'author' | 'twitter' | 'adsense'>> }>, remark: { posts: Array<{ post: (
         Pick<MarkdownRemark, 'html'>
         & { frontmatter?: Maybe<(
           Pick<MarkdownRemarkFrontmatter, 'layout' | 'title' | 'path' | 'category' | 'tags' | 'description' | 'date'>
@@ -3089,17 +3086,14 @@ export type IndexQueryQuery = { site?: Maybe<{ meta?: Maybe<(
 export type ProfilePageQueryQueryVariables = {};
 
 
-export type ProfilePageQueryQuery = { profile?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixed_WithWebpFragment> }> }>, work1?: Maybe<{ childImageSharp?: Maybe<{ sizes?: Maybe<GatsbyImageSharpSizes_WithWebpFragment> }> }>, work2?: Maybe<{ childImageSharp?: Maybe<{ sizes?: Maybe<GatsbyImageSharpSizes_WithWebpFragment> }> }>, work3?: Maybe<{ childImageSharp?: Maybe<{ sizes?: Maybe<GatsbyImageSharpSizes_WithWebpFragment> }> }>, back1?: Maybe<{ childImageSharp?: Maybe<{ sizes?: Maybe<GatsbyImageSharpSizes_WithWebpFragment> }> }>, back2?: Maybe<{ childImageSharp?: Maybe<{ sizes?: Maybe<GatsbyImageSharpSizes_WithWebpFragment> }> }> };
+export type ProfilePageQueryQuery = { profile?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixed_WithWebpFragment> }> }> };
 
 export type PostByPathQueryVariables = {
   path: Scalars['String'];
 };
 
 
-export type PostByPathQuery = { site?: Maybe<{ meta?: Maybe<(
-      Pick<SiteSiteMetadata, 'title' | 'description' | 'author' | 'twitter' | 'adsense'>
-      & { url: SiteSiteMetadata['siteUrl'] }
-    )> }>, post?: Maybe<(
+export type PostByPathQuery = { site?: Maybe<{ meta?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'siteUrl' | 'author' | 'twitter' | 'adsense'>> }>, post?: Maybe<(
     Pick<MarkdownRemark, 'id' | 'html'>
     & { frontmatter?: Maybe<(
       Pick<MarkdownRemarkFrontmatter, 'layout' | 'title' | 'path' | 'category' | 'tags' | 'description' | 'date'>
