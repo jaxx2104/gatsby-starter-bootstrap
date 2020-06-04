@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-bootstrap",
   "description": "Simple starter for Gatsby",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
   "dependencies": {
     "gatsby": "2.22.19",
@@ -78,7 +78,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.+(js|json|md)\" --ignore-path .gitignore",
-    "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
+    "lint": "eslint --fix --ext .js,.jsx --ignore-path .gitignore .",
     "lint:text": "textlint src/pages/**/index.md",
     "lint:textfix": "textlint --fix src/pages/**/index.md",
     "test": "prettier --write \"**/*.+(js|jsx|json|css|scss)\""
