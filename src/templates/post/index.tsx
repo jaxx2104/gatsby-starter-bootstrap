@@ -1,46 +1,62 @@
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import Img, { FluidObject } from 'gatsby-image'
 import React from 'react'
 
-import get from 'lodash/get'
-import map from 'lodash/map'
-
-import Adsense from 'components/adsense'
+import Adsense from '../../components/adsense'
+import Button from '../../components/button'
+import Badge from '../../components/badge'
+import { PostByPathQuery } from '../../../types/graphql-types'
 
 import './style.scss'
 
-const Post = ({ data, options }) => {
-  const {
-    category,
-    tags,
-    description,
-    title,
-    path,
-    date,
-    image,
-  } = data.frontmatter
+const getDescription = (content: string): string => {
+  const body = content.replace(
+    /<blockquote>/g,
+    '<blockquote class="blockquote">'
+  )
+  if (body.match('<!--more-->')) {
+    const [description] = body.split('<!--more-->')
+    return description
+  }
+  return body
+}
+
+interface Props {
+  data: PostByPathQuery
+  options: {
+    isIndex: boolean
+    adsense?: string | null
+  }
+}
+
+const Post: React.FC<Props> = ({ data, options }: Props) => {
+  const frontmatter = data.post?.frontmatter
+  const path = frontmatter?.path || ''
+  const image = frontmatter?.image || null
   const { isIndex, adsense } = options
-  const html = get(data, 'html')
+  const html = data.post?.html || ''
   const isMore = isIndex && !!html.match('<!--more-->')
-  const fluid = get(image, 'childImageSharp.fluid')
 
   return (
     <div className="article" key={path}>
       <div className="container">
         <div className="info">
           <Link style={{ boxShadow: 'none' }} to={path}>
-            <h1>{title}</h1>
-            <time dateTime={date}>{date}</time>
+            <h1>{frontmatter?.title}</h1>
+            <time dateTime={frontmatter?.date}>{frontmatter?.date}</time>
           </Link>
-          {Badges({ items: [category], primary: true })}
-          {Badges({ items: tags })}
+          <Badge label={frontmatter?.category || ''} primary={true} />
+          {(frontmatter?.tags || []).map((tag, index) => (
+            <Badge label={tag as string} primary={false} key={index} />
+          ))}
         </div>
         <div className="content">
-          <p>{description}</p>
-          {fluid ? (
-            <Img fluid={fluid} style={{ display: 'block', margin: '0 auto' }} />
-          ) : (
-            ''
+          <p>{frontmatter?.description}</p>
+          {image?.childImageSharp?.fluid && (
+            <Img
+              fluid={image.childImageSharp.fluid as FluidObject}
+              style={{ display: 'block', margin: '0 auto' }}
+            />
           )}
         </div>
         <div
@@ -49,50 +65,11 @@ const Post = ({ data, options }) => {
             __html: isMore ? getDescription(html) : html,
           }}
         />
-        {isMore ? Button({ path, label: 'MORE', primary: true }) : ''}
-        {getAd(isIndex, adsense)}
+        {isMore && <Button path={path} label="MORE" primary={true} />}
+        {!isIndex && <Adsense clientId={adsense} slotId="" format="auto" />}
       </div>
     </div>
   )
 }
 
 export default Post
-
-const getAd = (isIndex, adsense) => {
-  return !isIndex ? <Adsense clientId={adsense} slotId="" format="auto" /> : ''
-}
-
-const getDescription = (body) => {
-  body = body.replace(/<blockquote>/g, '<blockquote class="blockquote">')
-  if (body.match('<!--more-->')) {
-    body = body.split('<!--more-->')
-    if (typeof body[0] !== 'undefined') {
-      return body[0]
-    }
-  }
-  return body
-}
-
-const Button = ({ path, label, primary }) => (
-  <Link className="readmore" to={path}>
-    <span
-      className={`btn btn-outline-primary btn-block ${
-        primary ? 'btn-outline-primary' : 'btn-outline-secondary'
-      }`}
-    >
-      {label}
-    </span>
-  </Link>
-)
-
-const Badges = ({ items, primary }) =>
-  map(items, (item, i) => {
-    return (
-      <span
-        className={`badge ${primary ? 'badge-primary' : 'badge-secondary'}`}
-        key={i}
-      >
-        {item}
-      </span>
-    )
-  })
