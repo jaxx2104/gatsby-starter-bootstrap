@@ -1,10 +1,10 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 
-import Post from '../templates/post'
-import Meta from '../components/meta'
-import Layout from '../components/layout'
-import Page from '../templates/page'
+import Post from './post/post'
+import Meta from '../components/meta/meta'
+import Layout from '../components/layout/layout'
+import Page from './page/page'
 import { PostByPathQuery } from '../../types/graphql-types'
 
 interface Props {

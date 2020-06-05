@@ -2,9 +2,9 @@ import { graphql } from 'gatsby'
 import React from 'react'
 
 import { IndexQueryQuery, PostByPathQuery } from '../../types/graphql-types'
-import Post from '../templates/post'
-import Meta from '../components/meta'
-import Layout from '../components/layout'
+import Post from '../templates/post/post'
+import Meta from '../components/meta/meta'
+import Layout from '../components/layout/layout'
 
 interface Props {
   data: IndexQueryQuery

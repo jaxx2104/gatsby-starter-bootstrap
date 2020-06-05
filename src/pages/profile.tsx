@@ -4,9 +4,8 @@ import React from 'react'
 
 import { ProfilePageQueryQuery } from '../../types/graphql-types'
 import { siteMetadata } from '../../gatsby-config'
-import Layout from '../components/layout'
-import Meta from '../components/meta'
-import Icon from '../components/icon'
+import Layout from '../components/layout/layout'
+import Meta from '../components/meta/meta'
 
 interface Props {
   data: ProfilePageQueryQuery

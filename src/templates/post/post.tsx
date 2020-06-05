@@ -2,9 +2,9 @@ import { Link } from 'gatsby'
 import Img, { FluidObject } from 'gatsby-image'
 import React from 'react'
 
-import Adsense from '../../components/adsense'
-import Button from '../../components/button'
-import Badge from '../../components/badge'
+import Adsense from '../../components/adsense/adsense'
+import Button from '../../components/button/button'
+import Badge from '../../components/badge/badge'
 import { PostByPathQuery } from '../../../types/graphql-types'
 
 import './style.scss'
