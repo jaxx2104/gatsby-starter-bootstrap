@@ -1,19 +1,26 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import get from 'lodash/get'
 
-import Post from 'templates/post'
-import Meta from 'components/meta'
-import Layout from 'components/layout'
+import { IndexQueryQuery, PostByPathQuery } from '../../types/graphql-types'
+import Post from '../templates/post/post'
+import Meta from '../components/meta/meta'
+import Layout from '../components/layout/layout'
 
-const BlogIndex = ({ data, location }) => {
-  const posts = get(data, 'remark.posts')
+interface Props {
+  data: IndexQueryQuery
+  location: Location
+}
+
+const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
+  const posts = data.remark.posts
+  const meta = data.site?.meta
+
   return (
     <Layout location={location}>
-      <Meta site={get(data, 'site.meta')} />
-      {posts.map(({ post }, i) => (
+      <Meta site={meta} />
+      {posts.map((post, i) => (
         <Post
-          data={post}
+          data={post as PostByPathQuery}
           options={{
             isIndex: true,
           }}
@@ -32,7 +39,7 @@ export const pageQuery = graphql`
       meta: siteMetadata {
         title
         description
-        url: siteUrl
+        siteUrl
         author
         twitter
         adsense

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { library, IconName } from '@fortawesome/fontawesome-svg-core'
 import React from 'react'
 
 import {
@@ -31,9 +31,14 @@ library.add(
   faVuejs
 )
 
-const Icon = ({ name }) => (
-  <div className="icon" title={name}>
-    <FontAwesomeIcon icon={['fab', name]} />
+interface Props {
+  name: 'apple' | 'aws' | 'php' | 'node' | 'vuejs' | 'react' | 'js' | 'html5'
+  title: string
+}
+
+const Icon: React.FC<Props> = ({ name, title }: Props) => (
+  <div className="icon" title={title}>
+    <FontAwesomeIcon icon={['fab', name as IconName]} />
   </div>
 )
 

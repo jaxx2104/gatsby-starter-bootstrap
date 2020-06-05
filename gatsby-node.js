@@ -1,6 +1,7 @@
-const each = require('lodash/each')
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
-const PostTemplate = path.resolve('./src/templates/index.js')
+const PostTemplate = path.resolve('./src/templates/template.tsx')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -10,7 +11,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           {
-            allFile(filter: { extension: { regex: "/md|js/" } }, limit: 1000) {
+            allFile(filter: { extension: { regex: "/md|tsx/" } }, limit: 1000) {
               edges {
                 node {
                   id
@@ -37,7 +38,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Create blog posts & pages.
         const items = data.allFile.edges
         const posts = items.filter(({ node }) => /posts/.test(node.name))
-        each(posts, ({ node }) => {
+        posts.forEach(({ node }) => {
           if (!node.remark) return
           const { path } = node.remark.frontmatter
           createPage({
@@ -47,7 +48,7 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         const pages = items.filter(({ node }) => /page/.test(node.name))
-        each(pages, ({ node }) => {
+        pages.forEach(({ node }) => {
           if (!node.remark) return
           const { name } = path.parse(node.path)
           const PageTemplate = path.resolve(node.path)
