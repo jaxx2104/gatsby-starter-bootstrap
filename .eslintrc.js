@@ -14,7 +14,7 @@ module.exports = {
   ],
   plugins: ['@typescript-eslint', 'react', 'react-hooks', 'prettier'],
   parserOptions: {
-    ecmaVersion: 2016,
+    ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
