@@ -6,7 +6,7 @@ interface Props {
   location: Location
 }
 
-const Navi: React.FC<Props> = ({ location, title }: Props) => {
+const Navibar: React.FC<Props> = ({ location, title }: Props) => {
   return (
     <nav className="navbar navbar-expand navbar-dark flex-column flex-md-row bg-primary">
       <div className="container">
@@ -43,4 +43,4 @@ const Navi: React.FC<Props> = ({ location, title }: Props) => {
   )
 }
 
-export default Navi
+export default Navibar

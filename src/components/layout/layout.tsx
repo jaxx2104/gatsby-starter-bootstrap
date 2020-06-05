@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import emergence from 'emergence.js'
 
-import Navi from '../../components/navi'
-import Footer from '../../components/footer'
+import Navibar from '../navibar/navibar'
+import Footer from '../footer/footer'
 import { siteMetadata } from '../../../gatsby-config'
 
 import 'modern-normalize/modern-normalize.css'
@@ -23,7 +23,7 @@ const Layout: React.FC<Props> = ({ children, location }: Props) => {
 
   return (
     <div>
-      <Navi title={siteMetadata.title} location={location} />
+      <Navibar title={siteMetadata.title} location={location} />
       {children}
       <Footer title={siteMetadata.title} author={siteMetadata.author} />
     </div>
