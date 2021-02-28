@@ -40,7 +40,7 @@
     "babel-eslint": "10.1.0",
     "bootstrap": "4.6.0",
     "emergence.js": "1.1.2",
-    "eslint": "7.19.0",
+    "eslint": "7.21.0",
     "eslint-config-prettier": "6.15.0",
     "eslint-plugin-prettier": "3.3.1",
     "eslint-plugin-react": "7.22.0",
@@ -49,7 +49,7 @@
     "gh-pages": "3.1.0",
     "husky": "4.3.8",
     "jquery": "3.5.1",
-    "lint-staged": "10.5.3",
+    "lint-staged": "10.5.4",
     "modern-normalize": "0.7.0",
     "node-sass": "4.14.1",
     "popper.js": "1.16.1",
@@ -58,10 +58,10 @@
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-helmet": "6.1.0",
-    "textlint": "11.8.1",
+    "textlint": "11.8.2",
     "textlint-rule-preset-ja-spacing": "2.0.2",
     "textlint-rule-preset-japanese": "5.0.0",
-    "typescript": "3.9.7"
+    "typescript": "3.9.9"
   },
   "keywords": [
     "gatsby",
