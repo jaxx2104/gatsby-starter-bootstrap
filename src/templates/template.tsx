@@ -5,10 +5,9 @@ import Post from './post/post'
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
 import Page from './page/page'
-import { PostByPathQuery } from '../../types/graphql-types'
 
 interface Props {
-  data: PostByPathQuery
+  data: GatsbyTypes.PostByPathQuery
   location: Location
 }
 
