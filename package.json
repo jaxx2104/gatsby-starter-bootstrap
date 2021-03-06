@@ -46,11 +46,11 @@
   },
   "devDependencies": {
     "@types/react-helmet": "6.1.0",
-    "@typescript-eslint/eslint-plugin": "3.10.1",
-    "@typescript-eslint/parser": "3.10.1",
+    "@typescript-eslint/eslint-plugin": "4.16.1",
+    "@typescript-eslint/parser": "4.16.1",
     "babel-eslint": "10.1.0",
     "eslint": "7.21.0",
-    "eslint-config-prettier": "6.15.0",
+    "eslint-config-prettier": "8.1.0",
     "eslint-plugin-prettier": "3.3.1",
     "eslint-plugin-react": "7.22.0",
     "eslint-plugin-react-hooks": "4.2.0",
@@ -61,7 +61,7 @@
     "textlint": "11.8.2",
     "textlint-rule-preset-ja-spacing": "2.0.2",
     "textlint-rule-preset-japanese": "5.0.0",
-    "typescript": "3.9.9"
+    "typescript": "4.2.3"
   },
   "keywords": [
     "gatsby",
