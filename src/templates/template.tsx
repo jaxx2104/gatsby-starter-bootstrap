@@ -5,10 +5,9 @@ import Post from './post/post'
 import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
 import Page from './page/page'
-import { PostByPathQuery } from '../../types/graphql-types'
 
 interface Props {
-  data: PostByPathQuery
+  data: GatsbyTypes.PostByPathQuery
   location: Location
 }
 
@@ -66,6 +65,13 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 500) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        file(relativePath: { eq: "images/example.jpg" }) {
+          childImageSharp {
+            fixed {
+              ...GatsbyImageSharpFixed
             }
           }
         }

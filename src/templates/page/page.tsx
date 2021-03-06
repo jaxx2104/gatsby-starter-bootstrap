@@ -1,11 +1,9 @@
 import React from 'react'
 
-import { PostByPathQuery } from '../../../types/graphql-types'
-
 import './style.scss'
 
 interface Props {
-  data: PostByPathQuery
+  data: GatsbyTypes.PostByPathQuery
   location: Location
 }
 

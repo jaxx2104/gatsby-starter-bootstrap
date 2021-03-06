@@ -54,7 +54,6 @@ module.exports = {
         name: 'Gatstrap',
         short_name: 'Gatstrap',
         description: 'Gatsby starter for bootstrap a blog',
-        homepage_url: 'https://gatstrap.netlify.com',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#673ab7',
@@ -74,23 +73,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: '',
-      },
-    },
-    {
       resolve: 'gatsby-plugin-netlify',
       options: {
         mergeSecurityHeaders: true,
         mergeLinkHeaders: true,
         mergeCachingHeaders: true,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-graphql-codegen',
-      options: {
-        fileName: `types/graphql-types.d.ts`,
       },
     },
     'gatsby-plugin-catch-links',
@@ -101,6 +88,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-twitter',
     'gatsby-plugin-typescript',
+    "gatsby-plugin-typegen",
     'gatsby-transformer-sharp',
   ],
 }
