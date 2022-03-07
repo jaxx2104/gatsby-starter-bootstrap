@@ -37,7 +37,7 @@
     "jquery": "3.6.0",
     "modern-normalize": "1.0.0",
     "popper.js": "1.16.1",
-    "prismjs": "1.23.0",
+    "prismjs": "1.27.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
