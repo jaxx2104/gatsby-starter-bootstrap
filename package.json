@@ -41,7 +41,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
-    "sass": "1.32.8"
+    "sass": "1.80.4"
   },
   "devDependencies": {
     "@types/react-helmet": "6.1.0",
