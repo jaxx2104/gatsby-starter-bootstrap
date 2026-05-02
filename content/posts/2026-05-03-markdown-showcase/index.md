@@ -14,7 +14,7 @@ date: 2026-05-03
 
 ### Heading 3
 
-A paragraph with **bold**, _italic_, and `inline code`. A [link](https://www.gatsbyjs.com/).
+A paragraph with **bold**, _italic_, and `inline code`. Visit the [Gatsby site](https://www.gatsbyjs.com/) for more.
 
 > Blockquotes render with the `.blockquote` class via the post template.
 
