@@ -64,7 +64,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
     createPage({
       path: postPath,
       component: PostTemplate,
-      context: { path: postPath },
+      context: { pagePath: postPath },
     })
   })
 

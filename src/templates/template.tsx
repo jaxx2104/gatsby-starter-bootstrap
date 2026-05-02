@@ -36,7 +36,7 @@ export const Head: HeadFC<Queries.PostByPathQuery> = ({ data }) => (
 )
 
 export const pageQuery = graphql`
-  query PostByPath($path: String!) {
+  query PostByPath($pagePath: String!) {
     site {
       siteMetadata {
         title
@@ -46,7 +46,7 @@ export const pageQuery = graphql`
         twitter
       }
     }
-    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
+    post: markdownRemark(frontmatter: { path: { eq: $pagePath } }) {
       id
       html
       frontmatter {
