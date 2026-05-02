@@ -49,9 +49,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
       >
         {label}
       </button>
-      <ul className={`dropdown-menu${open ? ' show' : ''}`} role="menu">
-        {children}
-      </ul>
+      <ul className={`dropdown-menu${open ? ' show' : ''}`}>{children}</ul>
     </div>
   )
 }
