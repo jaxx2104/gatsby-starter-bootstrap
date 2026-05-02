@@ -1,49 +1,34 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 
-import { SiteSiteMetadata } from '../../../types/graphql-types'
-
-interface Props {
-  site:
-    | Pick<
-        SiteSiteMetadata,
-        'title' | 'description' | 'author' | 'twitter' | 'adsense' | 'siteUrl'
-      >
-    | null
-    | undefined
+export interface MetaProps {
   title?: string
+  description?: string
+  siteUrl?: string
+  twitter?: string
+  ogImagePath?: string
 }
 
-const Meta: React.FC<Props> = ({ site, title }: Props) => {
-  const siteTitle = site?.title || ''
-  const siteUrl = site?.siteUrl || ''
-  const siteDescription = site?.description || ''
-  const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle
+export const Meta: React.FC<MetaProps> = ({
+  title,
+  description,
+  siteUrl,
+  twitter,
+  ogImagePath = '/og-image.png',
+}) => {
+  const ogUrl = siteUrl ? `${siteUrl}${ogImagePath}` : ogImagePath
   return (
-    <Helmet
-      title={pageTitle}
-      meta={[
-        { name: 'twitter:card', content: 'summary' },
-        {
-          name: 'twitter:site',
-          content: `@${site?.twitter}`,
-        },
-        { property: 'og:title', content: pageTitle },
-        { property: 'og:type', content: 'website' },
-        {
-          property: 'og:description',
-          content: siteDescription,
-        },
-        {
-          property: 'og:url',
-          content: `${siteUrl}/profile`,
-        },
-        {
-          property: 'og:image',
-          content: `${siteUrl}/img/profile.jpg`,
-        },
-      ]}
-    />
+    <>
+      <title>{title}</title>
+      {description && <meta name="description" content={description} />}
+      <meta name="twitter:card" content="summary_large_image" />
+      {twitter && <meta name="twitter:site" content={`@${twitter}`} />}
+      <meta property="og:title" content={title} />
+      <meta property="og:type" content="website" />
+      {description && <meta property="og:description" content={description} />}
+      {siteUrl && <meta property="og:url" content={siteUrl} />}
+      <meta property="og:image" content={ogUrl} />
+    </>
   )
 }
+
 export default Meta
