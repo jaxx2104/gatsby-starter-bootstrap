@@ -15,6 +15,6 @@ jobs:
           node-version-file: .node-version
           cache: yarn
       - run: yarn install --frozen-lockfile
+      - run: yarn build
       - run: yarn typecheck
       - run: yarn lint
-      - run: yarn build
