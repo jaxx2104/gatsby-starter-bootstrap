@@ -4,8 +4,15 @@
   "version": "4.0.0-pre",
   "author": "jaxx2104 <jaxx2104@gmail.com>",
   "license": "0BSD",
-  "keywords": ["gatsby", "gatsby-starter", "bootstrap", "bootstrap-5", "blog", "typescript"],
-  "main": "n/a",
+  "keywords": [
+    "gatsby",
+    "gatsby-starter",
+    "bootstrap",
+    "bootstrap-5",
+    "blog",
+    "typescript"
+  ],
+  "private": true,
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
@@ -69,7 +76,12 @@
     "typescript": "^5.6.2"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,json,scss}": ["prettier --write", "eslint --fix"],
-    "*.md": ["prettier --write"]
+    "*.{ts,tsx,js,json,scss}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
   }
 }

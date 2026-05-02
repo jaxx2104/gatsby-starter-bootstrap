@@ -28,11 +28,19 @@ export default [
       ...reactHooks.configs.recommended.rules,
       ...prettierConfig.rules,
       'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'no-undef': 'off',
       'prettier/prettier': 'error',
     },
     settings: { react: { version: '19.0.0' } },
   },
   {
-    ignores: ['public/**', '.cache/**', 'src/__generated__/**', 'node_modules/**'],
+    ignores: [
+      'public/**',
+      '.cache/**',
+      'src/__generated__/**',
+      'src/gatsby-types.d.ts',
+      'node_modules/**',
+    ],
   },
 ]

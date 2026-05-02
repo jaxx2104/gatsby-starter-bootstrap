@@ -26,7 +26,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
 }) => {
   const { createPage } = actions
   const result = await graphql<PageQueryResult>(`
-    {
+    query CreatePagesQuery {
       allFile(filter: { extension: { regex: "/md|tsx/" } }, limit: 1000) {
         edges {
           node {
@@ -47,12 +47,17 @@ export const createPages: GatsbyNode['createPages'] = async ({
   `)
 
   if (result.errors || !result.data) {
-    reporter.panicOnBuild('Failed to query content for createPages', result.errors)
+    reporter.panicOnBuild(
+      'Failed to query content for createPages',
+      result.errors
+    )
     return
   }
 
   const items = result.data.allFile.edges
-  const posts = items.filter(({ node }) => /posts/.test(node.sourceInstanceName))
+  const posts = items.filter(({ node }) =>
+    /posts/.test(node.sourceInstanceName)
+  )
   posts.forEach(({ node }) => {
     if (!node.childMarkdownRemark) return
     const { path: postPath } = node.childMarkdownRemark.frontmatter

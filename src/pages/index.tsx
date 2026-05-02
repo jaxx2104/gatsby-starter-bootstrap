@@ -52,6 +52,7 @@ export const pageQuery = graphql`
     remark: allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       posts: edges {
         post: node {
+          id
           html
           frontmatter {
             layout

@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { GatsbyImage, getImage, type IGatsbyImageData } from 'gatsby-plugin-image'
+import {
+  GatsbyImage,
+  getImage,
+  type IGatsbyImageData,
+} from 'gatsby-plugin-image'
 
 import Button from '../../components/button/button'
 import Badge from '../../components/badge/badge'
@@ -10,7 +14,7 @@ import './style.scss'
 const splitOnMore = (html: string): string => {
   if (html.includes('<!--more-->')) {
     const [head] = html.split('<!--more-->')
-    return head
+    return head ?? html
   }
   return html
 }
@@ -28,7 +32,10 @@ const Post: React.FC<Props> = ({ data, options }) => {
   const html = data.post?.html ?? ''
   const isMore = options.isIndex && html.includes('<!--more-->')
   const image = getImage(
-    frontmatter?.image?.childImageSharp?.gatsbyImageData as IGatsbyImageData | undefined
+    (frontmatter?.image?.childImageSharp?.gatsbyImageData as
+      | IGatsbyImageData
+      | null
+      | undefined) ?? null
   )
 
   return (
@@ -41,9 +48,11 @@ const Post: React.FC<Props> = ({ data, options }) => {
               <time dateTime={frontmatter.date}>{frontmatter.date}</time>
             )}
           </Link>
-          {frontmatter?.category && <Badge label={frontmatter.category} primary />}
+          {frontmatter?.category && (
+            <Badge label={frontmatter.category} primary />
+          )}
           {(frontmatter?.tags ?? []).map((tag, index) =>
-            tag ? <Badge label={tag} key={index} /> : null
+            tag ? <Badge label={tag} primary={false} key={index} /> : null
           )}
         </header>
         <div className="content">
@@ -58,7 +67,9 @@ const Post: React.FC<Props> = ({ data, options }) => {
         </div>
         <div
           className="content"
-          dangerouslySetInnerHTML={{ __html: isMore ? splitOnMore(html) : html }}
+          dangerouslySetInnerHTML={{
+            __html: isMore ? splitOnMore(html) : html,
+          }}
         />
         {isMore && <Button path={path} label="Read more" primary />}
       </div>

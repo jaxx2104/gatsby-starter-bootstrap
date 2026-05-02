@@ -1,6 +1,10 @@
 import React from 'react'
 import { graphql, type HeadFC } from 'gatsby'
-import { GatsbyImage, getImage, type IGatsbyImageData } from 'gatsby-plugin-image'
+import {
+  GatsbyImage,
+  getImage,
+  type IGatsbyImageData,
+} from 'gatsby-plugin-image'
 
 import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
@@ -14,14 +18,21 @@ interface Props {
 const Profile: React.FC<Props> = ({ location, data }) => {
   const meta = useSiteMetadata()
   const profile = getImage(
-    data.profile?.childImageSharp?.gatsbyImageData as IGatsbyImageData | undefined
+    (data.profile?.childImageSharp?.gatsbyImageData as
+      | IGatsbyImageData
+      | null
+      | undefined) ?? null
   )
   return (
     <Layout location={location}>
       <section className="text-center">
         <div className="container">
           {profile && (
-            <GatsbyImage image={profile} alt={meta.author} className="rounded-circle" />
+            <GatsbyImage
+              image={profile}
+              alt={meta.author}
+              className="rounded-circle"
+            />
           )}
           <h1>{meta.author}</h1>
           <p className="lead text-muted">Front-end engineer.</p>
