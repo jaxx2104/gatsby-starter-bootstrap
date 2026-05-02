@@ -1,10 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import {
-  GatsbyImage,
-  getImage,
-  type IGatsbyImageData,
-} from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import Button from '../../components/button/button'
 import Badge from '../../components/badge/badge'
@@ -31,12 +27,7 @@ const Post: React.FC<Props> = ({ data, options }) => {
   const path = frontmatter?.path ?? ''
   const html = data.post?.html ?? ''
   const isMore = options.isIndex && html.includes('<!--more-->')
-  const image = getImage(
-    (frontmatter?.image?.childImageSharp?.gatsbyImageData as
-      | IGatsbyImageData
-      | null
-      | undefined) ?? null
-  )
+  const image = getImage(frontmatter?.image?.childImageSharp ?? null)
 
   return (
     <article className="article" key={path}>
