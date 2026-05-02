@@ -13,6 +13,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 }) => {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement | null>(null)
+  const buttonRef = useRef<HTMLButtonElement | null>(null)
 
   useEffect(() => {
     if (!open) return
@@ -21,13 +22,24 @@ export const Dropdown: React.FC<DropdownProps> = ({
         setOpen(false)
       }
     }
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false)
+        buttonRef.current?.focus()
+      }
+    }
     document.addEventListener('mousedown', onDocumentClick)
-    return () => document.removeEventListener('mousedown', onDocumentClick)
+    document.addEventListener('keydown', onKeyDown)
+    return () => {
+      document.removeEventListener('mousedown', onDocumentClick)
+      document.removeEventListener('keydown', onKeyDown)
+    }
   }, [open])
 
   return (
     <div className="dropdown" ref={ref}>
       <button
+        ref={buttonRef}
         className="btn btn-outline-light dropdown-toggle"
         type="button"
         aria-haspopup="menu"
