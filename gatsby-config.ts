@@ -65,21 +65,15 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-sass',
       options: {
         sassOptions: {
-          silenceDeprecations: [
-            'import',
-            'global-builtin',
-            'color-functions',
-            'legacy-js-api',
-            'slash-div',
-            'abs-percent',
-            'fs-importer-cwd',
-            'feature-exists',
-            'function-units',
-            'duplicate-var-flags',
-            'null-alpha',
-            'if-function',
-          ],
+          // Bootstrap 5.3 still ships SCSS that uses legacy `@import` and the
+          // pre-module color functions. `quietDeps` only silences node_modules
+          // noise, not our own code.
           quietDeps: true,
+          // sass-loader 10 (pinned by gatsby-plugin-sass 6) uses the legacy
+          // Sass JS API. The warning is not from our SCSS, it is from how
+          // sass-loader invokes Sass. Removing it requires upgrading
+          // gatsby-plugin-sass past what Gatsby 5 ships.
+          silenceDeprecations: ['legacy-js-api'],
         },
       },
     },
