@@ -15,7 +15,7 @@
   $dark: c.$gray-800,
   $body-bg: c.$white,
   $body-color: c.$gray-700,
-  $link-decoration: none,
+  $link-decoration: underline,
   $link-hover-decoration: underline,
   $enable-rounded: true,
   $enable-shadows: true,
@@ -38,6 +38,14 @@ body {
   height: 100%;
 }
 
+// Strengthen nav-link contrast on the dark purple navbar. Bootstrap's
+// default rgba(255,255,255,0.55) drops below WCAG AA on bg-primary.
+.navbar-dark .navbar-nav {
+  --bs-nav-link-color: rgba(255, 255, 255, 0.95);
+  --bs-nav-link-hover-color: #ffffff;
+  --bs-navbar-active-color: #ffffff;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -57,4 +65,33 @@ img {
 :focus-visible {
   outline: 3px solid c.$purple;
   outline-offset: 2px;
+}
+
+// Bump PrismJS token colors to meet WCAG AA contrast on the default
+// `prism.css` background (#f5f2f0). The upstream theme ships colors that
+// fall below 4.5:1 on small text; override the worst offenders here.
+.gatsby-highlight pre[class*='language-'] {
+  code .token.keyword,
+  code .token.boolean,
+  code .token.number,
+  code .token.constant,
+  code .token.symbol,
+  code .token.deleted,
+  code .token.tag {
+    color: #005580;
+  }
+
+  code .token.builtin,
+  code .token.string,
+  code .token.char,
+  code .token.attr-value,
+  code .token.regex,
+  code .token.variable {
+    color: #4f7c00;
+  }
+
+  code .token.function,
+  code .token.class-name {
+    color: #b34700;
+  }
 }

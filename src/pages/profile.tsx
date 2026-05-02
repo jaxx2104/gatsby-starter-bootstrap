@@ -26,7 +26,7 @@ const Profile: React.FC<Props> = ({ location, data }) => {
             />
           )}
           <h1>{meta.author}</h1>
-          <p className="lead text-muted">Front-end engineer.</p>
+          <p className="lead">Front-end engineer.</p>
           <a
             href={`https://twitter.com/${meta.twitter}`}
             className="twitter-follow-button"
@@ -42,7 +42,9 @@ const Profile: React.FC<Props> = ({ location, data }) => {
 
 export default Profile
 
-export const Head: HeadFC = () => <Meta title="Profile" />
+export const Head: HeadFC = () => (
+  <Meta title="Profile" description="About the author of Gatstrap." />
+)
 
 export const query = graphql`
   query ProfilePageQuery {
