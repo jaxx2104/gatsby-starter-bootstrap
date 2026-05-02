@@ -73,6 +73,28 @@ export const createPages: GatsbyNode['createPages'] = async ({
   })
 }
 
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] =
+  ({ actions }) => {
+    const { createTypes } = actions
+    // Declare optional frontmatter fields so queries that reference them keep
+    // compiling even when no post in `content/posts/` happens to define them.
+    createTypes(`
+      type MarkdownRemark implements Node {
+        frontmatter: MarkdownRemarkFrontmatter
+      }
+      type MarkdownRemarkFrontmatter {
+        layout: String
+        title: String
+        path: String
+        category: String
+        tags: [String]
+        description: String
+        date: Date @dateformat
+        image: File @fileByRelativePath
+      }
+    `)
+  }
+
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   actions,
 }) => {
