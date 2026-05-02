@@ -1,18 +1,18 @@
 $font-family-sans-serif:
   -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
 $font-family-monospace:
   SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-  monospace;
-$font-family-base: $font-family-sans-serif;
+  monospace !default;
+$font-family-base: $font-family-sans-serif !default;
 
-$h1-font-size: 1.8rem;
-$h2-font-size: 1.4rem;
-$h3-font-size: 1.2rem;
-$h4-font-size: 1.1rem;
-$h5-font-size: 1.05rem;
-$h6-font-size: 1rem;
+$h1-font-size: 1.8rem !default;
+$h2-font-size: 1.4rem !default;
+$h3-font-size: 1.2rem !default;
+$h4-font-size: 1.1rem !default;
+$h5-font-size: 1.05rem !default;
+$h6-font-size: 1rem !default;
 
-$headings-font-family: inherit;
-$headings-font-weight: 800;
-$headings-line-height: 1.5;
+$headings-font-family: inherit !default;
+$headings-font-weight: 800 !default;
+$headings-line-height: 1.5 !default;

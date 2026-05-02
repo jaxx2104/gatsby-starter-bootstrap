@@ -1,30 +1,37 @@
-// Theme variable overrides — must come before bootstrap import.
 @use 'sass:color';
-@import './colors';
-@import './fonts';
+@use './colors' as c;
+@use './fonts' as f;
 
-// Map our brand colors into Bootstrap 5's $theme-colors.
-$primary: $purple;
-$secondary: $gray-600;
-$success: $green;
-$info: $cyan;
-$warning: $yellow;
-$danger: $red;
-$light: $gray-100;
-$dark: $gray-800;
-
-$body-bg: $white;
-$body-color: $gray-700;
-
-$link-decoration: none;
-$link-hover-decoration: underline;
-
-$enable-rounded: true;
-$enable-shadows: true;
-$enable-gradients: false;
-
-// Bootstrap 5 — bring in everything the starter uses.
-@import 'bootstrap/scss/bootstrap';
+// Bootstrap 5 — pass overrides as `with (...)`. This avoids the legacy
+// `@import` deprecation while keeping the same theme surface as Phase 1.
+@use 'bootstrap/scss/bootstrap' with (
+  $primary: c.$purple,
+  $secondary: c.$gray-600,
+  $success: c.$green,
+  $info: c.$cyan,
+  $warning: c.$yellow,
+  $danger: c.$red,
+  $light: c.$gray-100,
+  $dark: c.$gray-800,
+  $body-bg: c.$white,
+  $body-color: c.$gray-700,
+  $link-decoration: none,
+  $link-hover-decoration: underline,
+  $enable-rounded: true,
+  $enable-shadows: true,
+  $enable-gradients: false,
+  $font-family-sans-serif: f.$font-family-sans-serif,
+  $font-family-monospace: f.$font-family-monospace,
+  $h1-font-size: f.$h1-font-size,
+  $h2-font-size: f.$h2-font-size,
+  $h3-font-size: f.$h3-font-size,
+  $h4-font-size: f.$h4-font-size,
+  $h5-font-size: f.$h5-font-size,
+  $h6-font-size: f.$h6-font-size,
+  $headings-font-family: f.$headings-font-family,
+  $headings-font-weight: f.$headings-font-weight,
+  $headings-line-height: f.$headings-line-height
+);
 
 html,
 body {
@@ -48,6 +55,6 @@ img {
 }
 
 :focus-visible {
-  outline: 3px solid $primary;
+  outline: 3px solid c.$purple;
   outline-offset: 2px;
 }
