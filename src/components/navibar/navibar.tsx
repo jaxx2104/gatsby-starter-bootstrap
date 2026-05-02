@@ -8,17 +8,20 @@ interface Props {
   location: Location
 }
 
-const navItem = (label: string, path: string, current: string) => (
-  <li className={`nav-item${current === path ? ' active' : ''}`} key={path}>
-    <Link
-      to={path}
-      className="nav-link"
-      aria-current={current === path ? 'page' : undefined}
-    >
-      {label}
-    </Link>
-  </li>
-)
+const navItem = (label: string, path: string, current: string) => {
+  const active = current === path
+  return (
+    <li className="nav-item" key={path}>
+      <Link
+        to={path}
+        className={`nav-link${active ? ' active' : ''}`}
+        aria-current={active ? 'page' : undefined}
+      >
+        {label}
+      </Link>
+    </li>
+  )
+}
 
 const Navibar: React.FC<Props> = ({ location, title }) => (
   <Navbar
