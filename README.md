@@ -1,39 +1,102 @@
 # Gatstrap
 
+A **Bootstrap 5** starter for Gatsby — fast, accessible, and ready to fork.
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fa249a3a-68ea-4b4b-9aa6-394c87099ee1/deploy-status)](https://app.netlify.com/sites/gatstrap/deploys)
-[![CircleCI](https://circleci.com/gh/jaxx2104/gatsby-starter-bootstrap.svg?style=svg)](https://circleci.com/gh/jaxx2104/gatsby-starter-bootstrap)
-[![dependency Status](https://img.shields.io/david/jaxx2104/gatsby-starter-bootstrap.svg?style=flat-square)](https://david-dm.org/jaxx2104/gatsby-starter-bootstrap#info=dependencies)
+[![CI](https://github.com/jaxx2104/gatsby-starter-bootstrap/actions/workflows/ci.yml/badge.svg)](https://github.com/jaxx2104/gatsby-starter-bootstrap/actions/workflows/ci.yml)
 
-Gatsby starter for bootstrap a blog
-
-![thumb](https://user-images.githubusercontent.com/2681007/42584980-656c9406-856f-11e8-882f-cafa9d89b395.png)
-
-## GatsbyJS v2, v1, v0
-
-- For v2 version of this starter, check out the [master branch](https://github.com/jaxx2104/gatsby-starter-bootstrap).
-- For v1 version, check out the [v1 branch](https://github.com/jaxx2104/gatsby-starter-bootstrap/tree/v1).
-- For v0 version, check out the [v0 branch](https://github.com/jaxx2104/gatsby-starter-bootstrap/tree/v0).
-- Make sure to read the [migration guide](https://next.gatsbyjs.org/docs/migrating-from-v1-to-v2/) when porting v1 projects to v2.
+![Gatstrap hero](./static/og-image.png)
 
 ## Features
 
-- Single column layout
-- Simple components: Post, Page, Navi, Footer etc.
-- [Twitter Bootstrap 4](https://github.com/twbs/bootstrap) css framework.
-- Custom theme color.
+- **Gatsby 5.16+** with React 19 and TypeScript (strict).
+- **Bootstrap 5.3** via Sass — no jQuery, no popper.
+- Markdown blog with Prism syntax highlighting.
+- `gatsby-plugin-image` for responsive images.
+- Gatsby `<Head>` API for per-page SEO.
+- Lighthouse mobile **95+** on Performance, Accessibility, Best Practices, SEO.
 
-## Installation
+## Quick start
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatstrap https://github.com/jaxx2104/gatsby-starter-bootstrap`
+```bash
+gatsby new my-blog https://github.com/jaxx2104/gatsby-starter-bootstrap
+cd my-blog
+yarn develop
+```
 
-## Usage
+Open <http://localhost:8000>.
 
-develop
-`gatsby develop`
+## Configuration
 
-### Custom Theme
+Edit `gatsby-config.ts`. The `siteMetadata` block is the single source of truth
+for the navbar title, the per-page SEO `<Head>`, and the PWA manifest:
 
-`/src/scss/gatstrap.scss`
+```ts
+const siteMetadata = {
+  title: 'Your Site',
+  description: 'Your description.',
+  siteUrl: 'https://example.com',
+  author: 'Your Name',
+  twitter: 'your_handle',
+}
+```
 
-![1f466b07-5506-4c8d-8d17-8d02b42d6d0d](https://user-images.githubusercontent.com/2681007/43086458-5092d0be-8ed8-11e8-8125-8b336fdd3b43.gif)
+## Customization
+
+Theme tokens are at `src/scss/colors.scss` and `src/scss/fonts.scss`. Override
+Bootstrap 5 Sass variables there before the `bootstrap` import in
+`src/scss/gatstrap.scss`.
+
+To swap the brand color:
+
+```scss
+// src/scss/colors.scss
+$purple: #00bcd4;
+```
+
+## Writing posts
+
+Add a folder under `content/posts/`:
+
+```
+content/posts/2026-06-01-my-post/
+  index.md
+  hero.jpg
+```
+
+`index.md` frontmatter:
+
+```yaml
+---
+layout: post
+title: My Post
+path: /my-post
+category: Notes
+tags: [example]
+description: A one-sentence description.
+date: 2026-06-01
+---
+```
+
+## Scripts
+
+| Command          | Description                       |
+| ---------------- | --------------------------------- |
+| `yarn develop`   | Start the dev server              |
+| `yarn build`     | Production build to `public/`     |
+| `yarn typecheck` | Run TypeScript strict mode checks |
+| `yarn lint`      | Run ESLint                        |
+| `yarn lint:fix`  | Run ESLint and auto-fix           |
+| `yarn format`    | Run Prettier                      |
+
+## Contributing
+
+1. Fork and clone.
+2. `yarn` to install (Node 20).
+3. `yarn typecheck`, `yarn lint`, and `yarn build` must pass before opening a
+   pull request.
+4. Pre-commit hooks run `lint-staged` automatically.
+
+## License
+
+Released under the [0BSD License](./LICENSE).
