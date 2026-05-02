@@ -1,72 +1,34 @@
-// Colors
-//
-// Grayscale and brand colors for use across Bootstrap.
+// Theme variable overrides — must come before bootstrap import.
+@use 'sass:color';
+@import './colors';
+@import './fonts';
 
-// Start with assigning color names to specific hex values.
-//
-// Color system
-//
-@import './colors.scss';
+// Map our brand colors into Bootstrap 5's $theme-colors.
+$primary: $purple;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-800;
 
-// Reassign color vars to semantic color scheme
-$theme-colors: (
-  primary: $purple,
-  secondary: $gray-600,
-  success: $green,
-  info: $cyan,
-  warning: $yellow,
-  danger: $red,
-  light: $gray-100,
-  dark: $gray-800,
-) !default;
+$body-bg: $white;
+$body-color: $gray-700;
 
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-$enable-rounded: true !default;
-$enable-shadows: true !default;
-$enable-gradients: false !default;
-$enable-transitions: false !default;
-$enable-hover-media-query: false !default;
-$enable-grid-classes: true !default;
-$enable-print-styles: true !default;
+$link-decoration: none;
+$link-hover-decoration: underline;
 
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: false;
 
-$container-max-widths: (
-  sm: 540px,
-  md: 640px,
-  lg: 710px,
-  xl: 780px,
-) !default;
-
-// Body
-//
-// Settings for the `<body>` element.
-
-$body-bg: $white !default;
-$body-color: $gray-700 !default;
-$inverse-bg: $gray-900 !default;
-$inverse-color: $gray-600 !default;
-
-// Links
-//
-// Style anchor elements.
-$link-decoration: none !default;
-$link-hover-decoration: none !default;
-
-// Fonts
-//
-@import './fonts.scss';
-
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
+// Bootstrap 5 — bring in everything the starter uses.
+@import 'bootstrap/scss/bootstrap';
 
 html,
 body {
   height: 100%;
-  width: 100%;
 }
 
 * {
@@ -75,16 +37,17 @@ body {
 }
 
 p {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 img {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   max-width: 100%;
 }
 
-img:hover {
-  animation: pulse 0.5s;
+:focus-visible {
+  outline: 3px solid $primary;
+  outline-offset: 2px;
 }
