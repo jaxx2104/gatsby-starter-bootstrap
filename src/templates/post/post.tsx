@@ -1,73 +1,68 @@
-import { Link } from 'gatsby'
-import Img, { FluidObject } from 'gatsby-image'
 import React from 'react'
+import { Link } from 'gatsby'
+import { GatsbyImage, getImage, type IGatsbyImageData } from 'gatsby-plugin-image'
 
-import Adsense from '../../components/adsense/adsense'
 import Button from '../../components/button/button'
 import Badge from '../../components/badge/badge'
 
 import './style.scss'
 
-const getDescription = (content: string): string => {
-  const body = content.replace(
-    /<blockquote>/g,
-    '<blockquote class="blockquote">'
-  )
-  if (body.match('<!--more-->')) {
-    const [description] = body.split('<!--more-->')
-    return description
+const splitOnMore = (html: string): string => {
+  if (html.includes('<!--more-->')) {
+    const [head] = html.split('<!--more-->')
+    return head
   }
-  return body
+  return html
 }
 
 interface Props {
-  data: GatsbyTypes.PostByPathQuery
+  data: Queries.PostByPathQuery
   options: {
     isIndex: boolean
-    adsense?: string | null
   }
 }
 
-const Post: React.FC<Props> = ({ data, options }: Props) => {
+const Post: React.FC<Props> = ({ data, options }) => {
   const frontmatter = data.post?.frontmatter
-  const path = frontmatter?.path || ''
-  const image = frontmatter?.image || null
-  const { isIndex, adsense } = options
-  const html = data.post?.html || ''
-  const isMore = isIndex && !!html.match('<!--more-->')
+  const path = frontmatter?.path ?? ''
+  const html = data.post?.html ?? ''
+  const isMore = options.isIndex && html.includes('<!--more-->')
+  const image = getImage(
+    frontmatter?.image?.childImageSharp?.gatsbyImageData as IGatsbyImageData | undefined
+  )
 
   return (
-    <div className="article" key={path}>
+    <article className="article" key={path}>
       <div className="container">
-        <div className="info">
+        <header className="info">
           <Link style={{ boxShadow: 'none' }} to={path}>
             <h1>{frontmatter?.title}</h1>
-            <time dateTime={frontmatter?.date}>{frontmatter?.date}</time>
+            {frontmatter?.date && (
+              <time dateTime={frontmatter.date}>{frontmatter.date}</time>
+            )}
           </Link>
-          <Badge label={frontmatter?.category || ''} primary={true} />
-          {(frontmatter?.tags || []).map((tag, index) => (
-            <Badge label={tag as string} primary={false} key={index} />
-          ))}
-        </div>
+          {frontmatter?.category && <Badge label={frontmatter.category} primary />}
+          {(frontmatter?.tags ?? []).map((tag, index) =>
+            tag ? <Badge label={tag} key={index} /> : null
+          )}
+        </header>
         <div className="content">
-          <p>{frontmatter?.description}</p>
-          {image?.childImageSharp?.fluid && (
-            <Img
-              fluid={image.childImageSharp.fluid as FluidObject}
+          {frontmatter?.description && <p>{frontmatter.description}</p>}
+          {image && (
+            <GatsbyImage
+              image={image}
+              alt={frontmatter?.title ?? ''}
               style={{ display: 'block', margin: '0 auto' }}
             />
           )}
         </div>
         <div
           className="content"
-          dangerouslySetInnerHTML={{
-            __html: isMore ? getDescription(html) : html,
-          }}
+          dangerouslySetInnerHTML={{ __html: isMore ? splitOnMore(html) : html }}
         />
-        {isMore && <Button path={path} label="MORE" primary={true} />}
-        {!isIndex && <Adsense clientId={adsense} slotId="" format="auto" />}
+        {isMore && <Button path={path} label="Read more" primary />}
       </div>
-    </div>
+    </article>
   )
 }
 

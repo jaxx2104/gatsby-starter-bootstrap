@@ -1,53 +1,55 @@
-import { graphql } from 'gatsby'
 import React from 'react'
+import { graphql, type HeadFC } from 'gatsby'
 
-import { IndexQueryQuery, PostByPathQuery } from '../../types/graphql-types'
 import Post from '../templates/post/post'
-import Meta from '../components/meta/meta'
 import Layout from '../components/layout/layout'
+import Meta from '../components/meta/meta'
 
 interface Props {
-  data: IndexQueryQuery
+  data: Queries.IndexQueryQuery
   location: Location
 }
 
-const BlogIndex: React.FC<Props> = ({ data, location }: Props) => {
-  const posts = data.remark.posts
-  const meta = data.site?.meta
-
+const BlogIndex: React.FC<Props> = ({ data, location }) => {
+  const posts = data.remark?.posts ?? []
   return (
     <Layout location={location}>
-      <Meta site={meta} />
-      {posts.map((post, i) => (
-        <Post
-          data={post as PostByPathQuery}
-          options={{
-            isIndex: true,
-          }}
-          key={i}
-        />
-      ))}
+      {posts.map((edge, i) =>
+        edge?.post ? (
+          <Post
+            data={{ post: edge.post, site: data.site }}
+            options={{ isIndex: true }}
+            key={i}
+          />
+        ) : null
+      )}
     </Layout>
   )
 }
 
 export default BlogIndex
 
+export const Head: HeadFC<Queries.IndexQueryQuery> = ({ data }) => (
+  <Meta
+    title={data.site?.siteMetadata?.title ?? ''}
+    description={data.site?.siteMetadata?.description ?? undefined}
+    siteUrl={data.site?.siteMetadata?.siteUrl ?? undefined}
+    twitter={data.site?.siteMetadata?.twitter ?? undefined}
+  />
+)
+
 export const pageQuery = graphql`
   query IndexQuery {
     site {
-      meta: siteMetadata {
+      siteMetadata {
         title
         description
         siteUrl
         author
         twitter
-        adsense
       }
     }
-    remark: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
+    remark: allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       posts: edges {
         post: node {
           html
@@ -61,9 +63,7 @@ export const pageQuery = graphql`
             date(formatString: "YYYY/MM/DD")
             image {
               childImageSharp {
-                fluid(maxWidth: 500) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 750, layout: CONSTRAINED)
               }
             }
           }
