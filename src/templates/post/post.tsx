@@ -62,7 +62,14 @@ const Post: React.FC<Props> = ({ data, options }) => {
             __html: isMore ? splitOnMore(html) : html,
           }}
         />
-        {isMore && <Button path={path} label="Read more" primary />}
+        {isMore && (
+          <Button
+            path={path}
+            label="Read more"
+            visuallyHiddenSuffix={`about ${frontmatter?.title ?? 'this post'}`}
+            primary
+          />
+        )}
       </div>
     </article>
   )
