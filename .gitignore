@@ -6,3 +6,4 @@ public
 .cache
 src/gatsby-types.d.ts
 .claude
+.lighthouseci
