@@ -61,7 +61,11 @@ export const createPages: GatsbyNode['createPages'] = async ({
   posts.forEach(({ node }) => {
     if (!node.childMarkdownRemark) return
     const { path: postPath } = node.childMarkdownRemark.frontmatter
-    createPage({ path: postPath, component: PostTemplate })
+    createPage({
+      path: postPath,
+      component: PostTemplate,
+      context: { path: postPath },
+    })
   })
 
   const pages = items.filter(({ node }) => /page/.test(node.sourceInstanceName))
