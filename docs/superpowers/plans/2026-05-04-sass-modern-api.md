@@ -63,10 +63,10 @@ Install both as direct devDependencies before touching any config so they exist 
 - [ ] **Step 1: Add the deps**
 
 ```bash
-yarn add -D sass-loader@^16 mini-css-extract-plugin
+yarn add -D sass-loader@^16.0.7 mini-css-extract-plugin@^1.6.2
 ```
 
-`mini-css-extract-plugin` is already a transitive dep of Gatsby; pinning it as a direct devDep gives us a stable import path (`import MiniCssExtractPlugin from 'mini-css-extract-plugin'`) instead of relying on Yarn's hoisting. Yarn picks a version compatible with Gatsby's existing graph.
+`mini-css-extract-plugin` is pinned to `^1.6.2` to match the version Gatsby 5.16 ships internally. MCEP's loader/plugin runtime contract is not stable across major versions; if our top-level pin were on v2 while Gatsby's internal plugin instance is v1, the loader would emit chunks the plugin can't consume (silent breakage or a "You forgot to add MiniCssExtractPlugin plugin" error at build time). Yarn deduplicates against Gatsby's internal copy, so only one physical MCEP install exists in `node_modules`. `sass-loader` is pinned to the resolved minor (`^16.0.7`) to match this project's `^MAJOR.MINOR` semver convention.
 
 - [ ] **Step 2: Verify installation**
 

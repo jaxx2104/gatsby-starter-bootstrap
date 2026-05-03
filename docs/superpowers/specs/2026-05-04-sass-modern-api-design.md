@@ -117,14 +117,23 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
 The `resolve.alias` block is preserved verbatim from the current
 implementation. Only the `module.rules` SCSS entry is new.
 
-### 5.2 Why `MiniCssExtractPlugin.loader` is safe to import
+### 5.2 Pin `mini-css-extract-plugin` to match Gatsby
 
-Gatsby 5 already depends on `mini-css-extract-plugin` and uses it to extract
-CSS from its built-in CSS handling. Importing `MiniCssExtractPlugin.loader`
-does not cause hoisting issues because we use only the loader entry — we do
-not register a new instance of the plugin. Gatsby's existing plugin
-registration handles the actual CSS file emission; we are inserting our SCSS
-rule into the same pipeline.
+Gatsby 5.16 pins `mini-css-extract-plugin` at `^1.6.2`. To consume
+`MiniCssExtractPlugin.loader` from `gatsby-node.ts` and have its emitted
+chunks picked up by the MCEP plugin instance Gatsby already registers
+internally, the loader and plugin **must be the same major version**. MCEP's
+loader/plugin runtime contract changed between v1 and v2.
+
+We therefore pin `mini-css-extract-plugin@^1.6.2` as a direct devDependency.
+Yarn deduplicates against Gatsby's internal copy so only one MCEP exists in
+`node_modules`. The import `import MiniCssExtractPlugin from
+'mini-css-extract-plugin'` resolves to v1 and feeds extracted CSS into
+Gatsby's existing pipeline. We do **not** register our own MCEP plugin
+instance.
+
+When Gatsby itself bumps to MCEP v2 in a future release, this pin moves
+with it as part of routine dependency maintenance.
 
 ### 5.3 Stage detection
 
