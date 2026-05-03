@@ -165,6 +165,7 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   actions,
   loaders,
 }) => {
+  const isSSR = stage === 'build-html' || stage === 'develop-html'
   const isDev = stage === 'develop' || stage === 'develop-html'
 
   const sassLoader = {
@@ -176,18 +177,17 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
     },
   }
 
+  const scssUse = isSSR
+    ? [loaders.null()]
+    : [
+        loaders.miniCssExtract(),
+        loaders.css({ importLoaders: 1, sourceMap: isDev }),
+        sassLoader,
+      ]
+
   actions.setWebpackConfig({
     module: {
-      rules: [
-        {
-          test: /\.s[ac]ss$/i,
-          use: [
-            loaders.miniCssExtract(),
-            loaders.css({ importLoaders: 1, sourceMap: isDev }),
-            sassLoader,
-          ],
-        },
-      ],
+      rules: [{ test: /\.s[ac]ss$/i, use: scssUse }],
     },
     resolve: {
       alias: {
@@ -201,8 +201,8 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
 ```
 
 Notes:
-- `loaders.miniCssExtract()` is stage-aware: it returns `style-loader` for `develop`, `MiniCssExtractPlugin.loader` for `build-javascript`, and `null-loader` for `develop-html`/`build-html` (SSR). This is critical — Gatsby only registers the MCEP plugin instance for non-SSR stages, so calling `MiniCssExtractPlugin.loader` directly during `build-html` would error with "You forgot to add 'mini-css-extract-plugin' plugin".
-- `loaders.css({ importLoaders: 1 })` returns Gatsby's pre-configured `css-loader`. `importLoaders: 1` tells css-loader that one preceding loader (the sass-loader) processes `@import`/`@use` rules.
+- `loaders.miniCssExtract()` is **not** stage-aware. Gatsby only registers the MCEP plugin instance for `develop` and `build-javascript`. Calling its loader during SSR (`build-html` / `develop-html`) raises `"You forgot to add 'mini-css-extract-plugin' plugin"`. Our `isSSR` branch substitutes `loaders.null()` for those stages, mirroring how `gatsby-plugin-sass` itself handled SSR internally.
+- `loaders.css({ importLoaders: 1 })` returns Gatsby's pre-configured `css-loader`. `importLoaders: 1` tells css-loader that one preceding loader (sass-loader) processes `@import`/`@use` rules.
 - The `resolve.alias` block is preserved verbatim from the previous implementation.
 
 The other two exports in this file — `createPages` and `createSchemaCustomization` — stay untouched.

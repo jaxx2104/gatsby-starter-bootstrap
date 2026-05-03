@@ -77,7 +77,12 @@ and pick up minor bumps (`bootstrap`, `sass`) that ride along naturally.
 
 The repository already exports `onCreateWebpackConfig` for path aliases.
 SCSS handling joins that callback and uses Gatsby's `loaders` helper to
-keep stage handling correct without re-implementing it. Pseudocode:
+keep stage handling correct without re-implementing it. The caller is
+responsible for splitting between SSR stages (which need a null-loader)
+and non-SSR stages (which use the real CSS pipeline) — `loaders.miniCssExtract()`
+itself is not stage-aware.
+
+Pseudocode:
 
 ```ts
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
@@ -85,6 +90,7 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   actions,
   loaders,
 }) => {
+  const isSSR = stage === 'build-html' || stage === 'develop-html'
   const isDev = stage === 'develop' || stage === 'develop-html'
 
   const sassLoader = {
@@ -96,18 +102,17 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
     },
   }
 
+  const scssUse = isSSR
+    ? [loaders.null()]
+    : [
+        loaders.miniCssExtract(),
+        loaders.css({ importLoaders: 1, sourceMap: isDev }),
+        sassLoader,
+      ]
+
   actions.setWebpackConfig({
     module: {
-      rules: [
-        {
-          test: /\.s[ac]ss$/i,
-          use: [
-            loaders.miniCssExtract(),
-            loaders.css({ importLoaders: 1, sourceMap: isDev }),
-            sassLoader,
-          ],
-        },
-      ],
+      rules: [{ test: /\.s[ac]ss$/i, use: scssUse }],
     },
     resolve: {
       alias: {
@@ -123,33 +128,29 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
 The `resolve.alias` block is preserved verbatim from the current
 implementation. Only the `module.rules` SCSS entry is new.
 
-### 5.2 Use Gatsby's `loaders` helper for stage-aware CSS handling
+### 5.2 Use Gatsby's `loaders` helper, splitting on SSR stages
 
 Gatsby's `onCreateWebpackConfig` provides a `loaders` argument with helpers
-that already encode the correct CSS-loader for each build stage:
+for the loaders Gatsby's own pipeline uses:
 
-| Stage              | `loaders.miniCssExtract()` returns      |
-| ------------------ | --------------------------------------- |
-| `develop`          | `style-loader` (HMR)                    |
-| `build-javascript` | `MiniCssExtractPlugin.loader` (extract) |
-| `develop-html`     | `null-loader` (SSR no-op)               |
-| `build-html`       | `null-loader` (SSR no-op)               |
+- `loaders.miniCssExtract()` → returns `MiniCssExtractPlugin.loader`. **Not**
+  stage-aware. Suitable only when the MCEP plugin instance is available —
+  i.e., `develop` and `build-javascript`. Calling it during `build-html`
+  raises `"You forgot to add 'mini-css-extract-plugin' plugin"` because
+  Gatsby does not register an MCEP plugin instance for SSR stages.
+- `loaders.css({ ... })` → Gatsby's pre-configured `css-loader`.
+- `loaders.null()` → `null-loader`, returns an empty module. The right
+  fallback for SSR-stage CSS imports because the SSR bundle has no DOM and
+  doesn't need to emit CSS.
 
-This matters because Gatsby only registers a `MiniCssExtractPlugin`
-**plugin instance** for `develop` and `build-javascript`. Calling
-`MiniCssExtractPlugin.loader` directly during `build-html` (the SSR
-bundle stage) raises `"You forgot to add 'mini-css-extract-plugin' plugin"`.
-Using `loaders.miniCssExtract()` sidesteps this — Gatsby's helper returns
-`null-loader` for SSR stages so the SCSS module evaluates to an empty
-module, which is exactly right for SSR (no DOM, no `<style>` tags).
+Our rule explicitly splits stages: SSR stages (`build-html`, `develop-html`)
+use `[loaders.null()]`; all other stages (`develop`, `build-javascript`) use
+the full chain `[loaders.miniCssExtract(), loaders.css(...), sass-loader]`.
+This mirrors the pattern `gatsby-plugin-sass` itself used internally.
 
-Because we use Gatsby's helper, we do **not** import `mini-css-extract-plugin`
-directly and we do **not** add it as a direct devDependency. Gatsby's
-internal copy is used transparently.
-
-`loaders.css({ importLoaders: 1, ...})` likewise gives us the css-loader
-configuration Gatsby already uses for its own CSS pipeline; we just slot in
-our own sass-loader at the front.
+Because Gatsby's `loaders.miniCssExtract()` references Gatsby's internal
+`mini-css-extract-plugin` install, we do **not** add MCEP as a direct
+devDependency.
 
 ### 5.3 Stage detection
 
