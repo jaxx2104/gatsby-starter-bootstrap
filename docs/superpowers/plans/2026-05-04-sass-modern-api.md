@@ -432,10 +432,10 @@ Expected: prints `no references`.
 node -e "
 const p = require('./package.json');
 console.log('gatsby-plugin-sass in deps:', !!p.dependencies?.['gatsby-plugin-sass']);
+console.log('mini-css-extract-plugin in devDeps:', !!p.devDependencies?.['mini-css-extract-plugin']);
 console.log('sass in deps:', !!p.dependencies?.sass);
 console.log('sass in devDeps:', p.devDependencies?.sass || 'absent');
 console.log('sass-loader in devDeps:', p.devDependencies?.['sass-loader'] || 'absent');
-console.log('mini-css-extract-plugin in devDeps:', p.devDependencies?.['mini-css-extract-plugin'] || 'absent');
 console.log('bootstrap in deps:', p.dependencies?.bootstrap || 'absent');
 "
 ```
@@ -444,12 +444,14 @@ Expected:
 
 ```
 gatsby-plugin-sass in deps: false
+mini-css-extract-plugin in devDeps: false
 sass in deps: false
 sass in devDeps: ^1.99...
-sass-loader in devDeps: ^16...
-mini-css-extract-plugin in devDeps: ^...
+sass-loader in devDeps: ^16.0.7
 bootstrap in deps: ^5.3.8
 ```
+
+Note: `mini-css-extract-plugin` is **not** a direct devDep — Gatsby's `loaders.miniCssExtract()` references its internal copy. See spec §5.2.
 
 - [ ] **Step 6: Smoke-test the dev server**
 
