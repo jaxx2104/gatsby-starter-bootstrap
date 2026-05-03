@@ -67,22 +67,22 @@ The work is complete when **all** of the following hold:
 
 ### Stack
 
-| Layer        | Choice                                              |
-| ------------ | --------------------------------------------------- |
-| SSG          | Gatsby 5.16+                                        |
-| UI           | React 19 (supported by Gatsby 5.16)                 |
-| Language     | TypeScript 5.x with `strict: true`                  |
-| CSS          | Bootstrap 5.3 + Dart Sass (no jQuery, no popper)    |
-| Images       | `gatsby-plugin-image` (`StaticImage` / `GatsbyImage`) |
+| Layer        | Choice                                                  |
+| ------------ | ------------------------------------------------------- |
+| SSG          | Gatsby 5.16+                                            |
+| UI           | React 19 (supported by Gatsby 5.16)                     |
+| Language     | TypeScript 5.x with `strict: true`                      |
+| CSS          | Bootstrap 5.3 + Dart Sass (no jQuery, no popper)        |
+| Images       | `gatsby-plugin-image` (`StaticImage` / `GatsbyImage`)   |
 | Markdown     | `gatsby-transformer-remark` and existing remark plugins |
-| Type codegen | `gatsby-plugin-graphql-codegen`                     |
-| Icons        | `@fortawesome/*` only (`font-awesome@4` removed)    |
-| Lint/Format  | ESLint 9 (flat config), Prettier 3                  |
-| Git hooks    | husky + lint-staged                                 |
-| Node         | 20 LTS                                              |
-| CI           | GitHub Actions (CircleCI removed)                   |
-| Hosting      | Netlify                                             |
-| License      | 0BSD (Gatsby's recommended license; was MIT)        |
+| Type codegen | `gatsby-plugin-graphql-codegen`                         |
+| Icons        | `@fortawesome/*` only (`font-awesome@4` removed)        |
+| Lint/Format  | ESLint 9 (flat config), Prettier 3                      |
+| Git hooks    | husky + lint-staged                                     |
+| Node         | 20 LTS                                                  |
+| CI           | GitHub Actions (CircleCI removed)                       |
+| Hosting      | Netlify                                                 |
+| License      | 0BSD (Gatsby's recommended license; was MIT)            |
 
 ### Source layout
 
@@ -247,3 +247,31 @@ These are deliberately deferred and may be considered after submission:
 - Tag and category pages.
 - Site search.
 - A Tailwind variant.
+
+## Post-implementation notes (2026-05-03)
+
+Captured during PR #682 to inform anyone re-running this revival on a sister
+repository.
+
+- **Gatsby `graphqlTypegen` is dev-only by default.** The option's
+  `generateOnBuild` field defaults to `false`, so a CI step that runs
+  `yarn build && yarn typecheck` finds no `Queries.*` types after a fresh
+  clone. Set `graphqlTypegen.generateOnBuild = true` in `gatsby-config.ts`
+  for any CI that typechecks against the generated namespace.
+- **Netlify needs an explicit `netlify.toml`.** Without one, Deploy Preview
+  uses dashboard defaults that may pin an outdated Node version and a build
+  command incompatible with the new package scripts. A minimal `netlify.toml`
+  with `command = "yarn build"`, `publish = "public"`, and
+  `NODE_VERSION = "20"` keeps the preview reproducible.
+- **Removing the CircleCI config does not remove the GitHub status check.**
+  Deleting `.circleci/config.yml` causes CircleCI to report
+  _"No configuration was found"_ for every push. Uninstall the CircleCI
+  GitHub App from the repository (or the user account) to make the check
+  disappear; this cannot be done from the codebase.
+- **Netlify deploy keys go stale.** Long-dormant sites lose GitHub access and
+  fail at _"preparing repo: git@github.com: Permission denied (publickey)"_.
+  Re-link the repository in Netlify before relying on Deploy Preview.
+- **`gatsby-plugin-manifest` requires a square `icon`.** Pointing the option
+  at the 1200×630 OG image triggers a build warning. Use a 512×512 source
+  (the existing `static/img/android-chrome-512x512.png` works) and let the
+  plugin auto-generate the additional sizes.
