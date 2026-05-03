@@ -1,5 +1,4 @@
-@import 'scss/colors.scss';
-@import 'scss/fonts.scss';
+@use 'scss/colors' as c;
 
 .article {
   padding-top: 40px;
@@ -8,7 +7,7 @@
   .info {
     padding-bottom: 10px;
     margin-bottom: 20px;
-    border-bottom: 1px solid $gray-200;
+    border-bottom: 1px solid c.$gray-100;
     word-break: break-word;
 
     h1 {
@@ -20,8 +19,8 @@
     }
 
     time {
-      font-size: $font-size-xs;
-      color: $gray-500;
+      font-size: 0.75rem;
+      color: c.$gray-700;
       display: inline;
       margin-right: 10px;
     }
@@ -40,8 +39,8 @@
     }
 
     blockquote {
-      background-color: $gray-100;
-      border-left: 5px solid $gray-200;
+      background-color: c.$gray-100;
+      border-left: 5px solid c.$gray-100;
       padding: 0.25em 1.5em;
 
       a {

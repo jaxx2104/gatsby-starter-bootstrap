@@ -1,56 +1,52 @@
-import { graphql } from 'gatsby'
 import React from 'react'
+import { graphql, type HeadFC } from 'gatsby'
 
 import Post from './post/post'
-import Meta from '../components/meta/meta'
-import Layout from '../components/layout/layout'
 import Page from './page/page'
+import Layout from '../components/layout/layout'
+import Meta from '../components/meta/meta'
 
 interface Props {
-  data: GatsbyTypes.PostByPathQuery
+  data: Queries.PostByPathQuery
   location: Location
 }
 
-const Template: React.FC<Props> = ({ data, location }: Props) => {
-  const isPage = data.post?.frontmatter?.layout != 'page'
+const Template: React.FC<Props> = ({ data, location }) => {
+  const isPage = data.post?.frontmatter?.layout === 'page'
   return (
-    <div>
-      <Layout location={location}>
-        <Meta
-          title={data.post?.frontmatter?.title || ''}
-          site={data.site?.meta}
-        />
-        {isPage ? (
-          <Post
-            data={data}
-            options={{
-              isIndex: false,
-              adsense: data.site?.meta?.adsense,
-            }}
-          />
-        ) : (
-          <Page data={data} location={location} />
-        )}
-      </Layout>
-    </div>
+    <Layout location={location}>
+      {isPage ? (
+        <Page data={data} location={location} />
+      ) : (
+        <Post data={data} options={{ isIndex: false }} />
+      )}
+    </Layout>
   )
 }
 
 export default Template
 
+export const Head: HeadFC<Queries.PostByPathQuery> = ({ data }) => (
+  <Meta
+    title={data.post?.frontmatter?.title ?? ''}
+    description={data.site?.siteMetadata?.description ?? undefined}
+    siteUrl={data.site?.siteMetadata?.siteUrl ?? undefined}
+    twitter={data.site?.siteMetadata?.twitter ?? undefined}
+  />
+)
+
 export const pageQuery = graphql`
-  query PostByPath($path: String!) {
+  query PostByPath($pagePath: String!) {
     site {
-      meta: siteMetadata {
+      siteMetadata {
         title
         description
         siteUrl
         author
         twitter
-        adsense
       }
     }
-    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
+    post: markdownRemark(frontmatter: { path: { eq: $pagePath } }) {
       id
       html
       frontmatter {
@@ -63,9 +59,7 @@ export const pageQuery = graphql`
         date(formatString: "YYYY/MM/DD")
         image {
           childImageSharp {
-            fluid(maxWidth: 500) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 750, layout: CONSTRAINED)
           }
         }
       }

@@ -1,72 +1,49 @@
-// Colors
-//
-// Grayscale and brand colors for use across Bootstrap.
+@use 'sass:color';
+@use './colors' as c;
+@use './fonts' as f;
 
-// Start with assigning color names to specific hex values.
-//
-// Color system
-//
-@import './colors.scss';
-
-// Reassign color vars to semantic color scheme
-$theme-colors: (
-  primary: $purple,
-  secondary: $gray-600,
-  success: $green,
-  info: $cyan,
-  warning: $yellow,
-  danger: $red,
-  light: $gray-100,
-  dark: $gray-800,
-) !default;
-
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-$enable-rounded: true !default;
-$enable-shadows: true !default;
-$enable-gradients: false !default;
-$enable-transitions: false !default;
-$enable-hover-media-query: false !default;
-$enable-grid-classes: true !default;
-$enable-print-styles: true !default;
-
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
-
-$container-max-widths: (
-  sm: 540px,
-  md: 640px,
-  lg: 710px,
-  xl: 780px,
-) !default;
-
-// Body
-//
-// Settings for the `<body>` element.
-
-$body-bg: $white !default;
-$body-color: $gray-700 !default;
-$inverse-bg: $gray-900 !default;
-$inverse-color: $gray-600 !default;
-
-// Links
-//
-// Style anchor elements.
-$link-decoration: none !default;
-$link-hover-decoration: none !default;
-
-// Fonts
-//
-@import './fonts.scss';
-
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
+// Bootstrap 5 — pass overrides as `with (...)`. This avoids the legacy
+// `@import` deprecation while keeping the same theme surface as Phase 1.
+@use 'bootstrap/scss/bootstrap' with (
+  $primary: c.$purple,
+  $secondary: c.$gray-600,
+  $success: c.$green,
+  $info: c.$cyan,
+  $warning: c.$yellow,
+  $danger: c.$red,
+  $light: c.$gray-100,
+  $dark: c.$gray-800,
+  $body-bg: c.$white,
+  $body-color: c.$gray-700,
+  $link-decoration: underline,
+  $link-hover-decoration: underline,
+  $enable-rounded: true,
+  $enable-shadows: true,
+  $enable-gradients: false,
+  $font-family-sans-serif: f.$font-family-sans-serif,
+  $font-family-monospace: f.$font-family-monospace,
+  $h1-font-size: f.$h1-font-size,
+  $h2-font-size: f.$h2-font-size,
+  $h3-font-size: f.$h3-font-size,
+  $h4-font-size: f.$h4-font-size,
+  $h5-font-size: f.$h5-font-size,
+  $h6-font-size: f.$h6-font-size,
+  $headings-font-family: f.$headings-font-family,
+  $headings-font-weight: f.$headings-font-weight,
+  $headings-line-height: f.$headings-line-height
+);
 
 html,
 body {
   height: 100%;
-  width: 100%;
+}
+
+// Strengthen nav-link contrast on the dark purple navbar. Bootstrap's
+// default rgba(255,255,255,0.55) drops below WCAG AA on bg-primary.
+.navbar-dark .navbar-nav {
+  --bs-nav-link-color: rgba(255, 255, 255, 0.95);
+  --bs-nav-link-hover-color: #ffffff;
+  --bs-navbar-active-color: #ffffff;
 }
 
 * {
@@ -75,16 +52,46 @@ body {
 }
 
 p {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 img {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   max-width: 100%;
 }
 
-img:hover {
-  animation: pulse 0.5s;
+:focus-visible {
+  outline: 3px solid c.$purple;
+  outline-offset: 2px;
+}
+
+// Bump PrismJS token colors to meet WCAG AA contrast on the default
+// `prism.css` background (#f5f2f0). The upstream theme ships colors that
+// fall below 4.5:1 on small text; override the worst offenders here.
+.gatsby-highlight pre[class*='language-'] {
+  code .token.keyword,
+  code .token.boolean,
+  code .token.number,
+  code .token.constant,
+  code .token.symbol,
+  code .token.deleted,
+  code .token.tag {
+    color: #005580;
+  }
+
+  code .token.builtin,
+  code .token.string,
+  code .token.char,
+  code .token.attr-value,
+  code .token.regex,
+  code .token.variable {
+    color: #4f7c00;
+  }
+
+  code .token.function,
+  code .token.class-name {
+    color: #b34700;
+  }
 }

@@ -4,3 +4,6 @@ public
 .DS_Store
 .intermediate-representation
 .cache
+src/gatsby-types.d.ts
+.claude
+.lighthouseci

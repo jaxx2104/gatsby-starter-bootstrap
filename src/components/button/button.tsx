@@ -4,21 +4,28 @@ import { Link } from 'gatsby'
 interface Props {
   path: string
   label: string
-  primary: boolean
+  primary?: boolean
+  visuallyHiddenSuffix?: string
 }
 
-const Button: React.FC<Props> = ({ path, label, primary }: Props) => {
-  return (
-    <Link className="readmore" to={path}>
-      <span
-        className={`btn btn-outline-primary btn-block ${
-          primary ? 'btn-outline-primary' : 'btn-outline-secondary'
-        }`}
-      >
-        {label}
-      </span>
-    </Link>
-  )
-}
+const Button: React.FC<Props> = ({
+  path,
+  label,
+  primary = false,
+  visuallyHiddenSuffix,
+}) => (
+  <Link className="readmore" to={path}>
+    <span
+      className={`btn w-100 ${
+        primary ? 'btn-outline-primary' : 'btn-outline-secondary'
+      }`}
+    >
+      {label}
+      {visuallyHiddenSuffix && (
+        <span className="visually-hidden"> {visuallyHiddenSuffix}</span>
+      )}
+    </span>
+  </Link>
+)
 
 export default Button

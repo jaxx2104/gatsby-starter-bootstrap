@@ -1,54 +1,56 @@
-import { graphql } from 'gatsby'
-import Img, { FixedObject } from 'gatsby-image'
 import React from 'react'
+import { graphql, type HeadFC } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-import { ProfilePageQueryQuery } from '../../types/graphql-types'
-import { siteMetadata } from '../../gatsby-config'
 import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
 interface Props {
-  data: ProfilePageQueryQuery
+  data: Queries.ProfilePageQueryQuery
   location: Location
 }
 
-const Profile: React.FC<Props> = ({ location, data }: Props) => {
-  const profile = data.profile?.childImageSharp?.fixed
-
+const Profile: React.FC<Props> = ({ location, data }) => {
+  const meta = useSiteMetadata()
+  const profile = getImage(data.profile?.childImageSharp ?? null)
   return (
     <Layout location={location}>
-      <Meta site={siteMetadata} title="Profile" />
-      <div>
-        <section className="text-center">
-          <div className="container">
-            <Img fixed={profile as FixedObject} className="rounded-circle" />
-            <h1>jaxx2104</h1>
-            <p className="lead text-muted">Front-end engineer.</p>
-            <div>
-              <a
-                href="https://twitter.com/jaxx2104"
-                className="twitter-follow-button"
-                data-show-count="false"
-              >
-                Follow @jaxx2104
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
+      <section className="text-center">
+        <div className="container">
+          {profile && (
+            <GatsbyImage
+              image={profile}
+              alt={meta.author}
+              className="rounded-circle"
+            />
+          )}
+          <h1>{meta.author}</h1>
+          <p className="lead">Front-end engineer.</p>
+          <a
+            href={`https://twitter.com/${meta.twitter}`}
+            className="twitter-follow-button"
+            data-show-count="false"
+          >
+            Follow @{meta.twitter}
+          </a>
+        </div>
+      </section>
     </Layout>
   )
 }
 
 export default Profile
 
+export const Head: HeadFC = () => (
+  <Meta title="Profile" description="About the author of Gatstrap." />
+)
+
 export const query = graphql`
   query ProfilePageQuery {
     profile: file(name: { eq: "profile" }) {
       childImageSharp {
-        fixed(width: 120, height: 120) {
-          ...GatsbyImageSharpFixed_withWebp
-        }
+        gatsbyImageData(width: 120, height: 120, layout: FIXED)
       }
     }
   }

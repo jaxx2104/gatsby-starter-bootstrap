@@ -1,19 +1,26 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "jsx": "react-jsx",
+    "moduleResolution": "Bundler",
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "noUncheckedIndexedAccess": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolatedModules": false,
-    "jsx": "preserve"
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "allowJs": false,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "templates/*": ["src/templates/*"],
+      "scss/*": ["src/scss/*"]
+    }
   },
-  "include": ["./src/**/*"],
+  "include": ["src", "gatsby-config.ts", "gatsby-node.ts"],
   "exclude": ["node_modules", "public", ".cache"]
 }

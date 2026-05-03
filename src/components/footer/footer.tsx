@@ -1,5 +1,6 @@
-import { Link } from 'gatsby'
 import React from 'react'
+import { Link } from 'gatsby'
+
 import './style.scss'
 
 interface Props {
@@ -7,19 +8,18 @@ interface Props {
   title: string
 }
 
-const Footer: React.FC<Props> = ({ author, title }: Props) => (
-  <div className="footer">
+const Footer: React.FC<Props> = ({ author, title }) => (
+  <footer className="py-4 mt-5">
     <div className="container">
       <hr className="border-primary" />
-      <p>
+      <p className="mb-0">
         {title}
-        <Link to="/profile/">
-          <br />
+        <Link to="/profile/" className="d-block">
           <strong>{author}</strong> on Profile
         </Link>
       </p>
     </div>
-  </div>
+  </footer>
 )
 
 export default Footer

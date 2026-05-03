@@ -2,15 +2,17 @@ import React from 'react'
 
 interface Props {
   label: string
-  primary: boolean
+  primary?: boolean
 }
 
-const Badges: React.FC<Props> = ({ label, primary }: Props) => {
-  return (
-    <span className={`badge ${primary ? 'badge-primary' : 'badge-secondary'}`}>
-      {label}
-    </span>
-  )
-}
+const Badge: React.FC<Props> = ({ label, primary = false }) => (
+  <span
+    className={`badge me-1 ${
+      primary ? 'text-bg-primary' : 'text-bg-secondary'
+    }`}
+  >
+    {label}
+  </span>
+)
 
-export default Badges
+export default Badge

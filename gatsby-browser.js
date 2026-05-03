@@ -1,6 +1,2 @@
-// Import all js dependencies.
-import 'jquery/dist/jquery.min.js'
-import 'popper.js/dist/popper.min'
-import 'bootstrap/js/dist/util'
-import 'bootstrap/js/dist/carousel'
-import 'bootstrap/js/dist/dropdown'
+// Bootstrap 5 ships native JS that is loaded on demand by src/bootstrap/* wrappers.
+// Global side-effect imports (jQuery, popper, bootstrap) are intentionally not loaded here.

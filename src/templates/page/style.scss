@@ -1,17 +1,16 @@
-@import 'scss/colors.scss';
-@import 'scss/fonts.scss';
+@use 'scss/colors' as c;
+@use 'scss/fonts' as f;
 
 section {
   padding: 50px 0;
   min-height: 300px;
 
-
   &.jumboimage {
     position: relative;
     text-align: left;
     color: white;
-    padding: 0rem 0px;
-    margin: 0px auto;
+    padding: 0 0;
+    margin: 0 auto;
     background: linear-gradient(0deg, rgb(0, 0, 0), rgb(51, 51, 51) 50%);
   }
 
@@ -32,39 +31,16 @@ section {
   }
 
   hr {
-    border-color: $red;
+    border-color: c.$red;
     border-width: 3px;
     max-width: 50px;
 
     &.light {
-      border-color: $white;
+      border-color: c.$white;
     }
   }
 
   .section-heading {
-    font-family: $font-family-monospace;
-  }
-
-
-  .slide-left {
-    &[data-emergence='visible'] {
-      opacity: 1;
-      animation: slideInLeft 1s;
-    }
-
-    &[data-emergence='hidden'] {
-      opacity: 0;
-    }
-  }
-
-  .slide-right {
-    &[data-emergence='visible'] {
-      opacity: 1;
-      animation: slideInRight 1s;
-    }
-
-    &[data-emergence='hidden'] {
-      opacity: 0;
-    }
+    font-family: f.$font-family-monospace;
   }
 }
