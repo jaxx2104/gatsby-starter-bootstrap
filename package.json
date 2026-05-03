@@ -19,9 +19,10 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "format": "prettier --write \"**/*.{ts,tsx,js,json,md,scss}\" --ignore-path .gitignore",
+    "lint": "biome lint .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "ci:lint": "biome ci .",
     "lint:text": "textlint \"content/**/*.md\"",
     "lint:textfix": "textlint --fix \"content/**/*.md\"",
     "prepare": "husky"
@@ -76,12 +77,8 @@
     "typescript": "^5.6.2"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,json,scss}": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.md": [
-      "prettier --write"
+    "*.{ts,tsx,js,mjs,json}": [
+      "biome check --write --no-errors-on-unmatched"
     ]
   }
 }
