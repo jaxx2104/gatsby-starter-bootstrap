@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build"
+  command = "yarn clean && yarn build"
   publish = "public"
 
 [build.environment]
