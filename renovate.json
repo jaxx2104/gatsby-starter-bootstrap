@@ -1,15 +1,3 @@
 {
-  "extends": ["config:base", "schedule:monthly"],
-  "automerge": true,
-  "major": {
-    "automerge": false
-  },
-  "packageRules": [
-    {
-      "depTypeList": ["devDependencies"],
-      "updateTypes": ["major", "minor", "patch"],
-      "groupName": "devDependencies"
-    }
-  ],
-  "timezone": "Asia/Tokyo"
+  "enabled": false
 }
