@@ -21,12 +21,6 @@
       },
       "style": {
         "useImportType": "off"
-      },
-      "security": {
-        "noDangerouslySetInnerHtml": "off"
-      },
-      "suspicious": {
-        "noArrayIndexKey": "off"
       }
     }
   },

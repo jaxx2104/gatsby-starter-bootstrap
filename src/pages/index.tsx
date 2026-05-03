@@ -18,6 +18,7 @@ const BlogIndex: React.FC<Props> = ({ data, location }) => {
           <Post
             data={{ post: edge.post, site: data.site }}
             options={{ isIndex: true }}
+            // biome-ignore lint/suspicious/noArrayIndexKey: posts list is sorted server-side and stable per build
             key={i}
           />
         ) : null

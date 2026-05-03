@@ -42,7 +42,10 @@ const Post: React.FC<Props> = ({ data, options }) => {
             <Badge label={frontmatter.category} primary />
           )}
           {(frontmatter?.tags ?? []).map((tag, index) =>
-            tag ? <Badge label={tag} primary={false} key={index} /> : null
+            tag ? (
+              // biome-ignore lint/suspicious/noArrayIndexKey: tag list is fixed for the lifetime of a post and not reordered
+              <Badge label={tag} primary={false} key={index} />
+            ) : null
           )}
         </header>
         <div className="content">
@@ -57,6 +60,7 @@ const Post: React.FC<Props> = ({ data, options }) => {
         </div>
         <div
           className="content"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: markdown HTML produced server-side by gatsby-transformer-remark
           dangerouslySetInnerHTML={{
             __html: isMore ? splitOnMore(html) : html,
           }}
