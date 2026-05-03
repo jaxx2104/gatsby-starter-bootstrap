@@ -1,10 +1,9 @@
-import React from 'react'
 import { graphql, type HeadFC } from 'gatsby'
-
-import Post from './post/post'
-import Page from './page/page'
+import React from 'react'
 import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
+import Page from './page/page'
+import Post from './post/post'
 
 interface Props {
   data: Queries.PostByPathQuery

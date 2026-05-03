@@ -1,8 +1,7 @@
 import React from 'react'
-
-import Navibar from '../navibar/navibar'
-import Footer from '../footer/footer'
 import { useSiteMetadata } from '../../hooks/useSiteMetadata'
+import Footer from '../footer/footer'
+import Navibar from '../navibar/navibar'
 
 import 'modern-normalize/modern-normalize.css'
 import 'prismjs/themes/prism.css'

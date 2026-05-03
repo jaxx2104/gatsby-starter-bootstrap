@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 import type { GatsbyNode } from 'gatsby'
 
 const PostTemplate = path.resolve('./src/templates/template.tsx')

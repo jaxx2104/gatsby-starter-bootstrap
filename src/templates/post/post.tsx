@@ -1,9 +1,8 @@
-import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
-import Button from '../../components/button/button'
+import React from 'react'
 import Badge from '../../components/badge/badge'
+import Button from '../../components/button/button'
 
 import './style.scss'
 

@@ -1,9 +1,8 @@
-import React from 'react'
 import { graphql, type HeadFC } from 'gatsby'
-
-import Post from '../templates/post/post'
+import React from 'react'
 import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
+import Post from '../templates/post/post'
 
 interface Props {
   data: Queries.IndexQueryQuery
