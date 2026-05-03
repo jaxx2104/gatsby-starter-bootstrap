@@ -52,8 +52,7 @@
     "modern-normalize": "^3.0.1",
     "prismjs": "^1.29.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "sass": "^1.78.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4",
@@ -62,6 +61,7 @@
     "@types/react-dom": "^19.0.0",
     "husky": "^9.1.6",
     "lint-staged": "^16.1.0",
+    "sass": "^1.99",
     "sass-loader": "^16.0.7",
     "textlint": "^14.3.0",
     "textlint-rule-preset-japanese": "^10.0.4",
