@@ -5,7 +5,7 @@ A **Bootstrap 5** starter for Gatsby — fast, accessible, and ready to fork.
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fa249a3a-68ea-4b4b-9aa6-394c87099ee1/deploy-status)](https://app.netlify.com/sites/gatstrap/deploys)
 [![CI](https://github.com/jaxx2104/gatsby-starter-bootstrap/actions/workflows/ci.yml/badge.svg)](https://github.com/jaxx2104/gatsby-starter-bootstrap/actions/workflows/ci.yml)
 
-![Gatstrap hero](./static/og-image.png)
+![Gatstrap demo](./static/screenshot.png)
 
 ## Features
 
