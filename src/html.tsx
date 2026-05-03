@@ -25,6 +25,7 @@ const HTML: React.FC<Props> = ({
     </head>
     <body {...bodyAttributes}>
       {preBodyComponents}
+      {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Gatsby HTML shell renders the SSR-rendered app body */}
       <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
       {postBodyComponents}
     </body>

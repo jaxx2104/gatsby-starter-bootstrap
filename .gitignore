@@ -7,3 +7,5 @@ public
 src/gatsby-types.d.ts
 .claude
 .lighthouseci
+.superpowers
+docs/superpowers

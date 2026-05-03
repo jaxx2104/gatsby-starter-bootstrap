@@ -1,9 +1,8 @@
-import React from 'react'
 import { graphql, type HeadFC } from 'gatsby'
-
-import Post from '../templates/post/post'
+import React from 'react'
 import Layout from '../components/layout/layout'
 import Meta from '../components/meta/meta'
+import Post from '../templates/post/post'
 
 interface Props {
   data: Queries.IndexQueryQuery
@@ -19,6 +18,7 @@ const BlogIndex: React.FC<Props> = ({ data, location }) => {
           <Post
             data={{ post: edge.post, site: data.site }}
             options={{ isIndex: true }}
+            // biome-ignore lint/suspicious/noArrayIndexKey: posts list is sorted server-side and stable per build
             key={i}
           />
         ) : null
