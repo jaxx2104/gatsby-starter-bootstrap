@@ -12,6 +12,7 @@ const config: GatsbyConfig = {
   siteMetadata,
   graphqlTypegen: {
     typesOutputPath: 'src/gatsby-types.d.ts',
+    generateOnBuild: true,
   },
   plugins: [
     {
@@ -54,7 +55,7 @@ const config: GatsbyConfig = {
         background_color: '#ffffff',
         theme_color: '#673ab7',
         display: 'standalone',
-        icon: 'static/og-image.png',
+        icon: 'static/img/android-chrome-512x512.png',
       },
     },
     'gatsby-plugin-catch-links',
