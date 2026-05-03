@@ -100,9 +100,34 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
   }
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
+  stage,
   actions,
+  loaders,
 }) => {
+  const isSSR = stage === 'build-html' || stage === 'develop-html'
+  const isDev = stage === 'develop' || stage === 'develop-html'
+
+  const sassLoader = {
+    loader: 'sass-loader',
+    options: {
+      api: 'modern-compiler',
+      sourceMap: isDev,
+      sassOptions: { quietDeps: true },
+    },
+  }
+
+  const scssUse = isSSR
+    ? [loaders.null()]
+    : [
+        loaders.miniCssExtract(),
+        loaders.css({ importLoaders: 1, sourceMap: isDev }),
+        sassLoader,
+      ]
+
   actions.setWebpackConfig({
+    module: {
+      rules: [{ test: /\.s[ac]ss$/i, use: scssUse }],
+    },
     resolve: {
       alias: {
         components: path.resolve(__dirname, 'src/components'),
