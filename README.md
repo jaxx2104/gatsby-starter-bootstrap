@@ -96,7 +96,9 @@ date: 2026-06-01
 3. `yarn typecheck`, `yarn lint`, and `yarn build` must pass before opening a
    pull request.
 4. Pre-commit hooks run `lint-staged` automatically.
-5. SCSS and Markdown files are not formatted by tooling — follow the
+5. `git push` runs `yarn typecheck` via a `pre-push` hook. Use
+   `git push --no-verify` to skip during work-in-progress pushes.
+6. SCSS and Markdown files are not formatted by tooling — follow the
    `.editorconfig` settings (2-space indent, LF line endings, UTF-8).
 
 ## License
