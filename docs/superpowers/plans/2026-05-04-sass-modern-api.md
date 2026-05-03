@@ -60,26 +60,28 @@ Install both as direct devDependencies before touching any config so they exist 
 - Modify: `package.json` (devDependencies)
 - Modify: `yarn.lock`
 
-- [ ] **Step 1: Add the deps**
+- [ ] **Step 1: Add the dep**
 
 ```bash
-yarn add -D sass-loader@^16.0.7 mini-css-extract-plugin@^1.6.2
+yarn add -D sass-loader@^16.0.7
 ```
 
-`mini-css-extract-plugin` is pinned to `^1.6.2` to match the version Gatsby 5.16 ships internally. MCEP's loader/plugin runtime contract is not stable across major versions; if our top-level pin were on v2 while Gatsby's internal plugin instance is v1, the loader would emit chunks the plugin can't consume (silent breakage or a "You forgot to add MiniCssExtractPlugin plugin" error at build time). Yarn deduplicates against Gatsby's internal copy, so only one physical MCEP install exists in `node_modules`. `sass-loader` is pinned to the resolved minor (`^16.0.7`) to match this project's `^MAJOR.MINOR` semver convention.
+`sass-loader` is pinned to `^16.0.7` to match this project's `^MAJOR.MINOR` semver convention.
+
+We do **not** install `mini-css-extract-plugin` directly. T2 uses Gatsby's `loaders.miniCssExtract()` helper from `onCreateWebpackConfig` (see spec §5.2), which is stage-aware and references Gatsby's own MCEP install. Adding our own MCEP would duplicate the package (and the v1 vs v2 plugin/loader contract is brittle).
 
 - [ ] **Step 2: Verify installation**
 
 ```bash
-yarn list --pattern "sass-loader|mini-css-extract-plugin" --depth=0
+yarn list --pattern "sass-loader" --depth=0
 ```
 
-Expected: both packages listed with their resolved versions. `sass-loader` should be at 16.x; `mini-css-extract-plugin` should match the version Gatsby already resolves to (some 2.x).
+Expected: `sass-loader` resolves to 16.0.x.
 
-- [ ] **Step 3: Confirm modules resolve**
+- [ ] **Step 3: Confirm module resolves**
 
 ```bash
-node -e "require.resolve('sass-loader'); require.resolve('mini-css-extract-plugin'); console.log('ok')"
+node -e "require.resolve('sass-loader'); console.log('ok')"
 ```
 
 Expected: prints `ok`.
@@ -90,13 +92,13 @@ Expected: prints `ok`.
 yarn build
 ```
 
-Expected: exits 0. `gatsby-plugin-sass` still handles SCSS; the new deps are unused. Build time should be roughly unchanged from pre-flight.
+Expected: exits 0. `gatsby-plugin-sass` still handles SCSS; the new dep is unused. Build time should be roughly unchanged from pre-flight.
 
 - [ ] **Step 5: Commit**
 
 ```bash
 git add package.json yarn.lock
-git commit -m "chore(sass): install sass-loader and mini-css-extract-plugin"
+git commit -m "chore(sass): install sass-loader"
 ```
 
 The pre-commit hook runs Biome on staged JS/TS/JSON. `package.json` should be a no-op edit for Biome.
@@ -108,8 +110,8 @@ The pre-commit hook runs Biome on staged JS/TS/JSON. `package.json` should be a 
 This is the load-bearing task. In one commit we:
 
 1. Remove the `gatsby-plugin-sass` plugin entry from `gatsby-config.ts`.
-2. Remove the package from `package.json`.
-3. Add the SCSS module rule to `gatsby-node.ts onCreateWebpackConfig`.
+2. Remove `gatsby-plugin-sass` from `package.json`.
+3. Add the SCSS module rule to `gatsby-node.ts onCreateWebpackConfig` using Gatsby's `loaders` helper for stage-aware CSS handling.
 
 Doing it atomically avoids a window where two SCSS rules are registered or where SCSS is unhandled.
 
@@ -144,44 +146,49 @@ Open `gatsby-config.ts`. Remove this block:
 
 The plugin entry is in the `plugins:` array. Remove the entire `{ resolve: 'gatsby-plugin-sass', options: {...} }` object including its trailing comma. Other plugins around it (`gatsby-plugin-catch-links`, `gatsby-plugin-image`, `gatsby-plugin-netlify`, `gatsby-plugin-offline`, `gatsby-plugin-sharp`, etc.) stay.
 
-- [ ] **Step 2: Edit `gatsby-node.ts` to add the SCSS rule**
+- [ ] **Step 2: Edit `gatsby-node.ts` to add the SCSS rule via Gatsby's `loaders` helper**
 
-Open `gatsby-node.ts`. Add the import at the top, alongside the existing `import path from 'node:path'` (added during T3 of biome-migration):
+Open `gatsby-node.ts`. The existing imports are:
 
 ```ts
 import path from 'node:path'
 import type { GatsbyNode } from 'gatsby'
-import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 ```
 
-Then replace the existing `onCreateWebpackConfig` export with:
+No new import is needed; `loaders` arrives via `onCreateWebpackConfig`'s argument.
+
+Replace the existing `onCreateWebpackConfig` export with:
 
 ```ts
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   stage,
   actions,
+  loaders,
 }) => {
-  const isProduction =
-    stage === 'build-javascript' || stage === 'build-html'
+  const isDev = stage === 'develop' || stage === 'develop-html'
 
-  const scssRule = {
-    test: /\.s[ac]ss$/i,
-    use: [
-      isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-      { loader: 'css-loader', options: { sourceMap: !isProduction } },
-      {
-        loader: 'sass-loader',
-        options: {
-          api: 'modern-compiler',
-          sourceMap: !isProduction,
-          sassOptions: { quietDeps: true },
-        },
-      },
-    ],
+  const sassLoader = {
+    loader: 'sass-loader',
+    options: {
+      api: 'modern-compiler',
+      sourceMap: isDev,
+      sassOptions: { quietDeps: true },
+    },
   }
 
   actions.setWebpackConfig({
-    module: { rules: [scssRule] },
+    module: {
+      rules: [
+        {
+          test: /\.s[ac]ss$/i,
+          use: [
+            loaders.miniCssExtract(),
+            loaders.css({ importLoaders: 1, sourceMap: isDev }),
+            sassLoader,
+          ],
+        },
+      ],
+    },
     resolve: {
       alias: {
         components: path.resolve(__dirname, 'src/components'),
@@ -193,17 +200,20 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
 }
 ```
 
-Both the `module.rules` and `resolve.alias` entries are in the same `setWebpackConfig` call. The alias block is preserved verbatim from the previous implementation.
+Notes:
+- `loaders.miniCssExtract()` is stage-aware: it returns `style-loader` for `develop`, `MiniCssExtractPlugin.loader` for `build-javascript`, and `null-loader` for `develop-html`/`build-html` (SSR). This is critical — Gatsby only registers the MCEP plugin instance for non-SSR stages, so calling `MiniCssExtractPlugin.loader` directly during `build-html` would error with "You forgot to add 'mini-css-extract-plugin' plugin".
+- `loaders.css({ importLoaders: 1 })` returns Gatsby's pre-configured `css-loader`. `importLoaders: 1` tells css-loader that one preceding loader (the sass-loader) processes `@import`/`@use` rules.
+- The `resolve.alias` block is preserved verbatim from the previous implementation.
 
 The other two exports in this file — `createPages` and `createSchemaCustomization` — stay untouched.
 
-- [ ] **Step 3: Remove `gatsby-plugin-sass` from `package.json`**
+- [ ] **Step 3: Remove `gatsby-plugin-sass` and the now-unused `mini-css-extract-plugin` direct dep**
 
 ```bash
-yarn remove gatsby-plugin-sass
+yarn remove gatsby-plugin-sass mini-css-extract-plugin
 ```
 
-This rewrites `package.json` and `yarn.lock`.
+`mini-css-extract-plugin` was added during T1 in this branch's history under an earlier (rejected) design. Now that we use Gatsby's `loaders.miniCssExtract()` helper, we no longer need the direct dep — Gatsby's internal copy is referenced by the helper.
 
 - [ ] **Step 4: Type-check**
 
