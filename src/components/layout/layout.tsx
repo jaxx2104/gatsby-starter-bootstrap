@@ -3,7 +3,6 @@ import { useSiteMetadata } from '../../hooks/useSiteMetadata'
 import Footer from '../footer/footer'
 import Navibar from '../navibar/navibar'
 
-import 'prismjs/themes/prism.css'
 import 'scss/gatstrap.scss'
 
 interface Props {
