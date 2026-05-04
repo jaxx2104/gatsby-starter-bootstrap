@@ -10,20 +10,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
-          cache: yarn
+          cache: pnpm
       - uses: actions/cache@v4
         with:
           path: .cache
-          key: gatsby-cache-${{ runner.os }}-${{ hashFiles('package.json', 'yarn.lock', 'gatsby-config.ts', 'gatsby-node.ts') }}
+          key: gatsby-cache-${{ runner.os }}-${{ hashFiles('package.json', 'pnpm-lock.yaml', 'gatsby-config.ts', 'gatsby-node.ts') }}
           restore-keys: |
             gatsby-cache-${{ runner.os }}-
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
-      - run: yarn typecheck
-      - run: yarn ci:lint
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm typecheck
+      - run: pnpm ci:lint
       - uses: actions/upload-artifact@v4
         with:
           name: gatsby-public
