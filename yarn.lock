@@ -6304,15 +6304,6 @@ gatsby-remark-images@^7.16.0:
     unist-util-select "^3.0.4"
     unist-util-visit-parents "^3.1.1"
 
-gatsby-remark-prismjs@^7.16.0:
-  version "7.16.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-7.16.0.tgz#54333498d1220fcdc0277628238cb2df62b0ee3b"
-  integrity sha512-VdK1y46U24Cj2MfYxc9JCW8pviMiE0rD9XIVj36jibeUn93FEFR/iF3Nc5QWI45qmbgJS1gDQwtekrKE15mTlg==
-  dependencies:
-    "@babel/runtime" "^7.20.13"
-    parse-numeric-range "^1.3.0"
-    unist-util-visit "^2.0.3"
-
 gatsby-remark-responsive-iframe@^6.16.0:
   version "6.16.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-responsive-iframe/-/gatsby-remark-responsive-iframe-6.16.0.tgz#aaea7115516db719da4f62e92154316d8f92e12f"
@@ -9420,11 +9411,6 @@ parse-latin@^4.0.0:
     unist-util-modify-children "^2.0.0"
     unist-util-visit-children "^1.0.0"
 
-parse-numeric-range@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/parse-numeric-range/-/parse-numeric-range-1.3.0.tgz#7c63b61190d61e4d53a1197f0c83c47bb670ffa3"
-  integrity sha512-twN+njEipszzlMJd4ONUYgSfZPDxgHhT9Ahed5uTigpQn90FggW4SA/AIPq/6a149fTbE9qBEcSwE3FAEp6wQQ==
-
 parse-srcset@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/parse-srcset/-/parse-srcset-1.0.2.tgz#f2bd221f6cc970a938d88556abc589caaaa2bde1"
@@ -9957,11 +9943,6 @@ pretty-error@^2.1.2:
   dependencies:
     lodash "^4.17.20"
     renderkid "^2.0.4"
-
-prismjs@^1.29.0:
-  version "1.30.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.30.0.tgz#d9709969d9d4e16403f6f348c63553b19f0975a9"
-  integrity sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw==
 
 probe-image-size@^7.2.3:
   version "7.2.3"
