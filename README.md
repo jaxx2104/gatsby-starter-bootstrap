@@ -20,7 +20,8 @@ A **Bootstrap 5** starter for Gatsby — fast, accessible, and ready to fork.
 ```bash
 gatsby new my-blog https://github.com/jaxx2104/gatsby-starter-bootstrap
 cd my-blog
-yarn develop
+pnpm install
+pnpm develop
 ```
 
 Open <http://localhost:8000>.
@@ -81,21 +82,21 @@ date: 2026-06-01
 
 | Command          | Description                                |
 | ---------------- | ------------------------------------------ |
-| `yarn develop`   | Start the dev server                       |
-| `yarn build`     | Production build to `public/`              |
-| `yarn typecheck` | Run TypeScript strict mode checks          |
-| `yarn lint`      | Run Biome lint                             |
-| `yarn lint:fix`  | Run Biome check (lint + format) with fixes |
-| `yarn format`    | Run Biome format                           |
+| `pnpm develop`   | Start the dev server                       |
+| `pnpm build`     | Production build to `public/`              |
+| `pnpm typecheck` | Run TypeScript strict mode checks          |
+| `pnpm lint`      | Run Biome lint                             |
+| `pnpm lint:fix`  | Run Biome check (lint + format) with fixes |
+| `pnpm format`    | Run Biome format                           |
 
 ## Contributing
 
 1. Fork and clone.
-2. `yarn` to install (Node 20).
-3. `yarn typecheck`, `yarn lint`, and `yarn build` must pass before opening a
+2. `pnpm install` to install (Node 22).
+3. `pnpm typecheck`, `pnpm lint`, and `pnpm build` must pass before opening a
    pull request.
 4. Pre-commit hooks run `lint-staged` automatically.
-5. `git push` runs `yarn typecheck` via a `pre-push` hook. Use
+5. `git push` runs `pnpm typecheck` via a `pre-push` hook. Use
    `git push --no-verify` to skip during work-in-progress pushes.
 6. SCSS and Markdown files are not formatted by tooling — follow the
    `.editorconfig` settings (2-space indent, LF line endings, UTF-8).
