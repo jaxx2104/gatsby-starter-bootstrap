@@ -13,7 +13,7 @@
     "typescript"
   ],
   "private": true,
-  "packageManager": "yarn@1.22.22",
+  "packageManager": "pnpm@9.15.9",
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
