@@ -6042,14 +6042,6 @@ gatsby-parcel-config@1.16.0:
     "@parcel/transformer-js" "2.8.3"
     "@parcel/transformer-json" "2.8.3"
 
-gatsby-plugin-catch-links@^5.16.0:
-  version "5.16.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-5.16.0.tgz#2ab8b7a104aa1a24a542ef9b6fd34709efa92942"
-  integrity sha512-+0bJTVIRFc13EOnEq8iPdXKDiCC6BmIBzHDLxzyEpWbfhHwOTnDgAPv51L4X0y7/mSbBLSfq+wDEEhXAyAKH2A==
-  dependencies:
-    "@babel/runtime" "^7.20.13"
-    escape-string-regexp "^1.0.5"
-
 gatsby-plugin-image@^3.16.0:
   version "3.16.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-3.16.0.tgz#eeeb504673a60666acd8617ec2cc396dc7e20588"
