@@ -3,7 +3,7 @@ import type { GatsbyConfig } from 'gatsby'
 const siteMetadata = {
   title: 'Gatstrap',
   description: 'A Bootstrap 5 starter for Gatsby',
-  siteUrl: 'https://gatstrap.netlify.app',
+  siteUrl: 'https://gatstrap.pages.dev',
   author: 'jaxx2104',
   twitter: 'jaxx2104',
 } as const
@@ -60,7 +60,6 @@ const config: GatsbyConfig = {
     },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-image',
-    'gatsby-plugin-netlify',
     'gatsby-plugin-offline',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
