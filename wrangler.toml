@@ -1,0 +1,6 @@
+# Cloudflare Pages config for Gatstrap.
+# The Cloudflare Pages dashboard build command is `yarn build`,
+# and the directory below is what gets published.
+
+name = "gatstrap"
+pages_build_output_dir = "./public"
