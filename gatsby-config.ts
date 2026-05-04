@@ -58,12 +58,9 @@ const config: GatsbyConfig = {
         icon: 'static/img/android-chrome-512x512.png',
       },
     },
-    'gatsby-plugin-catch-links',
     'gatsby-plugin-image',
-    'gatsby-plugin-offline',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-twitter',
     'gatsby-transformer-sharp',
   ],
 }
