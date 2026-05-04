@@ -61,7 +61,6 @@ const config: GatsbyConfig = {
     'gatsby-plugin-catch-links',
     'gatsby-plugin-image',
     'gatsby-plugin-netlify',
-    'gatsby-plugin-offline',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
