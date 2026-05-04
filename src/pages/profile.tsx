@@ -28,9 +28,9 @@ const Profile: React.FC<Props> = ({ location, data }) => {
           <h1>{meta.author}</h1>
           <p className="lead">Front-end engineer.</p>
           <a
-            href={`https://twitter.com/${meta.twitter}`}
-            className="twitter-follow-button"
-            data-show-count="false"
+            href={`https://x.com/${meta.twitter}`}
+            className="btn btn-outline-primary"
+            rel="me"
           >
             Follow @{meta.twitter}
           </a>

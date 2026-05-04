@@ -40,7 +40,6 @@
     "gatsby-plugin-offline": "^6.16.0",
     "gatsby-plugin-sharp": "^5.16.0",
     "gatsby-plugin-sitemap": "^6.16.0",
-    "gatsby-plugin-twitter": "^5.16.0",
     "gatsby-remark-copy-linked-files": "^6.16.0",
     "gatsby-remark-images": "^7.16.0",
     "gatsby-remark-prismjs": "^7.16.0",

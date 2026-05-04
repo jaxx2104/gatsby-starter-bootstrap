@@ -64,7 +64,6 @@ const config: GatsbyConfig = {
     'gatsby-plugin-offline',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-twitter',
     'gatsby-transformer-sharp',
   ],
 }
