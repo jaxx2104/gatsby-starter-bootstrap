@@ -67,31 +67,14 @@ img {
   outline-offset: 2px;
 }
 
-// Bump PrismJS token colors to meet WCAG AA contrast on the default
-// `prism.css` background (#f5f2f0). The upstream theme ships colors that
-// fall below 4.5:1 on small text; override the worst offenders here.
-.gatsby-highlight pre[class*='language-'] {
-  code .token.keyword,
-  code .token.boolean,
-  code .token.number,
-  code .token.constant,
-  code .token.symbol,
-  code .token.deleted,
-  code .token.tag {
-    color: #005580;
-  }
-
-  code .token.builtin,
-  code .token.string,
-  code .token.char,
-  code .token.attr-value,
-  code .token.regex,
-  code .token.variable {
-    color: #4f7c00;
-  }
-
-  code .token.function,
-  code .token.class-name {
-    color: #b34700;
-  }
+// Shiki emits <pre class="shiki"> with inline-styled tokens and
+// background. Project CSS only adds layout (radius, padding, scroll).
+pre.shiki {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-family: f.$font-family-monospace;
 }

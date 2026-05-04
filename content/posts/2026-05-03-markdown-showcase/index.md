@@ -3,7 +3,7 @@ layout: post
 title: Markdown Showcase
 path: /markdown-showcase
 category: Reference
-tags: [markdown, prismjs]
+tags: [markdown, shiki]
 description: A short tour of the Markdown features the starter renders out of the box.
 date: 2026-05-03
 ---
@@ -27,3 +27,17 @@ A paragraph with **bold**, _italic_, and `inline code`. Visit the [Gatsby site](
 ```ts
 export const greet = (name: string): string => `Hello, ${name}!`
 ```
+
+```js
+const fib = (n) => (n < 2 ? n : fib(n - 1) + fib(n - 2))
+```
+
+```sh
+yarn build
+```
+
+```json
+{ "name": "gatstrap", "version": "4.0.0" }
+```
+
+Inline code uses the Bootstrap default style: `npm install`.
