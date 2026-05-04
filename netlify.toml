@@ -5,3 +5,7 @@
 [build.environment]
   NODE_VERSION = "20"
   YARN_VERSION = "1.22.22"
+  # Disable Netlify's Gatsby cache restoration. Plugin/config changes
+  # otherwise leave a stale plugin manifest in the restored .cache/,
+  # which crashes workers with "There was a problem loading plugin <X>".
+  NETLIFY_USE_GATSBY_CACHE = "false"
