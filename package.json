@@ -13,6 +13,7 @@
     "typescript"
   ],
   "private": true,
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
@@ -36,7 +37,6 @@
     "gatsby-plugin-catch-links": "^5.16.0",
     "gatsby-plugin-image": "^3.16.0",
     "gatsby-plugin-manifest": "^5.16.0",
-    "gatsby-plugin-netlify": "^5.1.1",
     "gatsby-plugin-offline": "^6.16.0",
     "gatsby-plugin-sharp": "^5.16.0",
     "gatsby-plugin-sitemap": "^6.16.0",
