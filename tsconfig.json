@@ -14,11 +14,10 @@
     "isolatedModules": true,
     "allowJs": false,
     "noEmit": true,
-    "baseUrl": ".",
     "paths": {
-      "components/*": ["src/components/*"],
-      "templates/*": ["src/templates/*"],
-      "scss/*": ["src/scss/*"]
+      "components/*": ["./src/components/*"],
+      "templates/*": ["./src/templates/*"],
+      "scss/*": ["./src/scss/*"]
     }
   },
   "include": ["src", "gatsby-config.ts", "gatsby-node.ts"],
