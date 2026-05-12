@@ -45,8 +45,8 @@
     "gatsby-source-filesystem": "^5.16.0",
     "gatsby-transformer-remark": "^6.16.0",
     "gatsby-transformer-sharp": "^5.16.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "shiki": "^4.0.2",
     "unist-util-visit": "^5.0.0"
   },
@@ -58,7 +58,7 @@
     "husky": "^9.1.6",
     "lint-staged": "^16.1.0",
     "sass": "^1.99",
-    "sass-loader": "^16.0.7",
+    "sass-loader": "^16.0.8",
     "textlint": "^14.3.0",
     "textlint-rule-preset-japanese": "^10.0.4",
     "typescript": "^6.0.3"
