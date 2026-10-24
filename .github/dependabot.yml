@@ -10,6 +10,11 @@ updates:
           - minor
           - patch
     open-pull-requests-limit: 5
+    ignore:
+      # @types/node should track the Node version pinned in .node-version (22 LTS).
+      - dependency-name: "@types/node"
+        update-types:
+          - "version-update:semver-major"
 
   - package-ecosystem: github-actions
     directory: /
