@@ -25,6 +25,7 @@ jobs:
       - run: pnpm build
       - run: pnpm typecheck
       - run: pnpm ci:lint
+      - run: pnpm lint:text
       - uses: actions/upload-artifact@v7
         with:
           name: gatsby-public
