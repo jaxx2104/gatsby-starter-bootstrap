@@ -58,7 +58,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0",
     "sass": "^1.106.1",
-    "sass-loader": "^16.0.8",
+    "sass-loader": "^17.0.1",
     "textlint": "^15.8.0",
     "textlint-rule-preset-japanese": "^10.0.4",
     "typescript": "^6.0.3"
