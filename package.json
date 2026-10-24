@@ -61,7 +61,7 @@
     "sass-loader": "^16.0.8",
     "textlint": "^15.8.0",
     "textlint-rule-preset-japanese": "^10.0.4",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.2"
   },
   "lint-staged": {
     "*.{ts,tsx,js,mjs,json}": [
